@@ -21,9 +21,14 @@
 //     Only http:// and https:// prefixed URLs are recognized.
 //   - Single-letter abbreviations (m., s., d.) are not in the built-in list
 //     due to ambiguity with sentence-ending periods.
+//   - Az.R. and similar multi-part abbreviations followed by an uppercase letter
+//     may cause a false sentence break, since the splitter sees period + uppercase.
 package tokenizer
 
-import "fmt"
+import (
+	"encoding/json"
+	"fmt"
+)
 
 // wordsPerTokenEstimate is the estimated ratio of total tokens to word tokens,
 // used to pre-allocate the words slice in the Words convenience function.
@@ -43,36 +48,63 @@ const (
 	Sentence                     // Used only by SentenceTokens — a full sentence
 )
 
+// tokenTypeNames maps TokenType values to their string names.
+var tokenTypeNames = [...]string{
+	Word:        "Word",
+	Number:      "Number",
+	Punctuation: "Punctuation",
+	Space:       "Space",
+	Symbol:      "Symbol",
+	URL:         "URL",
+	Email:       "Email",
+	Sentence:    "Sentence",
+}
+
+// tokenTypeFromName maps string names back to TokenType values.
+var tokenTypeFromName = map[string]TokenType{
+	"Word":        Word,
+	"Number":      Number,
+	"Punctuation": Punctuation,
+	"Space":       Space,
+	"Symbol":      Symbol,
+	"URL":         URL,
+	"Email":       Email,
+	"Sentence":    Sentence,
+}
+
 // String returns the name of the token type.
 func (t TokenType) String() string {
-	switch t {
-	case Word:
-		return "Word"
-	case Number:
-		return "Number"
-	case Punctuation:
-		return "Punctuation"
-	case Space:
-		return "Space"
-	case Symbol:
-		return "Symbol"
-	case URL:
-		return "URL"
-	case Email:
-		return "Email"
-	case Sentence:
-		return "Sentence"
-	default:
-		return fmt.Sprintf("TokenType(%d)", int(t))
+	if int(t) >= 0 && int(t) < len(tokenTypeNames) {
+		return tokenTypeNames[t]
 	}
+	return fmt.Sprintf("TokenType(%d)", int(t))
+}
+
+// MarshalJSON encodes the token type as a JSON string (e.g. "Word").
+func (t TokenType) MarshalJSON() ([]byte, error) {
+	return json.Marshal(t.String())
+}
+
+// UnmarshalJSON decodes a JSON string (e.g. "Word") into a TokenType.
+func (t *TokenType) UnmarshalJSON(data []byte) error {
+	var s string
+	if err := json.Unmarshal(data, &s); err != nil {
+		return err
+	}
+	tt, ok := tokenTypeFromName[s]
+	if !ok {
+		return fmt.Errorf("unknown token type: %q", s)
+	}
+	*t = tt
+	return nil
 }
 
 // Token represents a unit of text with its position and classification.
 type Token struct {
-	Text  string    // The token text
-	Start int       // Byte offset in the original string (inclusive)
-	End   int       // Byte offset in the original string (exclusive)
-	Type  TokenType // Classification of the token
+	Text  string    `json:"text"`  // The token text
+	Start int       `json:"start"` // Byte offset in the original string (inclusive)
+	End   int       `json:"end"`   // Byte offset in the original string (exclusive)
+	Type  TokenType `json:"type"`  // Classification of the token
 }
 
 // String returns a debug representation, e.g. Word("salam")[0:5].
