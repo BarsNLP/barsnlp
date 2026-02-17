@@ -9502,7 +9502,6 @@ Vyiyələn
 Ayiyəsiz
 Nyol
 Vyol
-Nyola
 Nyolağa
 Nyoldaş
 Nyoldaşı
@@ -10411,7 +10410,6 @@ Aürəyinazik
 Aürəyiyumşaq
 Nürəyiyumşaqlıq
 Aürəyiyuxa
-Nürəyə
 Nüskük
 Nüslub
 Aüst

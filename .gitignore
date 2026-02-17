@@ -43,3 +43,6 @@ BACKLOG.md
 smoketest
 
 *.jsonl
+*.pdf
+.planning/*
+data/*.txt
