@@ -100,7 +100,7 @@ func main() {
 }
 ```
 
-Uses a table-driven morphotactic state machine with backtracking. Validates vowel harmony, consonant assimilation, and suffix ordering without requiring a dictionary.
+Uses a table-driven morphotactic state machine with backtracking. Validates vowel harmony, consonant assimilation, and suffix ordering. Includes an embedded dictionary (~12K stems from Wiktionary) for stem validation.
 
 All functions are safe for concurrent use.
 
