@@ -21,7 +21,6 @@
 //   - The -t causative suffix may produce false positives.
 //   - k/q restoration at morpheme boundaries is best-effort.
 //   - Reciprocal -ış/-iş/-uş/-üş may over-stem verb roots like danış-.
-//   - Composite tenses (pluperfect -mışdı-, etc.) are not supported.
 //   - Vowel dropping is restored via dictionary lookup (oğlu → oğul).
 //     Only works for stems present in the dictionary.
 //   - Azerbaijani Latin only. Use translit.CyrillicToLatin for Cyrillic input.

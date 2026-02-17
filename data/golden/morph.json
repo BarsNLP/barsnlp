@@ -350,32 +350,12 @@
     ]
   },
   {
-    "word": "kitabın",
-    "stem": "kitab",
-    "morphemes": [
-      {
-        "surface": "ın",
-        "tag": "CaseGen"
-      }
-    ]
-  },
-  {
     "word": "kitaba",
     "stem": "kitab",
     "morphemes": [
       {
         "surface": "a",
         "tag": "CaseDat"
-      }
-    ]
-  },
-  {
-    "word": "kitabı",
-    "stem": "kitab",
-    "morphemes": [
-      {
-        "surface": "ı",
-        "tag": "CaseAcc"
       }
     ]
   },
@@ -410,32 +390,12 @@
     ]
   },
   {
-    "word": "evin",
-    "stem": "ev",
-    "morphemes": [
-      {
-        "surface": "in",
-        "tag": "CaseGen"
-      }
-    ]
-  },
-  {
     "word": "evə",
     "stem": "ev",
     "morphemes": [
       {
         "surface": "ə",
         "tag": "CaseDat"
-      }
-    ]
-  },
-  {
-    "word": "evi",
-    "stem": "ev",
-    "morphemes": [
-      {
-        "surface": "i",
-        "tag": "CaseAcc"
       }
     ]
   },
