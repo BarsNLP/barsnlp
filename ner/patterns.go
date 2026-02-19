@@ -1,8 +1,9 @@
 package ner
 
 import (
+	"cmp"
 	"regexp"
-	"sort"
+	"slices"
 	"strings"
 )
 
@@ -18,8 +19,8 @@ var (
 	// Email: standard pattern
 	reEmail = regexp.MustCompile(`[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}`)
 
-	// URL: http or https prefixed
-	reURL = regexp.MustCompile(`https?://\S+`)
+	// URL: http or https prefixed, restricted to RFC 3986 characters
+	reURL = regexp.MustCompile(`https?://[A-Za-z0-9\-._~:/?#\[\]@!$&'()*+,;=%]+`)
 
 	// IBAN: AZ + 2 digits + 4 uppercase letters + 20 alphanumeric chars = 28 total
 	reIBAN = regexp.MustCompile(`\bAZ\d{2}[A-Z]{4}[A-Z0-9]{20}\b`)
@@ -37,37 +38,41 @@ var (
 	reVOENLabeled = regexp.MustCompile(`(?i)\bV[ÖO]EN[:\s]\s?(\d{10})\b`)
 )
 
+// maxEmailLen is the maximum length of an email address per RFC 5321.
+const maxEmailLen = 254
+
+// maxEntities is the maximum number of entities returned per call.
+const maxEntities = 10000
+
 // recognize is the internal implementation of Recognize.
 func recognize(s string) []Entity {
-	var all []Entity
+	// Pre-allocate with a heuristic: ~1 entity per 200 bytes.
+	const minCap = 8
+	all := make([]Entity, 0, len(s)/200+minCap)
 
 	// High-specificity patterns first
-	all = append(all, matchURL(s)...)
-	all = append(all, matchEmail(s)...)
-	all = append(all, matchIBAN(s)...)
-	all = append(all, matchLicensePlate(s)...)
-	all = append(all, matchPhone(s)...)
+	all = appendURL(all, s)
+	all = appendEmail(all, s)
+	all = appendIBAN(all, s)
+	all = appendLicensePlate(all, s)
+	all = appendPhone(all, s)
 
 	// Ambiguous patterns last (FIN/VOEN labeled, then bare)
-	all = append(all, matchFIN(s)...)
-	all = append(all, matchVOEN(s)...)
+	all = appendFIN(all, s)
+	all = appendVOEN(all, s)
 
 	if len(all) == 0 {
 		return nil
 	}
 
-	all = resolveOverlaps(all)
-	sort.Slice(all, func(i, j int) bool {
-		return all[i].Start < all[j].Start
-	})
-	return all
+	// resolveOverlaps returns entities already sorted by Start offset.
+	return resolveOverlaps(all)
 }
 
-// matchPhone finds phone numbers in both international and local formats.
-func matchPhone(s string) []Entity {
-	var out []Entity
+// appendPhone appends phone numbers in both international and local formats.
+func appendPhone(all []Entity, s string) []Entity {
 	for _, m := range rePhoneIntl.FindAllStringIndex(s, -1) {
-		out = append(out, Entity{
+		all = append(all, Entity{
 			Text:  s[m[0]:m[1]],
 			Start: m[0],
 			End:   m[1],
@@ -75,85 +80,86 @@ func matchPhone(s string) []Entity {
 		})
 	}
 	for _, m := range rePhoneLocal.FindAllStringIndex(s, -1) {
-		out = append(out, Entity{
+		all = append(all, Entity{
 			Text:  s[m[0]:m[1]],
 			Start: m[0],
 			End:   m[1],
 			Type:  Phone,
 		})
 	}
-	return out
+	return all
 }
 
-// matchEmail finds email addresses.
-func matchEmail(s string) []Entity {
-	var out []Entity
+// appendEmail appends email addresses, skipping those exceeding RFC 5321 length.
+func appendEmail(all []Entity, s string) []Entity {
 	for _, m := range reEmail.FindAllStringIndex(s, -1) {
-		out = append(out, Entity{
+		if m[1]-m[0] > maxEmailLen {
+			continue
+		}
+		all = append(all, Entity{
 			Text:  s[m[0]:m[1]],
 			Start: m[0],
 			End:   m[1],
 			Type:  Email,
 		})
 	}
-	return out
+	return all
 }
 
-// matchURL finds HTTP/HTTPS URLs.
-func matchURL(s string) []Entity {
-	var out []Entity
+// appendURL appends HTTP/HTTPS URLs, trimming trailing punctuation.
+func appendURL(all []Entity, s string) []Entity {
 	for _, m := range reURL.FindAllStringIndex(s, -1) {
 		text := s[m[0]:m[1]]
 		// Trim trailing punctuation that is likely not part of the URL.
 		text = strings.TrimRight(text, ".,;:!?)]}>")
 		end := m[0] + len(text)
-		out = append(out, Entity{
+		all = append(all, Entity{
 			Text:  text,
 			Start: m[0],
 			End:   end,
 			Type:  URL,
 		})
 	}
-	return out
+	return all
 }
 
-// matchIBAN finds Azerbaijani IBAN numbers.
-func matchIBAN(s string) []Entity {
-	var out []Entity
+// appendIBAN appends Azerbaijani IBAN numbers.
+func appendIBAN(all []Entity, s string) []Entity {
 	for _, m := range reIBAN.FindAllStringIndex(s, -1) {
-		out = append(out, Entity{
+		all = append(all, Entity{
 			Text:  s[m[0]:m[1]],
 			Start: m[0],
 			End:   m[1],
 			Type:  IBAN,
 		})
 	}
-	return out
+	return all
 }
 
-// matchLicensePlate finds Azerbaijani license plates.
-func matchLicensePlate(s string) []Entity {
-	var out []Entity
+// appendLicensePlate appends Azerbaijani license plates.
+func appendLicensePlate(all []Entity, s string) []Entity {
 	for _, m := range reLicensePlate.FindAllStringIndex(s, -1) {
-		out = append(out, Entity{
+		all = append(all, Entity{
 			Text:  s[m[0]:m[1]],
 			Start: m[0],
 			End:   m[1],
 			Type:  LicensePlate,
 		})
 	}
-	return out
+	return all
 }
 
-// matchFIN finds FIN codes. Labeled matches (preceded by "FIN" keyword) take
-// priority over bare matches at the same position.
-func matchFIN(s string) []Entity {
-	var out []Entity
+// appendFIN appends FIN codes. Labeled matches (preceded by "FIN" keyword)
+// take priority; bare matches at the same position are skipped.
+func appendFIN(all []Entity, s string) []Entity {
+	// Track labeled positions to skip bare duplicates.
+	labeled := make(map[int]struct{})
 
 	// Labeled matches: "FIN: XXXXXXX" or "FIN XXXXXXX"
 	for _, sub := range reFINLabeled.FindAllStringSubmatchIndex(s, -1) {
 		// sub[2]:sub[3] is the capture group (the 7-char code)
-		out = append(out, Entity{
+		labeled[sub[2]] = struct{}{}
+		all = append(all, Entity{
 			Text:    s[sub[2]:sub[3]],
 			Start:   sub[2],
 			End:     sub[3],
@@ -166,9 +172,12 @@ func matchFIN(s string) []Entity {
 	// Must contain at least one letter and one digit to avoid matching
 	// pure words (PRODUCT, VERSION) or pure numbers (1234567).
 	for _, m := range reFINBare.FindAllStringIndex(s, -1) {
+		if _, ok := labeled[m[0]]; ok {
+			continue
+		}
 		text := s[m[0]:m[1]]
 		if isMixedAlphanumeric(text) {
-			out = append(out, Entity{
+			all = append(all, Entity{
 				Text:  text,
 				Start: m[0],
 				End:   m[1],
@@ -177,15 +186,14 @@ func matchFIN(s string) []Entity {
 		}
 	}
 
-	return out
+	return all
 }
 
-// matchVOEN finds VOEN codes. Only labeled matches (preceded by "VOEN"/"VÖEN")
+// appendVOEN appends VOEN codes. Only labeled matches (preceded by "VOEN"/"VÖEN")
 // are recognized — bare 10-digit sequences are too ambiguous.
-func matchVOEN(s string) []Entity {
-	var out []Entity
+func appendVOEN(all []Entity, s string) []Entity {
 	for _, sub := range reVOENLabeled.FindAllStringSubmatchIndex(s, -1) {
-		out = append(out, Entity{
+		all = append(all, Entity{
 			Text:    s[sub[2]:sub[3]],
 			Start:   sub[2],
 			End:     sub[3],
@@ -193,7 +201,7 @@ func matchVOEN(s string) []Entity {
 			Labeled: true,
 		})
 	}
-	return out
+	return all
 }
 
 // isMixedAlphanumeric returns true if s contains at least one ASCII letter
@@ -218,25 +226,30 @@ func isMixedAlphanumeric(s string) bool {
 //   - The longer (more specific) match wins.
 //   - If equal length, labeled wins over unlabeled.
 //   - If still tied, the first one encountered wins.
+//
+// Returns entities sorted by Start offset.
 func resolveOverlaps(entities []Entity) []Entity {
 	if len(entities) <= 1 {
 		return entities
 	}
 
 	// Sort by start offset, then by length descending, then labeled first.
-	sort.Slice(entities, func(i, j int) bool {
-		if entities[i].Start != entities[j].Start {
-			return entities[i].Start < entities[j].Start
+	slices.SortFunc(entities, func(a, b Entity) int {
+		if c := cmp.Compare(a.Start, b.Start); c != 0 {
+			return c
 		}
-		li := entities[i].End - entities[i].Start
-		lj := entities[j].End - entities[j].Start
-		if li != lj {
-			return li > lj
+		la := a.End - a.Start
+		lb := b.End - b.Start
+		if c := cmp.Compare(lb, la); c != 0 {
+			return c
 		}
-		if entities[i].Labeled != entities[j].Labeled {
-			return entities[i].Labeled
+		if a.Labeled != b.Labeled {
+			if a.Labeled {
+				return -1
+			}
+			return 1
 		}
-		return false
+		return 0
 	})
 
 	result := make([]Entity, 0, len(entities))
@@ -245,13 +258,10 @@ func resolveOverlaps(entities []Entity) []Entity {
 	for _, e := range entities {
 		if e.Start >= maxEnd {
 			result = append(result, e)
+			if len(result) >= maxEntities {
+				break
+			}
 			maxEnd = e.End
-		} else if e.End > maxEnd {
-			// Partial overlap: keep the one that extends further only if
-			// we haven't already committed a result covering this range.
-			// Since we sorted by start then by length desc, the first entity
-			// at a given start is already the best. Skip partial overlaps.
-			continue
 		}
 	}
 

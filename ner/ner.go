@@ -78,6 +78,10 @@ func (t *EntityType) UnmarshalJSON(data []byte) error {
 	}
 	et, ok := entityTypeFromName[s]
 	if !ok {
+		const maxErrLen = 50
+		if len(s) > maxErrLen {
+			s = s[:maxErrLen] + "..."
+		}
 		return fmt.Errorf("unknown entity type: %q", s)
 	}
 	*t = et

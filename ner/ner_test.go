@@ -2,6 +2,7 @@ package ner
 
 import (
 	"encoding/json"
+	"strings"
 	"testing"
 )
 
@@ -365,6 +366,42 @@ func TestOffsetInvariant(t *testing.T) {
 				t.Errorf("invariant broken for %s: s[%d:%d]=%q != %q",
 					e.Type, e.Start, e.End, in[e.Start:e.End], e.Text)
 			}
+		}
+	}
+}
+
+func TestEntityString(t *testing.T) {
+	e := Entity{Text: "+994501234567", Start: 0, End: 13, Type: Phone}
+	got := e.String()
+	want := `Phone("+994501234567")[0:13]`
+	if got != want {
+		t.Errorf("got %q, want %q", got, want)
+	}
+
+	e = Entity{Text: "5ARPXK2", Start: 5, End: 12, Type: FIN, Labeled: true}
+	got = e.String()
+	want = `FIN("5ARPXK2")[5:12,labeled]`
+	if got != want {
+		t.Errorf("got %q, want %q", got, want)
+	}
+}
+
+func TestEntityTypeUnmarshalNonString(t *testing.T) {
+	var et EntityType
+	err := et.UnmarshalJSON([]byte("123"))
+	if err == nil {
+		t.Error("want error for non-string JSON, got nil")
+	}
+}
+
+func TestEntityTypeMapsComplete(t *testing.T) {
+	for i := EntityType(0); i <= URL; i++ {
+		name := i.String()
+		if strings.HasPrefix(name, "EntityType(") {
+			t.Errorf("EntityType %d has no name in entityTypeNames", i)
+		}
+		if _, ok := entityTypeFromName[name]; !ok {
+			t.Errorf("entityTypeFromName missing entry for %q", name)
 		}
 	}
 }
