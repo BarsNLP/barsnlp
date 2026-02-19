@@ -27,12 +27,12 @@ type EntityType int
 
 const (
 	FIN          EntityType = iota // Personal identification number (7 alphanumeric chars, no I/O)
-	VOEN                          // Tax identification number (10 digits)
-	Phone                         // Phone number (+994... or 0XX...)
-	Email                         // Email address
-	IBAN                          // International bank account number (AZ prefix, 28 chars)
-	LicensePlate                  // Azerbaijani vehicle license plate (XX-YY-ZZZ)
-	URL                           // HTTP or HTTPS URL
+	VOEN                           // Tax identification number (10 digits)
+	Phone                          // Phone number (+994... or 0XX...)
+	Email                          // Email address
+	IBAN                           // International bank account number (AZ prefix, 28 chars)
+	LicensePlate                   // Azerbaijani vehicle license plate (XX-YY-ZZZ)
+	URL                            // HTTP or HTTPS URL
 )
 
 // entityTypeNames maps EntityType values to their string names.
@@ -110,7 +110,7 @@ const maxInputBytes = 1 << 20 // 1 MiB
 // Returns entities sorted by Start offset. When entities overlap,
 // the longer (more specific) match wins; if equal length, labeled wins.
 func Recognize(s string) []Entity {
-	if len(s) == 0 || len(s) > maxInputBytes {
+	if s == "" || len(s) > maxInputBytes {
 		return nil
 	}
 	return recognize(s)

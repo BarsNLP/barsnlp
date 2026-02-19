@@ -118,6 +118,21 @@ func TestRecognizeFIN(t *testing.T) {
 			in:   "IOIOIOI",
 			want: nil,
 		},
+		{
+			name: "bare pure letters not matched",
+			in:   "PRODUCT VERSION SECTION",
+			want: nil,
+		},
+		{
+			name: "bare pure digits not matched",
+			in:   "1234567",
+			want: nil,
+		},
+		{
+			name: "bare mixed alphanumeric matched",
+			in:   "код ABC1234",
+			want: []Entity{{Text: "ABC1234", Start: 7, End: 14, Type: FIN}},
+		},
 	}
 
 	for _, tt := range tests {
@@ -145,10 +160,9 @@ func TestRecognizeVOEN(t *testing.T) {
 			want: []Entity{{Text: "1234567890", Start: 7, End: 17, Type: VOEN, Labeled: true}},
 		},
 		{
-			name: "bare VOEN",
+			name: "bare digits not matched as VOEN",
 			in:   "nömrə 1234567890 yazılıb",
-			// "nömrə" has ö (2 bytes) + ə (2 bytes) → prefix = 8 bytes
-			want: []Entity{{Text: "1234567890", Start: 8, End: 18, Type: VOEN}},
+			want: nil,
 		},
 	}
 

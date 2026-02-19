@@ -122,12 +122,14 @@ func TestMalformedUTF8(t *testing.T) {
 	}
 
 	for _, in := range inputs {
-		defer func() {
-			if r := recover(); r != nil {
-				t.Errorf("Recognize(%q) panicked: %v", in, r)
-			}
-		}()
-		_ = Recognize(in)
+		t.Run("", func(t *testing.T) {
+			defer func() {
+				if r := recover(); r != nil {
+					t.Errorf("Recognize(%q) panicked: %v", in, r)
+				}
+			}()
+			_ = Recognize(in)
+		})
 	}
 }
 
@@ -140,11 +142,13 @@ func TestNullByteInjection(t *testing.T) {
 	}
 
 	for _, in := range inputs {
-		defer func() {
-			if r := recover(); r != nil {
-				t.Errorf("Recognize(%q) panicked: %v", in, r)
-			}
-		}()
-		_ = Recognize(in)
+		t.Run("", func(t *testing.T) {
+			defer func() {
+				if r := recover(); r != nil {
+					t.Errorf("Recognize(%q) panicked: %v", in, r)
+				}
+			}()
+			_ = Recognize(in)
+		})
 	}
 }

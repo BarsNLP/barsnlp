@@ -19,7 +19,7 @@ var (
 	reEmail = regexp.MustCompile(`[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}`)
 
 	// URL: http or https prefixed
-	reURL = regexp.MustCompile(`https?://[^\s<>"{}|\\^` + "`" + ` ]+`)
+	reURL = regexp.MustCompile(`https?://\S+`)
 
 	// IBAN: AZ + 2 digits + 4 uppercase letters + 20 alphanumeric chars = 28 total
 	reIBAN = regexp.MustCompile(`\bAZ\d{2}[A-Z]{4}[A-Z0-9]{20}\b`)
@@ -32,10 +32,9 @@ var (
 	// FIN bare: 7 uppercase alphanumeric chars (no I, no O)
 	reFINBare = regexp.MustCompile(`\b[A-HJ-NP-Z0-9]{7}\b`)
 
-	// VOEN labeled: preceded by keyword "VOEN" or "VÖEN" with optional colon/space
+	// VOEN labeled: preceded by keyword "VOEN" or "VÖEN" with optional colon/space.
+	// Bare VOEN is not matched — 10 bare digits are too ambiguous.
 	reVOENLabeled = regexp.MustCompile(`(?i)\bV[ÖO]EN[:\s]\s?(\d{10})\b`)
-	// VOEN bare: exactly 10 digits
-	reVOENBare = regexp.MustCompile(`\b\d{10}\b`)
 )
 
 // recognize is the internal implementation of Recognize.
@@ -163,24 +162,28 @@ func matchFIN(s string) []Entity {
 		})
 	}
 
-	// Bare matches: any 7-char [A-HJ-NP-Z0-9] with word boundaries
+	// Bare matches: 7-char [A-HJ-NP-Z0-9] with word boundaries.
+	// Must contain at least one letter and one digit to avoid matching
+	// pure words (PRODUCT, VERSION) or pure numbers (1234567).
 	for _, m := range reFINBare.FindAllStringIndex(s, -1) {
-		out = append(out, Entity{
-			Text:  s[m[0]:m[1]],
-			Start: m[0],
-			End:   m[1],
-			Type:  FIN,
-		})
+		text := s[m[0]:m[1]]
+		if isMixedAlphanumeric(text) {
+			out = append(out, Entity{
+				Text:  text,
+				Start: m[0],
+				End:   m[1],
+				Type:  FIN,
+			})
+		}
 	}
 
 	return out
 }
 
-// matchVOEN finds VOEN codes. Labeled matches take priority over bare ones.
+// matchVOEN finds VOEN codes. Only labeled matches (preceded by "VOEN"/"VÖEN")
+// are recognized — bare 10-digit sequences are too ambiguous.
 func matchVOEN(s string) []Entity {
 	var out []Entity
-
-	// Labeled matches: "VOEN: 1234567890" or "VÖEN 1234567890"
 	for _, sub := range reVOENLabeled.FindAllStringSubmatchIndex(s, -1) {
 		out = append(out, Entity{
 			Text:    s[sub[2]:sub[3]],
@@ -190,18 +193,25 @@ func matchVOEN(s string) []Entity {
 			Labeled: true,
 		})
 	}
-
-	// Bare matches: any 10-digit sequence with word boundaries
-	for _, m := range reVOENBare.FindAllStringIndex(s, -1) {
-		out = append(out, Entity{
-			Text:  s[m[0]:m[1]],
-			Start: m[0],
-			End:   m[1],
-			Type:  VOEN,
-		})
-	}
-
 	return out
+}
+
+// isMixedAlphanumeric returns true if s contains at least one ASCII letter
+// and at least one ASCII digit. Used to filter bare FIN candidates.
+func isMixedAlphanumeric(s string) bool {
+	var hasLetter, hasDigit bool
+	for i := 0; i < len(s); i++ {
+		c := s[i]
+		if c >= 'A' && c <= 'Z' {
+			hasLetter = true
+		} else if c >= '0' && c <= '9' {
+			hasDigit = true
+		}
+		if hasLetter && hasDigit {
+			return true
+		}
+	}
+	return false
 }
 
 // resolveOverlaps removes overlapping entities. When two entities overlap:
