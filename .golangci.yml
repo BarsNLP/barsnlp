@@ -87,8 +87,20 @@ linters:
       - path: "morph/fsm\\.go$"
         linters:
           - gocyclo
+      # Detection scoring function has inherent branching for 4 languages x 2 scripts.
+      - path: "detect/detect\\.go$"
+        linters:
+          - gocyclo
       # Suffix table is a single large data declaration.
       - path: "morph/suffixes\\.go$"
+        linters:
+          - funlen
+      # Multi-pattern parsing pipeline is inherently cyclomatic.
+      - path: "datetime/patterns\\.go$"
+        linters:
+          - gocyclo
+      # Month/weekday/keyword tables are a single large data declaration.
+      - path: "datetime/words\\.go$"
         linters:
           - funlen
       - linters:

@@ -18,6 +18,7 @@ All packages are safe for concurrent use.
 | [morph](#morphological-analysis) | Stem and suffix chain decomposition |
 | [numtext](#number-to-text) | Number / text conversion ("123" &rarr; "yuz iyirmi uc") |
 | [ner](#named-entity-recognition) | FIN, VOEN, phone, email, IBAN, plate, URL extraction |
+| [detect](#language-detection) | Language detection (az/ru/en/tr) |
 
 ## Install
 
@@ -145,11 +146,36 @@ ner.IBANs("AZ21NABZ00000000137010001944")
 
 FIN and VOEN patterns are ambiguous in isolation. When preceded by a keyword (e.g. "FIN:", "VOEN:"), `Entity.Labeled` is true, indicating higher confidence. Overlapping entities are resolved by preferring longer matches.
 
+## Language Detection
+
+Identify the language of input text: Azerbaijani, Russian, English, or Turkish.
+
+```go
+// Detect language with confidence score
+r := detect.Detect("Salam, necəsən? Bu gün hava çox gözəldir.")
+fmt.Println(r.Lang, r.Script, r.Confidence)
+// Azerbaijani Latn 0.95...
+
+// ISO 639-1 code
+detect.Lang("Hello, how are you doing today?")
+// en
+
+// Ranked results for all supported languages
+for _, r := range detect.DetectAll("Привет, как дела?") {
+    fmt.Printf("%s: %.2f\n", r.Lang, r.Confidence)
+}
+// Russian: 0.55
+// Azerbaijani: 0.45
+// English: 0.00
+// Turkish: 0.00
+```
+
+Uses hybrid character-set scoring with trigram fallback for ambiguous cases (Azerbaijani vs Turkish). Supports Azerbaijani in both Latin and Cyrillic scripts. Input longer than 1 MiB is silently truncated.
+
 ## Planned
 
 - **spell** — spell checker (SymSpell algorithm)
 - **datetime** — date/time parser ("5 mart 2026" &rarr; structured)
-- **detect** — language detection (az/ru/en/tr)
 - **normalize** — text normalization, diacritic restoration
 - **keywords** — keyword extraction (TF-IDF / TextRank)
 - **validate** — text validator (spelling + punctuation + layout)
