@@ -1,4 +1,4 @@
-# BarsNLP
+# Modern Azerbaijani NLP
 
 [![CI](https://github.com/BarsNLP/barsnlp/actions/workflows/ci.yml/badge.svg)](https://github.com/BarsNLP/barsnlp/actions/workflows/ci.yml)
 [![Go Reference](https://pkg.go.dev/badge/github.com/BarsNLP/barsnlp.svg)](https://pkg.go.dev/github.com/BarsNLP/barsnlp)
