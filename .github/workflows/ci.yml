@@ -70,3 +70,9 @@ jobs:
 
       - name: Fuzz morph Analyze
         run: go test ./morph/ -fuzz=FuzzAnalyze -fuzztime=10s -parallel=1
+
+      - name: Fuzz detect
+        run: go test ./detect/ -fuzz=FuzzDetect -fuzztime=10s -parallel=1
+
+      - name: Fuzz datetime
+        run: go test ./datetime/ -fuzz=FuzzExtract -fuzztime=10s -parallel=1
