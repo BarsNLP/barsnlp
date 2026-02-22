@@ -83,8 +83,7 @@ func pipeline(text string) []string {
 	// CPU amplification in morph's per-part FSM processing.
 	safe := make([]string, 0, len(words))
 	for _, w := range words {
-		parts := strings.Split(w, "-")
-		if len(parts) <= maxHyphenParts {
+		if strings.Count(w, "-") < maxHyphenParts {
 			safe = append(safe, w)
 		}
 	}

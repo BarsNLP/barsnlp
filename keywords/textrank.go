@@ -6,8 +6,8 @@ import (
 )
 
 func scoreTextRank(stems []string) []Keyword {
-	nodes, _, edges := buildGraph(stems)
-	scores := pagerank(nodes, edges)
+	nodes, edges := buildGraph(stems)
+	scores := pagerank(edges)
 
 	freq := make(map[string]int, len(nodes))
 	for _, s := range stems {
@@ -27,8 +27,8 @@ type edge struct {
 	weight float64
 }
 
-func buildGraph(stems []string) (nodes []string, index map[string]int, edges [][]edge) {
-	index = make(map[string]int)
+func buildGraph(stems []string) (nodes []string, edges [][]edge) {
+	index := make(map[string]int)
 	for _, s := range stems {
 		if _, ok := index[s]; !ok {
 			index[s] = len(nodes)
@@ -65,11 +65,11 @@ func buildGraph(stems []string) (nodes []string, index map[string]int, edges [][
 		})
 	}
 
-	return nodes, index, edges
+	return nodes, edges
 }
 
-func pagerank(nodes []string, edges [][]edge) []float64 {
-	n := len(nodes)
+func pagerank(edges [][]edge) []float64 {
+	n := len(edges)
 	if n == 0 {
 		return nil
 	}
