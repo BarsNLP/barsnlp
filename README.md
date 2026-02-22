@@ -1,9 +1,9 @@
 # Modern Azerbaijani NLP
 
-[![CI](https://github.com/BarsNLP/barsnlp/actions/workflows/ci.yml/badge.svg)](https://github.com/BarsNLP/barsnlp/actions/workflows/ci.yml)
-[![Go Reference](https://pkg.go.dev/badge/github.com/BarsNLP/barsnlp.svg)](https://pkg.go.dev/github.com/BarsNLP/barsnlp)
-[![Go Version](https://img.shields.io/github/go-mod/go-version/BarsNLP/barsnlp)](https://github.com/BarsNLP/barsnlp/blob/main/go.mod)
-[![License](https://img.shields.io/github/license/BarsNLP/barsnlp)](LICENSE)
+[![CI](https://github.com/az-ai-labs/az-lang-nlp/actions/workflows/ci.yml/badge.svg)](https://github.com/az-ai-labs/az-lang-nlp/actions/workflows/ci.yml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/az-ai-labs/az-lang-nlp.svg)](https://pkg.go.dev/github.com/az-ai-labs/az-lang-nlp)
+[![Go Version](https://img.shields.io/github/go-mod/go-version/az-ai-labs/az-lang-nlp)](https://github.com/az-ai-labs/az-lang-nlp/blob/main/go.mod)
+[![License](https://img.shields.io/github/license/az-ai-labs/az-lang-nlp)](LICENSE)
 
 NLP toolkit for Azerbaijani language. Pure Go, zero dependencies.
 
@@ -11,19 +11,19 @@ All packages are safe for concurrent use.
 
 ## Packages
 
-| Package | Description |
-|---------|-------------|
-| [translit](#transliteration) | Latin / Cyrillic script conversion |
-| [tokenizer](#tokenizer) | Word and sentence tokenization with byte offsets |
-| [morph](#morphological-analysis) | Stem and suffix chain decomposition |
-| [numtext](#number-to-text) | Number / text conversion ("123" &rarr; "yuz iyirmi uc") |
-| [ner](#named-entity-recognition) | FIN, VOEN, phone, email, IBAN, plate, URL extraction |
-| [detect](#language-detection) | Language detection (az/ru/en/tr) |
+| Package                          | Description                                             |
+| -------------------------------- | ------------------------------------------------------- |
+| [translit](#transliteration)     | Latin / Cyrillic script conversion                      |
+| [tokenizer](#tokenizer)          | Word and sentence tokenization with byte offsets        |
+| [morph](#morphological-analysis) | Stem and suffix chain decomposition                     |
+| [numtext](#number-to-text)       | Number / text conversion ("123" &rarr; "yuz iyirmi uc") |
+| [ner](#named-entity-recognition) | FIN, VOEN, phone, email, IBAN, plate, URL extraction    |
+| [detect](#language-detection)    | Language detection (az/ru/en/tr)                        |
 
 ## Install
 
 ```
-go get github.com/BarsNLP/barsnlp
+go get github.com/az-ai-labs/az-lang-nlp
 ```
 
 Requires Go 1.25.7 or later.
