@@ -6,7 +6,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/BarsNLP/barsnlp/translit"
+	"github.com/az-ai-labs/az-lang-nlp/translit"
 )
 
 // verifyInvariants checks two invariants that must hold for every tokenization:

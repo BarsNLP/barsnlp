@@ -10,8 +10,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/BarsNLP/barsnlp/tokenizer"
-	"github.com/BarsNLP/barsnlp/translit"
+	"github.com/az-ai-labs/az-lang-nlp/tokenizer"
+	"github.com/az-ai-labs/az-lang-nlp/translit"
 )
 
 const (
