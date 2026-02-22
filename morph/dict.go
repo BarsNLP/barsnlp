@@ -36,9 +36,16 @@ func init() {
 	}
 }
 
+// IsKnownStem reports whether s is a known dictionary stem.
+// Expects lowercase Azerbaijani Latin input.
+// Used internally for soft ranking and by the normalize package
+// for diacritic restoration. Results may change as the dictionary grows.
+func IsKnownStem(s string) bool {
+	return isKnownStem(s)
+}
+
 // isKnownStem reports whether s is a known dictionary stem.
 // Expects lowercase Latin input.
-// Designed for soft ranking in fsm.go walk() base case, not hard filtering.
 func isKnownStem(s string) bool {
 	if s == "" {
 		return false
