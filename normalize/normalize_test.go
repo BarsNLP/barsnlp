@@ -61,14 +61,23 @@ func TestNormalizeWord(t *testing.T) {
 
 		// -- Turkic-I handling --
 
-		// After azLower: I -> ı, İ -> i. Neither triggers substitution.
-		{"turkic I unchanged", "kitab", "kitab"},
+		// After azLower: I -> ı (dotless), which has no diacritic alt, so word is unchanged.
+		{"uppercase I preserved", "KITAB", "KITAB"},
 
 		// -- No substitutable characters --
 
 		{"restore gel", "gel", "gəl"},   // g->ğ and e->ə: only gəl matches
 		{"no subs ev", "ev", "ev"},       // e is substitutable but ev is already a known stem
 		{"only ascii latin", "park", "park"},
+
+		// -- Apostrophe handling --
+
+		{"apostrophe stem restored", "soz'un", "söz'un"},
+		{"apostrophe curly quote", "soz\u2019un", "söz\u2019un"},
+
+		// -- Hyphenated words --
+
+		{"hyphenated restore", "gozel-kitab", "gözəl-kitab"},
 
 		// -- Edge cases --
 

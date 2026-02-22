@@ -20,6 +20,9 @@
 //   - Approximately 49 ambiguous ASCII forms are never restored (by design).
 //   - The i/ı distinction is not resolved (both are valid after Turkic lowering).
 //   - Full Unicode NFC normalization is not performed; input must already be NFC.
+//   - Worst-case CPU cost is O(2^N) per word where N is the number of substitutable
+//     positions (capped at 10). Callers processing untrusted input should apply
+//     timeouts or rate limiting.
 package normalize
 
 import (
@@ -47,7 +50,7 @@ func Normalize(s string) string {
 	}
 
 	var b strings.Builder
-	b.Grow(len(s) + len(s)/8) // diacritics may increase byte length
+	b.Grow(len(s) + len(s)/2) // diacritics replace 1-byte ASCII with 2-byte UTF-8
 
 	for _, tok := range tokens {
 		if tok.Type == tokenizer.Word {

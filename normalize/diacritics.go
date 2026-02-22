@@ -3,7 +3,9 @@ package normalize
 import (
 	"strings"
 	"unicode"
+	"unicode/utf8"
 
+	"github.com/az-ai-labs/az-lang-nlp/internal/azcase"
 	"github.com/az-ai-labs/az-lang-nlp/morph"
 )
 
@@ -19,7 +21,7 @@ const maxWordBytes = 256
 // Azerbaijani diacritic equivalents. Applied AFTER Turkic-aware lowercasing.
 //
 // The 'i' -> 'ı' mapping is intentionally excluded:
-// after azLower, 'i' means confirmed dotted-i (from lowercase 'i' or uppercase 'İ'),
+// after azcase.Lower, 'i' means confirmed dotted-i (from lowercase 'i' or uppercase 'İ'),
 // and 'ı' means confirmed dotless-i (from uppercase 'I').
 // Both are already correct after Turkic lowering.
 var asciiToDiacritic = [128]rune{
@@ -36,9 +38,33 @@ func hasDiacriticAlt(r rune) bool {
 	return r < 128 && asciiToDiacritic[r] != 0
 }
 
+// containsDiacritics reports whether s contains any Azerbaijani diacritical characters.
+func containsDiacritics(s string) bool {
+	for _, r := range s {
+		switch r {
+		case '\u0259', '\u00f6', '\u00fc', '\u011f', '\u00e7', '\u015f', // lower: ə ö ü ğ ç ş
+			'\u018f', '\u00d6', '\u00dc', '\u011e', '\u00c7', '\u015e': // upper: Ə Ö Ü Ğ Ç Ş
+			return true
+		}
+	}
+	return false
+}
+
+// toLowerRunes returns the runes of s with Azerbaijani-aware lowercasing.
+// Combines lowering and rune conversion in a single pass to avoid
+// an intermediate string allocation.
+func toLowerRunes(s string) []rune {
+	runes := make([]rune, 0, utf8.RuneCountInString(s))
+	for _, r := range s {
+		runes = append(runes, azcase.Lower(r))
+	}
+	return runes
+}
+
 // restoreWord attempts to restore diacritics on a single word.
 // Returns the original word unchanged if:
 //   - the word is empty or too long
+//   - it already contains diacritical characters
 //   - it has no substitutable characters
 //   - it is already a known dictionary stem
 //   - it has too many substitutable positions
@@ -48,10 +74,12 @@ func restoreWord(word string) string {
 		return word
 	}
 
-	lowered := toLower(word)
+	if containsDiacritics(word) {
+		return word
+	}
 
-	// Find substitutable positions in the lowered form.
-	runes := []rune(lowered)
+	// Lowercase and convert to runes in a single pass.
+	runes := toLowerRunes(word)
 	var positions []int
 	for i, r := range runes {
 		if hasDiacriticAlt(r) {
@@ -65,6 +93,7 @@ func restoreWord(word string) string {
 
 	// If the ASCII form is already a known stem, do not modify it.
 	// This prevents changing valid words like "ac" (hungry) to "aç" (open).
+	lowered := string(runes)
 	if morph.IsKnownStem(lowered) {
 		return word
 	}
@@ -76,8 +105,8 @@ func restoreWord(word string) string {
 	// Generate variants lazily and check against dictionary.
 	// Short-circuit on second match (ambiguous).
 	totalVariants := 1 << len(positions)
-	var matchRunes []rune
 	matchCount := 0
+	matchMask := 0
 
 	candidate := make([]rune, len(runes))
 	for mask := 1; mask < totalVariants; mask++ {
@@ -91,10 +120,8 @@ func restoreWord(word string) string {
 		if morph.IsKnownStem(string(candidate)) {
 			matchCount++
 			if matchCount == 1 {
-				matchRunes = make([]rune, len(candidate))
-				copy(matchRunes, candidate)
+				matchMask = mask
 			} else {
-				// Ambiguous: two or more matches.
 				return word
 			}
 		}
@@ -104,66 +131,32 @@ func restoreWord(word string) string {
 		return word
 	}
 
-	// Restore the original case pattern onto the matched runes.
-	return restoreCase(word, matchRunes)
+	// Reconstruct the unique match from the saved bitmask.
+	for bit, pos := range positions {
+		if matchMask&(1<<bit) != 0 {
+			runes[pos] = asciiToDiacritic[runes[pos]]
+		}
+	}
+	return restoreCase(word, runes)
 }
 
 // restoreCase applies the case pattern from the original word to the
 // restored runes. Original uppercase positions become uppercase in the output.
 func restoreCase(original string, restored []rune) string {
-	origRunes := []rune(original)
-	if len(origRunes) != len(restored) {
+	if utf8.RuneCountInString(original) != len(restored) {
 		return original
 	}
 
 	var b strings.Builder
-	b.Grow(len(original) + len(origRunes)) // diacritics may use more bytes
-	for i, r := range restored {
-		if unicode.IsUpper(origRunes[i]) {
-			b.WriteRune(azUpper(r))
+	b.Grow(len(original) + len(restored))
+	i := 0
+	for _, origR := range original {
+		if unicode.IsUpper(origR) {
+			b.WriteRune(azcase.Upper(restored[i]))
 		} else {
-			b.WriteRune(r)
+			b.WriteRune(restored[i])
 		}
-	}
-	return b.String()
-}
-
-// azLower returns the Azerbaijani-aware lowercase form of r.
-// Handles the dotted/dotless I distinction:
-//   - I (U+0049) -> ı (U+0131, dotless small i)
-//   - İ (U+0130, dotted capital I) -> i (U+0069)
-func azLower(r rune) rune {
-	switch r {
-	case 'I':
-		return '\u0131' // I -> ı
-	case '\u0130':
-		return 'i' // İ -> i
-	default:
-		return unicode.ToLower(r)
-	}
-}
-
-// azUpper returns the Azerbaijani-aware uppercase form of r.
-// Handles the dotted/dotless I distinction:
-//   - i (U+0069) -> İ (U+0130, dotted capital I)
-//   - ı (U+0131, dotless small i) -> I (U+0049)
-func azUpper(r rune) rune {
-	switch r {
-	case 'i':
-		return '\u0130' // i -> İ
-	case '\u0131':
-		return 'I' // ı -> I
-	default:
-		return unicode.ToUpper(r)
-	}
-}
-
-// toLower returns s with Azerbaijani-aware lowercasing applied to every rune.
-func toLower(s string) string {
-	var b strings.Builder
-	b.Grow(len(s))
-	for _, r := range s {
-		b.WriteRune(azLower(r))
+		i++
 	}
 	return b.String()
 }
