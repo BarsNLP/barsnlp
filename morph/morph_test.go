@@ -7,6 +7,7 @@ import (
 	"os"
 	"strings"
 	"testing"
+	"unicode/utf8"
 
 	"github.com/az-ai-labs/az-lang-nlp/internal/azcase"
 )
@@ -1314,13 +1315,17 @@ func FuzzAnalyze(f *testing.F) {
 		if len(results) == 0 {
 			t.Errorf("Analyze(%q) returned empty", word)
 		}
-		// Every analysis stem must be non-empty
+		// Every analysis stem must be non-empty.
+		// Reconstruction invariant only holds for valid UTF-8: invalid bytes
+		// are replaced with U+FFFD during rune iteration, making round-trip impossible.
+		validUTF8 := utf8.ValidString(word)
 		for _, a := range results {
 			if a.Stem == "" {
 				t.Errorf("Analyze(%q) produced empty stem", word)
 			}
-			// Verify reconstruction invariant
-			verifyInvariants(t, word, a)
+			if validUTF8 {
+				verifyInvariants(t, word, a)
+			}
 		}
 	})
 }
