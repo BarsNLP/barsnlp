@@ -144,3 +144,9 @@ func ContainsDigit(s string) bool {
 	}
 	return false
 }
+
+// IsApostrophe reports whether r is an apostrophe character
+// (ASCII apostrophe, right single quote, or modifier letter apostrophe).
+func IsApostrophe(r rune) bool {
+	return r == '\'' || r == '\u2019' || r == '\u02BC'
+}

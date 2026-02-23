@@ -1358,7 +1358,7 @@ func TestResultString(t *testing.T) {
 func TestTypeMapsComplete(t *testing.T) {
 	t.Parallel()
 
-	for i := Type(0); i <= TypeDateTime; i++ {
+	for i := Type(0); i <= TypeDuration; i++ {
 		name := i.String()
 		if strings.HasPrefix(name, "Type(") {
 			t.Errorf("Type %d has no name in typeNames", i)

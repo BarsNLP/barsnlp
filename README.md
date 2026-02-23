@@ -195,10 +195,6 @@ normalize.Normalize("Bu gozel seherde yasayiram.")
 // Case is preserved
 normalize.NormalizeWord("GOZEL")
 // GÖZƏL
-
-// Tokenize and normalize words (avoids double tokenization in pipelines)
-normalize.NormalizeWords("Bu gozel seherde yasayiram.")
-// [Bu gözəl seherde yasayiram.]
 ```
 
 Uses dictionary lookup against the morph package's ~12K stem dictionary to find unambiguous diacritic restorations. Words with multiple possible restorations or not found in the dictionary are returned unchanged. Handles hyphenated words and apostrophe suffixes. Input longer than 1 MiB is returned unchanged.

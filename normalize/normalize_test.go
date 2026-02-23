@@ -165,52 +165,6 @@ func TestNormalize(t *testing.T) {
 }
 
 // ---------------------------------------------------------------------------
-// NormalizeWords — table-driven tests
-// ---------------------------------------------------------------------------
-
-func TestNormalizeWords(t *testing.T) {
-	t.Parallel()
-
-	tests := []struct {
-		name  string
-		input string
-		want  []string
-	}{
-		{"basic text", "gozel soz", []string{"gözəl", "söz"}},
-		{"already correct", "kitab", []string{"kitab"}},
-		{"empty", "", nil},
-		{"punctuation only", "...", nil},
-		{"mixed known unknown", "gozel server", []string{"gözəl", "server"}},
-		{"single word restored", "azerbaycan", []string{"azərbaycan"}},
-	}
-
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			t.Parallel()
-			got := NormalizeWords(tt.input)
-			if len(got) != len(tt.want) {
-				t.Fatalf("NormalizeWords(%q) returned %d words, want %d", tt.input, len(got), len(tt.want))
-			}
-			for i := range got {
-				if got[i] != tt.want[i] {
-					t.Errorf("NormalizeWords(%q)[%d] = %q, want %q", tt.input, i, got[i], tt.want[i])
-				}
-			}
-		})
-	}
-}
-
-func TestNormalizeWordsMaxInput(t *testing.T) {
-	t.Parallel()
-
-	big := strings.Repeat("a", maxInputBytes+1)
-	got := NormalizeWords(big)
-	if got != nil {
-		t.Error("expected oversized input to return nil")
-	}
-}
-
-// ---------------------------------------------------------------------------
 // Idempotency
 // ---------------------------------------------------------------------------
 

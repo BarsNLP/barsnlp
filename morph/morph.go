@@ -255,7 +255,7 @@ var productiveTags = map[MorphTag]bool{
 	DerivAbstract:  true,
 	DerivPriv:      true,
 	DerivPoss:      true,
-	DerivVerb: true,
+	DerivVerb:      true,
 	// Voice suffixes are excluded: they are derivational and create new
 	// lexical items (danış "speak" ≠ dan "dawn" + -ış). When the whole
 	// word is a known dictionary stem, the whole-word interpretation wins.

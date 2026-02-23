@@ -139,12 +139,10 @@ qiymətləndir	0.7
 # --- Negative verbs (stem form) ---
 nifrət	-0.9
 qorx	-0.7
-narahat	-0.6
 ağla	-0.6
 kədərlən	-0.7
 əziyyət	-0.8
 incit	-0.7
-məyus	-0.7
 peşman	-0.6
 qısqan	-0.6
 şikayət	-0.5
@@ -171,25 +169,17 @@ dostluq	0.8
 sülh	0.8
 azadlıq	0.8
 xoşbəxtlik	0.9
-uğur	0.8
 qələbə	0.8
 sevinc	0.8
 fərəh	0.7
-ümid	0.6
 inam	0.7
-hörmət	0.7
 ehtiram	0.7
 minnətdarlıq	0.8
 həqiqət	0.6
-ədalət	0.8
 vətən	0.6
 ailə	0.6
 
 # --- Negative adverbs and nouns ---
-nifrət	-0.9
-qorxu	-0.8
-kədər	-0.7
-ağrı	-0.7
 xəstəlik	-0.7
 ölüm	-0.9
 müharibə	-0.9
@@ -205,10 +195,7 @@ işsizlik	-0.7
 korrupsiya	-0.8
 cinayət	-0.9
 terror	-0.9
-xəyanət	-0.9
-yalan	-0.7
 riyakarlıq	-0.8
-zərər	-0.6
 itkı	-0.6
 cəza	-0.6
 həbsxana	-0.7

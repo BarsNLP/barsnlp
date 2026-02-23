@@ -35,7 +35,7 @@ func parseLexicon(raw string) map[string]float64 {
 			continue
 		}
 		stem := strings.TrimSpace(parts[0])
-		score, err := strconv.ParseFloat(strings.TrimSpace(parts[1]), 64) //nolint:mnd
+		score, err := strconv.ParseFloat(strings.TrimSpace(parts[1]), 64)
 		if err != nil {
 			continue
 		}
@@ -46,6 +46,7 @@ func parseLexicon(raw string) map[string]float64 {
 
 // analyze implements the core sentiment analysis pipeline.
 func analyze(text string) Result {
+	text = azcase.ComposeNFC(text)
 	words := tokenizer.Words(text)
 	if len(words) == 0 {
 		return Result{}

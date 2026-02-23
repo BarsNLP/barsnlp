@@ -70,26 +70,6 @@ func Normalize(s string) string {
 	return b.String()
 }
 
-// NormalizeWords tokenizes text and returns words with diacritics restored.
-// Unlike Normalize, it returns the word slice directly without reassembling
-// into a string, eliminating double tokenization in downstream pipelines.
-// Returns nil for empty or oversized (>1 MiB) input.
-func NormalizeWords(text string) []string {
-	if text == "" || len(text) > maxInputBytes {
-		return nil
-	}
-	text = azcase.ComposeNFC(text)
-	words := tokenizer.Words(text)
-	if len(words) == 0 {
-		return nil
-	}
-	result := make([]string, len(words))
-	for i, w := range words {
-		result[i] = restoreWord(w)
-	}
-	return result
-}
-
 // NormalizeWord restores diacritics on a single word.
 // Returns the input unchanged if the word is unknown or ambiguous.
 func NormalizeWord(word string) string {
@@ -110,7 +90,7 @@ func restoreWordToken(word string) string {
 
 	// Handle apostrophe suffixes: restore the stem part only.
 	for i, r := range word {
-		if i > 0 && isApostrophe(r) && i < len(word)-1 {
+		if i > 0 && azcase.IsApostrophe(r) && i < len(word)-1 {
 			stem := word[:i]
 			suffix := word[i:]
 			return restoreWord(stem) + suffix
@@ -133,10 +113,4 @@ func restoreHyphenated(word string) string {
 		}
 	}
 	return strings.Join(parts, "-")
-}
-
-// isApostrophe reports whether r is an apostrophe character
-// (ASCII apostrophe, right single quote, or modifier letter apostrophe).
-func isApostrophe(r rune) bool {
-	return r == '\'' || r == '\u2019' || r == '\u02BC'
 }

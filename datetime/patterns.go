@@ -771,6 +771,11 @@ func applyQuantityOffset(ref time.Time, qty int, unit qtyUnit, dir dirKind) time
 // when parsing a numtext word-form number (e.g. "yüz iyirmi bir" = 3 words).
 const maxNumtextWords = 5
 
+// maxDurationQty caps the quantity in a single duration segment to prevent
+// time.Duration overflow (int64 nanoseconds). 1 000 000 hours ≈ 114 years,
+// well within int64 range even when multiplied by time.Hour.
+const maxDurationQty = 1_000_000
+
 // durationUnits maps unit words to their time.Duration multiplier.
 var durationUnits = map[string]time.Duration{
 	"saat":   time.Hour,
@@ -819,6 +824,9 @@ func appendDuration(all []Result, s string, words []wordSpan) []Result {
 		}
 
 		// We have at least one <qty> <unit> pair. Greedily consume more pairs.
+		if qty > maxDurationQty {
+			qty = maxDurationQty
+		}
 		dur := time.Duration(qty) * mul
 		spanStart := words[i].start
 		spanEnd := words[unitIdx].end
@@ -841,6 +849,9 @@ func appendDuration(all []Result, s string, words []wordSpan) []Result {
 			nMul, nOk := durationUnits[words[nUnitIdx].lower]
 			if !nOk {
 				break
+			}
+			if nQty > maxDurationQty {
+				nQty = maxDurationQty
 			}
 			dur += time.Duration(nQty) * nMul
 			spanEnd = words[nUnitIdx].end

@@ -2,6 +2,23 @@ package azcase
 
 import "strings"
 
+// nfcReplacer composes known Azerbaijani NFD pairs in a single pass.
+var nfcReplacer = strings.NewReplacer(
+	// Lowercase
+	"o\u0308", "\u00f6", // o + diaeresis -> ö
+	"u\u0308", "\u00fc", // u + diaeresis -> ü
+	"c\u0327", "\u00e7", // c + cedilla   -> ç
+	"s\u0327", "\u015f", // s + cedilla   -> ş
+	"g\u0306", "\u011f", // g + breve     -> ğ
+	// Uppercase
+	"O\u0308", "\u00d6", // O + diaeresis -> Ö
+	"U\u0308", "\u00dc", // U + diaeresis -> Ü
+	"C\u0327", "\u00c7", // C + cedilla   -> Ç
+	"S\u0327", "\u015e", // S + cedilla   -> Ş
+	"G\u0306", "\u011e", // G + breve     -> Ğ
+	"I\u0307", "\u0130", // I + dot above -> İ
+)
+
 // ComposeNFC replaces known NFD decomposed sequences for the 6 Azerbaijani
 // letters with diacritics: ö, ü, ç, ş, ğ, İ.
 // This is NOT full Unicode NFC — only Azerbaijani-specific pairs.
@@ -19,19 +36,5 @@ func ComposeNFC(s string) string {
 		return s
 	}
 
-	// Slow path: compose known Azerbaijani decomposed pairs.
-	// Lowercase
-	s = strings.ReplaceAll(s, "o\u0308", "\u00f6") // o + diaeresis -> ö
-	s = strings.ReplaceAll(s, "u\u0308", "\u00fc") // u + diaeresis -> ü
-	s = strings.ReplaceAll(s, "c\u0327", "\u00e7") // c + cedilla   -> ç
-	s = strings.ReplaceAll(s, "s\u0327", "\u015f") // s + cedilla   -> ş
-	s = strings.ReplaceAll(s, "g\u0306", "\u011f") // g + breve     -> ğ
-	// Uppercase
-	s = strings.ReplaceAll(s, "O\u0308", "\u00d6") // O + diaeresis -> Ö
-	s = strings.ReplaceAll(s, "U\u0308", "\u00dc") // U + diaeresis -> Ü
-	s = strings.ReplaceAll(s, "C\u0327", "\u00c7") // C + cedilla   -> Ç
-	s = strings.ReplaceAll(s, "S\u0327", "\u015e") // S + cedilla   -> Ş
-	s = strings.ReplaceAll(s, "G\u0306", "\u011e") // G + breve     -> Ğ
-	s = strings.ReplaceAll(s, "I\u0307", "\u0130") // I + dot above -> İ
-	return s
+	return nfcReplacer.Replace(s)
 }
