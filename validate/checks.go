@@ -13,76 +13,20 @@ import (
 
 // ── Homoglyph table ────────────────────────────────────────────────────
 
-// cyrToLat returns the Latin equivalent of a Cyrillic homoglyph rune,
-// or (0, false) if r is not a known confusable.
-func cyrToLat(r rune) (rune, bool) {
-	switch r {
-	case 'а':
-		return 'a', true
-	case 'е':
-		return 'e', true
-	case 'о':
-		return 'o', true
-	case 'р':
-		return 'p', true
-	case 'с':
-		return 'c', true
-	case 'х':
-		return 'x', true
-	case 'у':
-		return 'y', true
-	case 'А':
-		return 'A', true
-	case 'Е':
-		return 'E', true
-	case 'О':
-		return 'O', true
-	case 'Р':
-		return 'P', true
-	case 'С':
-		return 'C', true
-	case 'Х':
-		return 'X', true
-	case 'У':
-		return 'Y', true
-	}
-	return 0, false
+// cyrToLat maps Cyrillic homoglyph runes to their Latin equivalents.
+var cyrToLat = map[rune]rune{
+	'а': 'a', 'е': 'e', 'о': 'o', 'р': 'p', 'с': 'c', 'х': 'x', 'у': 'y',
+	'А': 'A', 'Е': 'E', 'О': 'O', 'Р': 'P', 'С': 'C', 'Х': 'X', 'У': 'Y',
+	'і': 'i', 'І': 'I', // U+0456 / U+0406
+	'ј': 'j', 'Ј': 'J', // U+0458 / U+0408
 }
 
-// latToCyr returns the Cyrillic equivalent of a Latin homoglyph rune,
-// or (0, false) if r is not a known confusable.
-func latToCyr(r rune) (rune, bool) {
-	switch r {
-	case 'a':
-		return 'а', true
-	case 'e':
-		return 'е', true
-	case 'o':
-		return 'о', true
-	case 'p':
-		return 'р', true
-	case 'c':
-		return 'с', true
-	case 'x':
-		return 'х', true
-	case 'y':
-		return 'у', true
-	case 'A':
-		return 'А', true
-	case 'E':
-		return 'Е', true
-	case 'O':
-		return 'О', true
-	case 'P':
-		return 'Р', true
-	case 'C':
-		return 'С', true
-	case 'X':
-		return 'Х', true
-	case 'Y':
-		return 'У', true
-	}
-	return 0, false
+// latToCyr maps Latin homoglyph runes to their Cyrillic equivalents.
+var latToCyr = map[rune]rune{
+	'a': 'а', 'e': 'е', 'o': 'о', 'p': 'р', 'c': 'с', 'x': 'х', 'y': 'у',
+	'A': 'А', 'E': 'Е', 'O': 'О', 'P': 'Р', 'C': 'С', 'X': 'Х', 'Y': 'У',
+	'i': 'і', 'I': 'І', // U+0456 / U+0406
+	'j': 'ј', 'J': 'Ј', // U+0458 / U+0408
 }
 
 // ── Spelling check ─────────────────────────────────────────────────────
@@ -109,11 +53,11 @@ func appendSpellingIssues(issues []Issue, tokens []tokenizer.Token, det detect.R
 		if tok.Type != tokenizer.Word || tok.Text == "" {
 			continue
 		}
-		if containsDigit(tok.Text) {
+		if azcase.ContainsDigit(tok.Text) {
 			continue
 		}
 		// Skip title-case unknown words (likely proper nouns).
-		if isTitleCase(tok.Text) {
+		if azcase.IsTitleCase(tok.Text) {
 			continue
 		}
 		if spell.IsCorrect(tok.Text) {
@@ -122,7 +66,7 @@ func appendSpellingIssues(issues []Issue, tokens []tokenizer.Token, det detect.R
 
 		suggestion := ""
 		if suggestions := spell.Suggest(tok.Text, maxEditDist); len(suggestions) > 0 {
-			suggestion = applyCase(tok.Text, suggestions[0].Term)
+			suggestion = azcase.ApplyCase(tok.Text, suggestions[0].Term)
 		}
 
 		issues = append(issues, Issue{
@@ -137,84 +81,6 @@ func appendSpellingIssues(issues []Issue, tokens []tokenizer.Token, det detect.R
 	}
 
 	return issues
-}
-
-// containsDigit reports whether s contains any digit rune.
-func containsDigit(s string) bool {
-	for _, r := range s {
-		if unicode.IsDigit(r) {
-			return true
-		}
-	}
-	return false
-}
-
-// isTitleCase reports whether s has its first rune uppercase and is not
-// entirely uppercase (which would be an acronym).
-func isTitleCase(s string) bool {
-	r, size := utf8.DecodeRuneInString(s)
-	if r == utf8.RuneError || !unicode.IsUpper(r) {
-		return false
-	}
-	rest := s[size:]
-	if rest == "" {
-		return false
-	}
-	for _, c := range rest {
-		if unicode.IsLetter(c) && !unicode.IsUpper(c) {
-			return true
-		}
-	}
-	return false
-}
-
-// applyCase transfers the case pattern of original onto corrected.
-func applyCase(original, corrected string) string {
-	if original == "" || corrected == "" {
-		return corrected
-	}
-	if isAllUpper(original) {
-		return toUpper(corrected)
-	}
-	firstRune, _ := utf8.DecodeRuneInString(original)
-	if unicode.IsUpper(firstRune) {
-		return upperFirst(corrected)
-	}
-	return corrected
-}
-
-func isAllUpper(s string) bool {
-	hasLetter := false
-	for _, r := range s {
-		if unicode.IsLetter(r) {
-			hasLetter = true
-			if !unicode.IsUpper(r) {
-				return false
-			}
-		}
-	}
-	return hasLetter
-}
-
-func toUpper(s string) string {
-	var sb strings.Builder
-	sb.Grow(len(s))
-	for _, r := range s {
-		sb.WriteRune(azcase.Upper(r))
-	}
-	return sb.String()
-}
-
-func upperFirst(s string) string {
-	r, size := utf8.DecodeRuneInString(s)
-	if r == utf8.RuneError || size == 0 {
-		return s
-	}
-	var sb strings.Builder
-	sb.Grow(len(s))
-	sb.WriteRune(azcase.Upper(r))
-	sb.WriteString(s[size:])
-	return sb.String()
 }
 
 // ── Punctuation check ──────────────────────────────────────────────────
@@ -236,7 +102,7 @@ func appendPunctuationIssues(issues []Issue, tokens []tokenizer.Token) []Issue {
 		tok := &tokens[i]
 
 		// Double/multiple spaces.
-		if tok.Type == tokenizer.Space && countSpaces(tok.Text) >= minDoubleSpaces {
+		if tok.Type == tokenizer.Space && strings.Count(tok.Text, " ") >= minDoubleSpaces {
 			issues = append(issues, Issue{
 				Text:       tok.Text,
 				Start:      tok.Start,
@@ -339,17 +205,6 @@ func isSentenceEnd(text string) bool {
 	return false
 }
 
-// countSpaces counts the number of space characters (U+0020) in s.
-func countSpaces(s string) int {
-	n := 0
-	for _, r := range s {
-		if r == ' ' {
-			n++
-		}
-	}
-	return n
-}
-
 // ── Layout check (homoglyphs) ──────────────────────────────────────────
 
 // appendLayoutIssues detects homoglyph characters from the wrong script.
@@ -401,13 +256,13 @@ func replaceHomoglyphs(word string, dominant detect.Script) (string, bool) {
 		switch dominant {
 		case detect.ScriptLatn:
 			if unicode.Is(unicode.Cyrillic, r) {
-				if _, ok := cyrToLat(r); ok {
+				if _, ok := cyrToLat[r]; ok {
 					needsReplacement = true
 				}
 			}
 		case detect.ScriptCyrl:
 			if unicode.Is(unicode.Latin, r) {
-				if _, ok := latToCyr(r); ok {
+				if _, ok := latToCyr[r]; ok {
 					needsReplacement = true
 				}
 			}
@@ -428,12 +283,12 @@ func replaceHomoglyphs(word string, dominant detect.Script) (string, bool) {
 	for _, r := range word {
 		switch dominant {
 		case detect.ScriptLatn:
-			if lat, ok := cyrToLat(r); ok {
+			if lat, ok := cyrToLat[r]; ok {
 				sb.WriteRune(lat)
 				continue
 			}
 		case detect.ScriptCyrl:
-			if cyr, ok := latToCyr(r); ok {
+			if cyr, ok := latToCyr[r]; ok {
 				sb.WriteRune(cyr)
 				continue
 			}
@@ -519,23 +374,26 @@ func isNonDominantScript(word string, dominant detect.Script) bool {
 
 // allHomoglyphs reports whether every letter rune in word is a known
 // homoglyph character. Used to avoid double-reporting with layout check.
+// Returns false for words with no letter runes (avoids vacuous truth).
 func allHomoglyphs(word string, dominant detect.Script) bool {
+	hasLetter := false
 	for _, r := range word {
 		if !unicode.IsLetter(r) {
 			continue
 		}
+		hasLetter = true
 		switch dominant {
 		case detect.ScriptLatn:
-			if _, ok := cyrToLat(r); !ok {
+			if _, ok := cyrToLat[r]; !ok {
 				return false
 			}
 		case detect.ScriptCyrl:
-			if _, ok := latToCyr(r); !ok {
+			if _, ok := latToCyr[r]; !ok {
 				return false
 			}
 		default:
 			return false
 		}
 	}
-	return true
+	return hasLetter
 }

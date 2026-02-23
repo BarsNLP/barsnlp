@@ -122,12 +122,10 @@ func TestValidateSpelling(t *testing.T) {
 				t.Error("spelling issue has no suggestion")
 			}
 			// Verify byte offsets.
-			if t.Name() != "" {
-				src := "Bu ketab gözəldir."
-				if src[issue.Start:issue.End] != issue.Text {
-					t.Errorf("offset mismatch: text[%d:%d] = %q, issue.Text = %q",
-						issue.Start, issue.End, src[issue.Start:issue.End], issue.Text)
-				}
+			src := "Bu ketab gözəldir."
+			if src[issue.Start:issue.End] != issue.Text {
+				t.Errorf("offset mismatch: text[%d:%d] = %q, issue.Text = %q",
+					issue.Start, issue.End, src[issue.Start:issue.End], issue.Text)
 			}
 			break
 		}

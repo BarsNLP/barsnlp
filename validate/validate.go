@@ -234,14 +234,33 @@ func Validate(text string) Report {
 
 // IsValid reports whether text has no error-severity issues.
 // Returns true for empty or oversized input (no issues found).
+// More efficient than checking Validate().Score: stops at the first
+// error-severity issue without sorting or scoring.
 // Safe for concurrent use.
 func IsValid(text string) bool {
-	report := Validate(text)
-	for _, issue := range report.Issues {
-		if issue.Severity == Error {
-			return false
+	if text == "" || len(text) > maxInputBytes {
+		return true
+	}
+
+	tokens := tokenizer.WordTokens(text)
+	if len(tokens) == 0 {
+		return true
+	}
+
+	detection := detect.Detect(text)
+
+	// Run each check and return false as soon as any error is found.
+	for _, check := range []func([]Issue, []tokenizer.Token, detect.Result) []Issue{
+		appendSpellingIssues,
+		appendLayoutIssues,
+	} {
+		for _, issue := range check(nil, tokens, detection) {
+			if issue.Severity == Error {
+				return false
+			}
 		}
 	}
+
 	return true
 }
 
