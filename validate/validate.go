@@ -156,8 +156,8 @@ func (s *Severity) UnmarshalJSON(data []byte) error {
 // Issue represents a single validation finding with position information.
 type Issue struct {
 	Text       string    `json:"text"`
-	Start      int       `json:"start"`      // byte offset, inclusive
-	End        int       `json:"end"`        // byte offset, exclusive
+	Start      int       `json:"start"` // byte offset, inclusive
+	End        int       `json:"end"`   // byte offset, exclusive
 	Type       IssueType `json:"type"`
 	Severity   Severity  `json:"severity"`
 	Message    string    `json:"message"`

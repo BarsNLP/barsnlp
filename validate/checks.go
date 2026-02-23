@@ -153,31 +153,28 @@ func appendPunctuationIssues(issues []Issue, tokens []tokenizer.Token) []Issue {
 		// The tokenizer emits each punctuation character as a separate
 		// token, so we detect runs of consecutive identical tokens.
 		// Only report on the first token in a run.
-		if tok.Type == tokenizer.Punctuation {
-			if i > 0 && tokens[i-1].Type == tokenizer.Punctuation && tokens[i-1].Text == tok.Text {
-				// Continuation of a run already reported.
-			} else {
-				count := 1
-				for j := i + 1; j < len(tokens); j++ {
-					if tokens[j].Type != tokenizer.Punctuation || tokens[j].Text != tok.Text {
-						break
-					}
-					count++
+		if tok.Type == tokenizer.Punctuation &&
+			(i == 0 || tokens[i-1].Type != tokenizer.Punctuation || tokens[i-1].Text != tok.Text) {
+			count := 1
+			for j := i + 1; j < len(tokens); j++ {
+				if tokens[j].Type != tokenizer.Punctuation || tokens[j].Text != tok.Text {
+					break
 				}
-				if count >= minConsecutivePunct {
-					r, _ := utf8.DecodeRuneInString(tok.Text)
-					if !(r == '.' && count == ellipsisLength) {
-						last := &tokens[i+count-1]
-						issues = append(issues, Issue{
-							Text:       strings.Repeat(tok.Text, count),
-							Start:      tok.Start,
-							End:        last.End,
-							Type:       Punctuation,
-							Severity:   Info,
-							Message:    "repeated punctuation",
-							Suggestion: tok.Text,
-						})
-					}
+				count++
+			}
+			if count >= minConsecutivePunct {
+				r, _ := utf8.DecodeRuneInString(tok.Text)
+				if r != '.' || count != ellipsisLength {
+					last := &tokens[i+count-1]
+					issues = append(issues, Issue{
+						Text:       strings.Repeat(tok.Text, count),
+						Start:      tok.Start,
+						End:        last.End,
+						Type:       Punctuation,
+						Severity:   Info,
+						Message:    "repeated punctuation",
+						Suggestion: tok.Text,
+					})
 				}
 			}
 		}

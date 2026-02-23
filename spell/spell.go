@@ -274,7 +274,6 @@ func Correct(text string) string {
 	return sb.String()
 }
 
-
 // isApostrophe reports whether r is an apostrophe character
 // (ASCII apostrophe, right single quote, or modifier letter apostrophe).
 func isApostrophe(r rune) bool {
