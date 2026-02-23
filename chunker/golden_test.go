@@ -16,9 +16,9 @@ type goldenCase struct {
 	Input   string  `json:"input"`
 	Size    int     `json:"size"`
 	Overlap int     `json:"overlap"`
-	WantBS  []Chunk `json:"by_size"`
-	WantSe  []Chunk `json:"by_sentence"`
-	WantRe  []Chunk `json:"recursive"`
+	WantBySize     []Chunk `json:"by_size"`
+	WantBySentence []Chunk `json:"by_sentence"`
+	WantRecursive  []Chunk `json:"recursive"`
 }
 
 const goldenPath = "../data/golden/chunker.json"
@@ -50,15 +50,15 @@ func TestGolden(t *testing.T) {
 			gotSe := BySentence(tc.Input, tc.Size, tc.Overlap)
 			gotRe := Recursive(tc.Input, tc.Size, tc.Overlap)
 
-			if msg := diffChunks(gotBS, tc.WantBS); msg != "" {
+			if msg := diffChunks(gotBS, tc.WantBySize); msg != "" {
 				t.Errorf("BySize(%q, %d, %d): %s", tc.Name, tc.Size, tc.Overlap, msg)
 			}
 
-			if msg := diffChunks(gotSe, tc.WantSe); msg != "" {
+			if msg := diffChunks(gotSe, tc.WantBySentence); msg != "" {
 				t.Errorf("BySentence(%q, %d, %d): %s", tc.Name, tc.Size, tc.Overlap, msg)
 			}
 
-			if msg := diffChunks(gotRe, tc.WantRe); msg != "" {
+			if msg := diffChunks(gotRe, tc.WantRecursive); msg != "" {
 				t.Errorf("Recursive(%q, %d, %d): %s", tc.Name, tc.Size, tc.Overlap, msg)
 			}
 		})
@@ -80,9 +80,9 @@ func updateGoldenFile(t *testing.T) {
 
 	for i := range cases {
 		tc := &cases[i]
-		tc.WantBS = BySize(tc.Input, tc.Size, tc.Overlap)
-		tc.WantSe = BySentence(tc.Input, tc.Size, tc.Overlap)
-		tc.WantRe = Recursive(tc.Input, tc.Size, tc.Overlap)
+		tc.WantBySize = BySize(tc.Input, tc.Size, tc.Overlap)
+		tc.WantBySentence = BySentence(tc.Input, tc.Size, tc.Overlap)
+		tc.WantRecursive = Recursive(tc.Input, tc.Size, tc.Overlap)
 	}
 
 	out, err := json.MarshalIndent(cases, "", "  ")

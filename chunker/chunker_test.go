@@ -86,7 +86,7 @@ func TestBySizeOverlapContent(t *testing.T) {
 	input := "abcdefghijklmnopqrst" // 20 runes
 	chunks := BySize(input, 10, 5)
 
-	if len(chunks) < 2 { //nolint:mnd
+	if len(chunks) < 2 {
 		t.Fatalf("expected at least 2 chunks, got %d", len(chunks))
 	}
 
@@ -166,6 +166,19 @@ func TestBySentenceSingleSentenceExceedsSize(t *testing.T) {
 	verifyInvariants(t, input, chunks)
 }
 
+func TestBySentenceOverlapProgressGuarantee(t *testing.T) {
+	// Regression: when overlap >= total rune count of all sentences in a group,
+	// groupStart must still advance to prevent an infinite loop producing
+	// 10,000 duplicate chunks.
+	input := "Bir. İki. Üç. Dörd. Beş."
+	chunks := BySentence(input, 20, 19)
+
+	if len(chunks) > 100 {
+		t.Fatalf("expected reasonable chunk count, got %d (degenerate loop?)", len(chunks))
+	}
+	verifyInvariants(t, input, chunks)
+}
+
 // ---------------------------------------------------------------------------
 // Recursive
 // ---------------------------------------------------------------------------
@@ -222,7 +235,7 @@ func TestRecursiveParagraphThenSentence(t *testing.T) {
 	input := "Qısa paraqraf.\n\nBirinci uzun cümlə burada yazılıb. İkinci uzun cümlə orada yazılıb."
 	chunks := Recursive(input, 40, 0)
 
-	if len(chunks) < 2 { //nolint:mnd
+	if len(chunks) < 2 {
 		t.Fatalf("expected at least 2 chunks, got %d", len(chunks))
 	}
 

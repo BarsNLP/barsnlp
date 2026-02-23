@@ -66,7 +66,8 @@ func bySentence(text string, size, overlap int) []Chunk {
 		})
 
 		// Compute overlap: walk backwards from groupEnd to find sentences
-		// that fit within the overlap rune budget.
+		// that fit within the overlap rune budget. Ensure groupStart
+		// advances by at least one sentence to guarantee progress.
 		overlapSentences := 0
 		if overlap > 0 && groupEnd < len(sentences) {
 			overlapRunes := 0
@@ -80,7 +81,11 @@ func bySentence(text string, size, overlap int) []Chunk {
 			}
 		}
 
-		groupStart = groupEnd - overlapSentences
+		nextStart := groupEnd - overlapSentences
+		if nextStart <= groupStart {
+			nextStart = groupStart + 1
+		}
+		groupStart = nextStart
 	}
 
 	return chunks

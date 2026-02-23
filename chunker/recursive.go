@@ -69,12 +69,12 @@ func splitFragment(text string, frag fragment, size int, level splitLevel) []fra
 
 	switch level {
 	case levelParagraph:
-		parts = splitByParagraph(text, frag)
+		parts = splitByParagraph(frag, fragText)
 	case levelSentence:
-		parts = splitBySentenceTokens(text, frag)
+		parts = splitByTokens(frag, tokenizer.SentenceTokens(fragText))
 	case levelWord:
-		parts = splitByWordTokens(text, frag)
-	case levelRune:
+		parts = splitByTokens(frag, tokenizer.WordTokens(fragText))
+	default: // levelRune or any future level beyond levelWord
 		return splitByRune(text, frag, size)
 	}
 
@@ -99,34 +99,29 @@ func splitFragment(text string, frag fragment, size int, level splitLevel) []fra
 }
 
 // splitByParagraph splits a fragment on "\n\n" boundaries.
-func splitByParagraph(text string, frag fragment) []fragment {
-	fragText := text[frag.start:frag.end]
-	parts := splitKeepSeparator(fragText, paragraphSeparator)
-	return offsetFragments(parts, frag.start)
-}
-
-// splitBySentenceTokens splits a fragment using the tokenizer's sentence splitter.
-func splitBySentenceTokens(text string, frag fragment) []fragment {
-	fragText := text[frag.start:frag.end]
-	tokens := tokenizer.SentenceTokens(fragText)
-	if len(tokens) <= 1 {
-		return []fragment{frag}
-	}
-
-	result := make([]fragment, len(tokens))
-	for i, t := range tokens {
-		result[i] = fragment{
-			start: frag.start + t.Start,
-			end:   frag.start + t.End,
+// The separator is attached to the preceding segment to preserve byte coverage.
+func splitByParagraph(frag fragment, fragText string) []fragment {
+	sep := paragraphSeparator
+	var result []fragment
+	pos := 0
+	for {
+		idx := strings.Index(fragText[pos:], sep)
+		if idx < 0 {
+			break
 		}
+		end := pos + idx + len(sep)
+		result = append(result, fragment{start: frag.start + pos, end: frag.start + end})
+		pos = end
+	}
+	if pos < len(fragText) {
+		result = append(result, fragment{start: frag.start + pos, end: frag.end})
 	}
 	return result
 }
 
-// splitByWordTokens splits a fragment using the tokenizer's word splitter.
-func splitByWordTokens(text string, frag fragment) []fragment {
-	fragText := text[frag.start:frag.end]
-	tokens := tokenizer.WordTokens(fragText)
+// splitByTokens splits a fragment using the given tokenizer function.
+// Used for both sentence and word level splitting.
+func splitByTokens(frag fragment, tokens []tokenizer.Token) []fragment {
 	if len(tokens) <= 1 {
 		return []fragment{frag}
 	}
@@ -148,46 +143,14 @@ func splitByRune(text string, frag fragment, size int) []fragment {
 	offsets := buildRuneOffsets(fragText)
 	totalRunes := len(offsets) - 1
 
-	result := make([]fragment, 0, totalRunes/size+1)
-	for runePos := 0; runePos < totalRunes; runePos += size {
+	capHint := min(totalRunes/size+1, maxChunks)
+	result := make([]fragment, 0, capHint)
+	for runePos := 0; runePos < totalRunes && len(result) < maxChunks; runePos += size {
 		endRune := min(runePos+size, totalRunes)
 		result = append(result, fragment{
 			start: frag.start + offsets[runePos],
 			end:   frag.start + offsets[endRune],
 		})
-	}
-	return result
-}
-
-// splitKeepSeparator splits s by sep and returns sub-strings that include
-// the separator attached to the preceding segment (preserving byte coverage).
-func splitKeepSeparator(s, sep string) []string {
-	parts := strings.Split(s, sep)
-	if len(parts) <= 1 {
-		return parts
-	}
-
-	// Re-attach separators to the preceding part so that concatenation
-	// of all returned strings reconstructs s exactly.
-	result := make([]string, 0, len(parts))
-	for i, p := range parts {
-		if i < len(parts)-1 {
-			result = append(result, p+sep)
-		} else if p != "" {
-			result = append(result, p)
-		}
-	}
-	return result
-}
-
-// offsetFragments converts string slices (relative to some sub-string)
-// into fragment structs with byte offsets relative to the original text.
-func offsetFragments(parts []string, baseOffset int) []fragment {
-	result := make([]fragment, len(parts))
-	pos := baseOffset
-	for i, p := range parts {
-		result[i] = fragment{start: pos, end: pos + len(p)}
-		pos += len(p)
 	}
 	return result
 }
@@ -202,6 +165,14 @@ func mergeFragments(text string, frags []fragment, size int) []fragment {
 	current := frags[0]
 	currentRunes := utf8.RuneCountInString(text[current.start:current.end])
 
+	emit := func() {
+		if currentRunes >= minChunkRunes || len(merged) == 0 {
+			merged = append(merged, current)
+		} else {
+			merged[len(merged)-1].end = current.end
+		}
+	}
+
 	for i := 1; i < len(frags); i++ {
 		nextRunes := utf8.RuneCountInString(text[frags[i].start:frags[i].end])
 
@@ -209,28 +180,13 @@ func mergeFragments(text string, frags []fragment, size int) []fragment {
 			current.end = frags[i].end
 			currentRunes += nextRunes
 		} else {
-			if currentRunes >= minChunkRunes {
-				merged = append(merged, current)
-			} else if len(merged) > 0 {
-				// Merge tiny fragment with previous.
-				merged[len(merged)-1].end = current.end
-			} else {
-				merged = append(merged, current)
-			}
+			emit()
 			current = frags[i]
 			currentRunes = nextRunes
 		}
 	}
 
-	// Emit the last accumulated fragment.
-	if currentRunes >= minChunkRunes {
-		merged = append(merged, current)
-	} else if len(merged) > 0 {
-		merged[len(merged)-1].end = current.end
-	} else {
-		merged = append(merged, current)
-	}
-
+	emit()
 	return merged
 }
 
@@ -239,10 +195,6 @@ func mergeFragments(text string, frags []fragment, size int) []fragment {
 func applyOverlap(text string, frags []fragment, overlap int) []Chunk {
 	if len(frags) == 0 {
 		return nil
-	}
-
-	if overlap <= 0 {
-		return fragsToChunks(text, frags)
 	}
 
 	chunks := make([]Chunk, 0, len(frags))
@@ -256,9 +208,8 @@ func applyOverlap(text string, frags []fragment, overlap int) []Chunk {
 
 		// For chunks after the first, extend the start backwards by overlap runes
 		// into the previous fragment's territory.
-		if i > 0 {
-			prevEnd := frags[i-1].end
-			startByte = walkBackRunes(text, f.start, prevEnd, overlap)
+		if i > 0 && overlap > 0 {
+			startByte = walkBackRunes(text, f.start, frags[i-1].end, overlap)
 		}
 
 		chunks = append(chunks, Chunk{
@@ -287,21 +238,4 @@ func walkBackRunes(text string, pos, limit, n int) int {
 		result -= size
 	}
 	return result
-}
-
-// fragsToChunks converts fragments to Chunks without overlap.
-func fragsToChunks(text string, frags []fragment) []Chunk {
-	chunks := make([]Chunk, 0, len(frags))
-	for _, f := range frags {
-		if len(chunks) >= maxChunks {
-			break
-		}
-		chunks = append(chunks, Chunk{
-			Text:  text[f.start:f.end],
-			Start: f.start,
-			End:   f.end,
-			Index: len(chunks),
-		})
-	}
-	return chunks
 }

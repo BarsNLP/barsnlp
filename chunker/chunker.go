@@ -88,6 +88,10 @@ func BySize(text string, size, overlap int) []Chunk {
 // bySize is the unexported implementation of BySize, also used as a fallback
 // by the Recursive strategy for fragments that cannot be split further.
 func bySize(text string, size, overlap int) []Chunk {
+	if size <= 0 || text == "" {
+		return nil
+	}
+
 	totalRunes := utf8.RuneCountInString(text)
 	if totalRunes == 0 {
 		return nil
@@ -101,7 +105,8 @@ func bySize(text string, size, overlap int) []Chunk {
 	// Pre-compute rune-to-byte offset map for the input.
 	runeOffsets := buildRuneOffsets(text)
 
-	chunks := make([]Chunk, 0, totalRunes/step+1)
+	capHint := min(totalRunes/step+1, maxChunks)
+	chunks := make([]Chunk, 0, capHint)
 	runePos := 0
 
 	for runePos < totalRunes && len(chunks) < maxChunks {
