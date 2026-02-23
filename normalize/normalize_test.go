@@ -78,6 +78,8 @@ func TestNormalizeWord(t *testing.T) {
 		// -- Hyphenated words --
 
 		{"hyphenated restore", "gozel-kitab", "gözəl-kitab"},
+		{"hyphenated 2 parts works", "gozel-soz", "gözəl-söz"},
+		{"hyphenated 9 parts unchanged", "a-b-c-d-e-f-g-h-i", "a-b-c-d-e-f-g-h-i"},
 
 		// -- Edge cases --
 
@@ -159,6 +161,52 @@ func TestNormalize(t *testing.T) {
 				t.Errorf("Normalize(%q) = %q, want %q", tt.input, got, tt.want)
 			}
 		})
+	}
+}
+
+// ---------------------------------------------------------------------------
+// NormalizeWords — table-driven tests
+// ---------------------------------------------------------------------------
+
+func TestNormalizeWords(t *testing.T) {
+	t.Parallel()
+
+	tests := []struct {
+		name  string
+		input string
+		want  []string
+	}{
+		{"basic text", "gozel soz", []string{"gözəl", "söz"}},
+		{"already correct", "kitab", []string{"kitab"}},
+		{"empty", "", nil},
+		{"punctuation only", "...", nil},
+		{"mixed known unknown", "gozel server", []string{"gözəl", "server"}},
+		{"single word restored", "azerbaycan", []string{"azərbaycan"}},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			t.Parallel()
+			got := NormalizeWords(tt.input)
+			if len(got) != len(tt.want) {
+				t.Fatalf("NormalizeWords(%q) returned %d words, want %d", tt.input, len(got), len(tt.want))
+			}
+			for i := range got {
+				if got[i] != tt.want[i] {
+					t.Errorf("NormalizeWords(%q)[%d] = %q, want %q", tt.input, i, got[i], tt.want[i])
+				}
+			}
+		})
+	}
+}
+
+func TestNormalizeWordsMaxInput(t *testing.T) {
+	t.Parallel()
+
+	big := strings.Repeat("a", maxInputBytes+1)
+	got := NormalizeWords(big)
+	if got != nil {
+		t.Error("expected oversized input to return nil")
 	}
 }
 

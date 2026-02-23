@@ -43,6 +43,18 @@ func Upper(r rune) rune {
 
 // ToLower returns s with Azerbaijani-aware lowercasing applied to every rune.
 func ToLower(s string) string {
+	// Fast path: skip allocation when string is already lowercase.
+	needsWork := false
+	for _, r := range s {
+		if Lower(r) != r {
+			needsWork = true
+			break
+		}
+	}
+	if !needsWork {
+		return s
+	}
+
 	var b strings.Builder
 	b.Grow(len(s))
 	for _, r := range s {

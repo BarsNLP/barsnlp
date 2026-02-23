@@ -28,12 +28,18 @@ package normalize
 import (
 	"strings"
 
+	"github.com/az-ai-labs/az-lang-nlp/internal/azcase"
 	"github.com/az-ai-labs/az-lang-nlp/tokenizer"
 )
 
 // maxInputBytes is the maximum input size for Normalize.
 // Inputs exceeding this are returned unchanged.
 const maxInputBytes = 1 << 20 // 1 MiB
+
+// maxHyphenParts is the maximum number of segments a hyphenated word may have.
+// Words split into more parts than this are returned unchanged to avoid
+// processing pathological inputs.
+const maxHyphenParts = 8
 
 // Normalize restores missing Azerbaijani diacritics in text.
 // Tokenizes the input, restores each word independently, and reassembles.
@@ -43,6 +49,7 @@ func Normalize(s string) string {
 	if s == "" || len(s) > maxInputBytes {
 		return s
 	}
+	s = azcase.ComposeNFC(s)
 
 	tokens := tokenizer.WordTokens(s)
 	if len(tokens) == 0 {
@@ -63,12 +70,33 @@ func Normalize(s string) string {
 	return b.String()
 }
 
+// NormalizeWords tokenizes text and returns words with diacritics restored.
+// Unlike Normalize, it returns the word slice directly without reassembling
+// into a string, eliminating double tokenization in downstream pipelines.
+// Returns nil for empty or oversized (>1 MiB) input.
+func NormalizeWords(text string) []string {
+	if text == "" || len(text) > maxInputBytes {
+		return nil
+	}
+	text = azcase.ComposeNFC(text)
+	words := tokenizer.Words(text)
+	if len(words) == 0 {
+		return nil
+	}
+	result := make([]string, len(words))
+	for i, w := range words {
+		result[i] = restoreWord(w)
+	}
+	return result
+}
+
 // NormalizeWord restores diacritics on a single word.
 // Returns the input unchanged if the word is unknown or ambiguous.
 func NormalizeWord(word string) string {
 	if word == "" || len(word) > maxWordBytes {
 		return word
 	}
+	word = azcase.ComposeNFC(word)
 	return restoreWordToken(word)
 }
 
@@ -93,8 +121,12 @@ func restoreWordToken(word string) string {
 }
 
 // restoreHyphenated splits on hyphens, restores each part, and rejoins.
+// Words with more than maxHyphenParts segments are returned unchanged.
 func restoreHyphenated(word string) string {
 	parts := strings.Split(word, "-")
+	if len(parts) <= 1 || len(parts) > maxHyphenParts {
+		return word
+	}
 	for i, part := range parts {
 		if part != "" {
 			parts[i] = restoreWord(part)
