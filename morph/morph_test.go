@@ -359,6 +359,7 @@ func TestMorphTagString(t *testing.T) {
 		{TensePresent, "TensePresent"},
 		{TenseFuture, "TenseFuture"},
 		{TenseAorist, "TenseAorist"},
+		{TensePastEvi, "TensePastEvi"},
 		{MoodOblig, "MoodOblig"},
 		{MoodCond, "MoodCond"},
 		{MoodImper, "MoodImper"},
@@ -392,7 +393,7 @@ func TestMorphTagJSON(t *testing.T) {
 		Copula,
 		VoicePass, VoiceReflex, VoiceRecip, VoiceCaus,
 		Negation,
-		TensePastDef, TensePastIndef, TensePresent, TenseFuture, TenseAorist,
+		TensePastDef, TensePastIndef, TensePresent, TenseFuture, TenseAorist, TensePastEvi,
 		MoodOblig, MoodCond, MoodImper,
 		Participle, ParticipleAdj, Gerund,
 		Pers1Sg, Pers2Sg, Pers1Pl, Pers2Pl, Pers3,
@@ -503,8 +504,8 @@ func TestAnalysisString(t *testing.T) {
 // ---------------------------------------------------------------------------
 
 func TestSuffixTableCompleteness(t *testing.T) {
-	if len(suffixRules) != 40 {
-		t.Errorf("suffixRules has %d entries, want 40", len(suffixRules))
+	if len(suffixRules) != 41 {
+		t.Errorf("suffixRules has %d entries, want 41", len(suffixRules))
 	}
 
 	// Check all surfaces are lowercase
@@ -540,7 +541,7 @@ func TestSuffixTableCompleteness(t *testing.T) {
 		VoicePass: true, VoiceReflex: true, VoiceRecip: true, VoiceCaus: true,
 		Negation: true,
 		TensePastDef: true, TensePastIndef: true, TensePresent: true,
-		TenseFuture: true, TenseAorist: true,
+		TenseFuture: true, TenseAorist: true, TensePastEvi: true,
 		MoodOblig: true, MoodCond: true,
 		Participle: true, Gerund: true,
 		Pers1Sg: true, Pers2Sg: true, Pers1Pl: true, Pers2Pl: true, Pers3: true,
@@ -670,6 +671,13 @@ func TestStem(t *testing.T) {
 		{"reciprocal danışır", "danışır", "danış"},
 		{"reciprocal barışdı", "barışdı", "barış"},
 		{"reciprocal yarışır", "yarışır", "yarış"},
+
+		// -- Evidential past (-ıb) --
+		{"verb edib", "edib", "ed"},
+		{"verb bildirib", "bildirib", "bildir"},
+		{"verb gəlib", "gəlib", "gəl"},
+		{"verb olunub", "olunub", "ol"},
+		{"verb yazılıb", "yazılıb", "yazıl"},
 	}
 
 	for _, tt := range tests {
@@ -866,6 +874,25 @@ func TestAnalyzeSuffixCategories(t *testing.T) {
 
 		// Aorist conjugation
 		{"yazaram", "yaz", []MorphTag{TenseAorist, Pers1Sg}},
+
+		// Verb: evidential past (bare; stem is "ed" not "et" because
+		// t→d voicing at morpheme boundary is not yet restored)
+		{"edib", "ed", []MorphTag{TensePastEvi}},
+
+		// Verb: evidential past + person 2sg
+		{"gəlibsən", "gəl", []MorphTag{TensePastEvi, Pers2Sg}},
+
+		// Verb: evidential past + person 3pl
+		{"gəliblər", "gəl", []MorphTag{TensePastEvi, Pers3}},
+
+		// Verb: evidential past + copula
+		{"gəlibdir", "gəl", []MorphTag{TensePastEvi, Copula}},
+
+		// Verb: negation + evidential past skipped: buffer y between
+		// negation -mə and -ıb (gəl+mə+y+ib) not yet handled by FSM.
+
+		// Verb: voice passive + evidential past
+		{"yazılıb", "yaz", []MorphTag{VoicePass, TensePastEvi}},
 	}
 
 	for _, tt := range tests {
@@ -1162,6 +1189,7 @@ func TestVerifyInvariants(t *testing.T) {
 		"Kitablar", "KITABLAR",
 		"müəllimdir",
 		"bilirəm", "bilirsən", "bilirik", "bilirsiniz", "bilirlər",
+		"edib", "gəlib", "gəlibsən", "gəliblər", "gəlibdir", "yazılıb",
 	}
 
 	for _, w := range words {

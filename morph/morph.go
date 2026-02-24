@@ -100,6 +100,7 @@ const (
 	TensePresent                                // -ir/-ir, -ur/-ur, -ar/-er
 	TenseFuture                                 // -acaq/-ecek
 	TenseAorist                                 // -ar/-er (aorist/habitual)
+	TensePastEvi                                // -ıb/-ib/-ub/-üb (evidential past, nəqli keçmiş)
 )
 
 const (
@@ -163,6 +164,7 @@ var morphTagNames = map[MorphTag]string{
 	TensePresent:   "TensePresent",
 	TenseFuture:    "TenseFuture",
 	TenseAorist:    "TenseAorist",
+	TensePastEvi:   "TensePastEvi",
 
 	MoodOblig: "MoodOblig",
 	MoodCond:  "MoodCond",
@@ -218,6 +220,7 @@ var morphTagFromName = map[string]MorphTag{
 	"TensePresent":   TensePresent,
 	"TenseFuture":    TenseFuture,
 	"TenseAorist":    TenseAorist,
+	"TensePastEvi":   TensePastEvi,
 
 	"MoodOblig": MoodOblig,
 	"MoodCond":  MoodCond,
@@ -247,6 +250,7 @@ var productiveTags = map[MorphTag]bool{
 	TensePresent:   true,
 	TenseFuture:    true,
 	TenseAorist:    true,
+	TensePastEvi:   true,
 	MoodOblig:      true,
 	Participle:     true,
 	ParticipleAdj:  true,

@@ -100,8 +100,8 @@
   {
     "name": "turkish_similar_to_az",
     "input": "Bugün hava çok güzel, parkta yürüyüş yapmaya karar verdik",
-    "want_lang": "English",
+    "want_lang": "Turkish",
     "want_script": "Latn",
-    "want_code": "en"
+    "want_code": "tr"
   }
 ]

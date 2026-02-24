@@ -683,15 +683,15 @@
   },
   {
     "name": "capital_azerbaijani_chars",
-    "input": "BAKI ŞƏHƏRİ GÖZƏL GÜNƏŞLI.",
+    "input": "BAKI ŞƏHƏRİ GÖZƏL GÜNƏŞLİ.",
     "words": [
       "BAKI",
       "ŞƏHƏRİ",
       "GÖZƏL",
-      "GÜNƏŞLI"
+      "GÜNƏŞLİ"
     ],
     "sentences": [
-      "BAKI ŞƏHƏRİ GÖZƏL GÜNƏŞLI."
+      "BAKI ŞƏHƏRİ GÖZƏL GÜNƏŞLİ."
     ]
   },
   {

@@ -330,6 +330,15 @@ var suffixRules = []suffixRule{
 		harmony:    fourWay,
 	},
 
+	// Tense Past Evidential: -ıb / -ib / -ub / -üb (nəqli keçmiş, alternative to -mış)
+	{
+		surfaces:   []string{"\u0131b", "ib", "ub", "\u00FCb"},
+		tag:        TensePastEvi,
+		fromStates: []fsmState{initial, verbAfterNeg, verbAfterVoice},
+		toState:    verbAfterTense,
+		harmony:    fourWay,
+	},
+
 	// Tense Present Continuous: -\u0131r / -ir / -ur / -\u00FCr
 	{
 		surfaces:   []string{"\u0131r", "ir", "ur", "\u00FCr"},

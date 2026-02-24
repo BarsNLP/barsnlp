@@ -182,6 +182,13 @@ const (
 	// englishTurkicDampener suppresses the English score when Turkic
 	// markers are present in the text.
 	englishTurkicDampener = 0.05
+
+	// noXQTurkishBias is added to the Turkish score when no x/q letters
+	// are found in the ambiguous trigram path. Since x and q are among
+	// the most common consonants in Azerbaijani (xalq, xəbər, qəbul,
+	// qız, etc.), their absence in a Turkic text is mild evidence for
+	// Turkish over Azerbaijani.
+	noXQTurkishBias = 0.05
 )
 
 // Detect identifies the most likely language of s.
@@ -304,7 +311,11 @@ func DetectAll(s string) []Result {
 			trScore = float64(trAzSharedCount) * sharedTurkicDampener
 		} else if trAzSharedCount > 0 {
 			// Shared Turkic special characters present but no schwa — ambiguous.
-			// Use trigram cosine similarity to break the tie.
+			// The shared characters (ğ, ş, ç, ö, ü, ı, İ) are proof that the
+			// text is Turkic, so their count provides a base score that ensures
+			// both Azerbaijani and Turkish outscore English. Trigram cosine
+			// similarity then breaks the tie between the two Turkic languages.
+			sharedBase := float64(trAzSharedCount) * sharedTurkicDampener
 			inputTrigrams := extractTrigrams(s)
 			azTrigram := trigramCosine(inputTrigrams, azLatnTrigrams, azLatnTrigramNorm)
 			trTrigram := trigramCosine(inputTrigrams, trTrigrams, trTrigramNorm)
@@ -312,8 +323,11 @@ func DetectAll(s string) []Result {
 			// x/q letters are a secondary Azerbaijani signal.
 			xqBoost := float64(xqCount) * xqBoostPerChar
 
-			azScore = azTrigram + xqBoost
-			trScore = trTrigram
+			azScore = sharedBase + azTrigram + xqBoost
+			trScore = sharedBase + trTrigram
+			if xqCount == 0 {
+				trScore += noXQTurkishBias
+			}
 		}
 		// English and Turkish without Turkic markers are not covered by the
 		// branches above. azScore and trScore default to 0.0 in that case.

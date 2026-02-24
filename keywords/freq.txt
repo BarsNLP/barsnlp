@@ -19,7 +19,6 @@ et 194347
 kimi 180781
 çox 164854
 isə 164693
-o 154631
 şəhər 152115
 onun 144427
 cü 138790
@@ -37,8 +36,6 @@ film 109084
 olmuş 107305
 böyük 106721
 ən 106582
-alig 104630
-align 104630
 daha 104235
 olaraq 101994
 dövlət 101963
@@ -57,7 +54,6 @@ bil 91250
 istifadə 88560
 ərazi 88537
 yerləş 88066
-center 86306
 qədər 85482
 edən 84113
 dövr 84101
@@ -72,7 +68,6 @@ həyat 76891
 olmuşdur 76701
 biri 75616
 digər 74560
-the 74236
 fəaliyyət 73267
 arasında 72751
 adı 72141
@@ -82,12 +77,10 @@ daxil 70009
 keçir 69947
 milli 69359
 növ 68980
-of 68677
 al 68671
 say 68243
 sahə 68196
 respublikası 67368
-style 67163
 insan 66658
 əsər 65603
 etmək 65480
@@ -99,7 +92,6 @@ lakin 62865
 dili 62591
 nəfər 62156
 etmişdir 61826
-s 61653
 qız 61352
 ad 60141
 oğlu 60048
@@ -116,7 +108,6 @@ olur 55724
 təşkil 54806
 bütün 54776
 qarşı 54773
-a 54191
 zaman 53703
 rusiya 53654
 oldu 53345
@@ -138,7 +129,6 @@ səbəb 49785
 inkişaf 49711
 hissəsi 49683
 qrup 49179
-jpg 48934
 oyun 48623
 əvvəl 48596
 vaxt 48379
@@ -158,7 +148,6 @@ mükafat 45826
 elm 45591
 onların 45524
 yerləşir 45418
-m 45000
 müxtəlif 44891
 keç 44701
 ikinci 44514
@@ -192,11 +181,9 @@ su 39803
 onlar 39767
 tarix 39620
 ona 39584
-and 39284
 etdiy 39133
 uşaq 38953
 adlı 38731
-ıı 38688
 yüksək 38619
 beynəlxalq 38401
 hesab 38389
@@ -261,7 +248,6 @@ lat 32584
 rəsmi 32225
 respublikasının 32184
 dərəcə 32017
-bgcolor 31914
 hakimiyyət 31709
 verir 31584
 yalnız 31369
@@ -293,13 +279,11 @@ osman 29444
 kəşf 29348
 olunan 29342
 yenidən 29339
-b 29282
 olar 29282
 izah 28998
 yazı 28968
 adam 28906
 çalış 28906
-width 28774
 şəkildə 28744
 nəzər 28713
 geniş 28631
@@ -319,7 +303,6 @@ lo 27954
 torpaq 27848
 əlavə 27820
 nəşr 27815
-v 27767
 üzərində 27742
 ayı 27726
 oktyabr 27726
@@ -343,7 +326,6 @@ ali 26776
 iyun 26706
 daxili 26620
 edilən 26483
-e 26476
 tədqiqat 26389
 siyasi 26377
 təşkilat 26333
@@ -412,7 +394,6 @@ mənbə 23686
 yax 23645
 nəticə 23611
 sahil 23490
-i 23259
 kilsə 23045
 şimal 23003
 əldə 22946
@@ -469,10 +450,8 @@ hərəkət 21389
 əliyev 21350
 osmanlı 21343
 xəritəsi 21327
-d 21242
 с 21221
 başlay 21216
-n 21209
 uzunluq 21163
 iqtisadi 21134
 saytı 21085
@@ -486,7 +465,6 @@ tətbiq 20895
 sədr 20878
 regio 20822
 qur 20769
-c 20676
 qəzet 20629
 imkan 20603
 gələn 20598
@@ -654,7 +632,6 @@ moskva 16576
 rayonu 16553
 işğal 16543
 işçi 16532
-h 16528
 daxildir 16522
 sən 16521
 indi 16516
@@ -701,7 +678,6 @@ ictimai 15557
 incəsənət 15555
 yayıl 15510
 colsp 15497
-colspan 15497
 vahid 15493
 universitetinin 15442
 italiya 15430
@@ -741,7 +717,6 @@ gürcüstan 14795
 olunub 14789
 şərait 14789
 ağır 14721
-p 14658
 bax 14656
 inşa 14652
 orqan 14643
@@ -791,7 +766,6 @@ ko 13677
 turnir 13670
 təklif 13649
 icma 13642
-class 13599
 layiq 13581
 tik 13554
 adət 13547
@@ -817,9 +791,7 @@ dəfn 13351
 qan 13308
 yanaşı 13301
 dəyər 13274
-x 13268
 səfər 13266
-px 13234
 roma 13231
 qeydə 13229
 bəz 13207
@@ -891,12 +863,10 @@ halda 12172
 həll 12169
 xüsusilə 12133
 bərabər 12125
-r 12124
 ingiltərə 12116
 açıl 12094
 yara 12094
 xadim 12093
-f 12084
 hakimiyyəti 12077
 ağa 12075
 sinif 12072
@@ -979,7 +949,6 @@ azadlıq 11242
 bölmə 11239
 gəlin 11239
 qələbə 11234
-t 11231
 onlara 11230
 wikitable 11221
 mütləq 11209
@@ -1050,11 +1019,9 @@ məhv 10740
 gir 10734
 parlament 10729
 boyu 10728
-l 10715
 qiymət 10704
 ordusu 10698
 hüseyn 10695
-z 10692
 bələdiyyə 10670
 başçısı 10657
 məqsəd 10652
@@ -1145,10 +1112,8 @@ mis 9803
 zəngin 9798
 birləşdir 9784
 işləri 9777
-k 9769
 etmişdi 9753
 sürəti 9750
-q 9745
 informasiya 9708
 əməkdaşlıq 9686
 insanlar 9675
@@ -1347,13 +1312,11 @@ fərman 8331
 məbəd 8326
 tərəfdən 8325
 akademik 8320
-y 8319
 daşıy 8316
 xristian 8316
 icazə 8313
 cəbhə 8302
 tarixçi 8302
-color 8298
 itir 8297
 bilir 8292
 müstəqillik 8291
@@ -1581,7 +1544,6 @@ sev 7146
 çıxır 7140
 sadə 7134
 yayılmışdır 7133
-g 7132
 seds 7121
 prinsip 7120
 istehsalı 7119
@@ -1590,7 +1552,6 @@ patter 7116
 j2000 7109
 işə 7105
 tədqiq 7104
-j 7099
 oyna 7097
 yazdığ 7096
 imperator 7084
@@ -2191,7 +2152,6 @@ oxşar 4882
 mümkündür 4871
 almış 4870
 matç 4870
-u 4870
 tezliklə 4866
 mahnısı 4855
 with 4848
@@ -2481,7 +2441,6 @@ coğrafiya 4248
 ha 4247
 kürd 4247
 müddətdə 4244
-w 4243
 əleyhinə 4243
 edərkən 4240
 png 4234
@@ -3393,7 +3352,6 @@ ato 3060
 imzala 3059
 statistika 3059
 mövcudluq 3057
-border 3055
 günə 3055
 he 3055
 təməl 3054
@@ -3455,7 +3413,6 @@ regionunda 2995
 şəraitdə 2994
 baxır 2993
 valig 2993
-valign 2993
 dəyişikliklər 2992
 istifadəyə 2992
 pişik 2992
@@ -4657,7 +4614,6 @@ narahatlıq 2115
 ra 2115
 albert 2113
 heigh 2113
-height 2113
 qə 2113
 cek 2112
 konfederasiya 2112
@@ -6349,7 +6305,6 @@ afrikada 1472
 həmid 1472
 olmasıdır 1472
 period 1472
-cellpadding 1471
 rəsmia 1471
 rəsmiadı 1471
 saatı 1471
@@ -6546,7 +6501,6 @@ yadda 1422
 etnoqrafiya 1421
 icması 1421
 sələf 1421
-br 1420
 dol 1420
 durur 1420
 fin 1420
@@ -6689,7 +6643,6 @@ idarəsində 1383
 kp 1383
 sədrəzəm 1383
 başlanmışdır 1382
-cellspacing 1382
 formal 1382
 moskvaya 1382
 xaçmaz 1382
@@ -6730,7 +6683,6 @@ zəhmət 1370
 mənbələrində 1369
 əhli 1369
 edition 1368
-link 1368
 tiflisdə 1368
 ıt 1368
 aralıda 1367
@@ -8518,7 +8470,6 @@ taktika 1028
 vilayətin 1028
 yelizavetpol 1028
 şahidi 1028
-div 1027
 funksiyaları 1027
 işlənməsi 1027
 qayıtmışdır 1027
@@ -8653,7 +8604,6 @@ bağça 1006
 keçdiyi 1006
 kitabların 1006
 kəməri 1006
-meta 1006
 namiq 1006
 sevda 1006
 vay 1006
@@ -9175,7 +9125,6 @@ xidmətlərə 938
 yerləşdirilmiş 938
 çalğı 938
 cd 937
-form 937
 suprefektura 937
 tarihi 937
 telekommunikasiya 937
@@ -12315,7 +12264,6 @@ geiş 645
 mahnını 645
 möhsün 645
 səhifələrində 645
-tr 645
 şərəfli 645
 əczaçılıq 645
 əfqanıstanda 645
@@ -14284,7 +14232,6 @@ prezidentliyə 537
 qoya 537
 qrun 537
 reportaj 537
-span 537
 təəccüb 537
 variantında 537
 əjd 537
@@ -21819,7 +21766,6 @@ e3 308
 eyb 308
 göstərmişlər 308
 gələnə 308
-html 308
 humaniz 308
 karvansarası 308
 keçin 308
@@ -27927,7 +27873,6 @@ stansiyalar 223
 sul 223
 söykənir 223
 səbəblərlə 223
-table 223
 talışlar 223
 torpaqla 223
 transmil 223
@@ -36865,7 +36810,6 @@ tacikistanda 154
 talışların 154
 taman 154
 tarixlərdə 154
-td 154
 title2 154
 tonyukuk 154
 toxumalarda 154
@@ -40580,7 +40524,6 @@ epir 135
 etməzdi 135
 eğitim 135
 florian 135
-font 135
 forumunda 135
 fəaliyyətidir 135
 gedişatını 135
@@ -53500,7 +53443,6 @@ salazar 93
 sanma 93
 santimetrə 93
 sayaraq 93
-script 93
 seoul 93
 seyhan 93
 sibirdən 93
@@ -54797,7 +54739,6 @@ walking 90
 westminster 90
 wireless 90
 xari 90
-xml 90
 xubilayın 90
 xəsarətlər 90
 yaddaşdan 90
@@ -59614,7 +59555,6 @@ spartalılar 80
 sporting 80
 ssrı 80
 stadt 80
-strong 80
 studen 80
 studia 80
 sumaq 80
@@ -79730,7 +79670,6 @@ satılmağa 53
 saxlandı 53
 saxlanmışdı 53
 schriften 53
-select 53
 sent-kits 53
 seqreqasiya 53
 sertifikata 53

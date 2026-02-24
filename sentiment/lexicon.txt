@@ -67,7 +67,6 @@ qorxu	-0.8
 təhlükəli	-0.8
 təhlükə	-0.8
 zərərli	-0.7
-zərər	-0.6
 çətin	-0.5
 kasıb	-0.5
 zəif	-0.5
@@ -93,7 +92,6 @@ mənasız	-0.6
 məna	-0.3
 boş	-0.4
 qaranlıq	-0.5
-qaranlı	-0.5
 soyuq	-0.4
 əsəbi	-0.6
 narahat	-0.6
@@ -148,11 +146,11 @@ qısqan	-0.6
 şikayət	-0.5
 ittiham	-0.6
 cəzalandır	-0.7
-döv	-0.8
+döy	-0.8
 öldür	-0.9
 oğurla	-0.8
 yalan	-0.7
-aldal	-0.8
+aldad	-0.8
 xəyanət	-0.9
 pozul	-0.6
 məhv	-0.9
@@ -196,7 +194,7 @@ korrupsiya	-0.8
 cinayət	-0.9
 terror	-0.9
 riyakarlıq	-0.8
-itkı	-0.6
+itki	-0.6
 cəza	-0.6
 həbsxana	-0.7
 
@@ -204,7 +202,6 @@ həbsxana	-0.7
 mənfəət	0.6
 gəlir	0.6
 artım	0.6
-inkişaf	0.7
 investisiya	0.5
 dividend	0.5
 qazanc	0.7
@@ -233,12 +230,10 @@ güzəşt	0.5
 # --- Financial negative ---
 borc	-0.5
 zərər	-0.7
-itkə	-0.6
 defolt	-0.8
 iflas	-0.9
 inflyasiya	-0.6
 devalvasiya	-0.7
-böhranı	-0.7
 staqnasiya	-0.6
 resessiya	-0.7
 sanksiya	-0.7
@@ -256,13 +251,9 @@ bahalaşma	-0.6
 riskli	-0.5
 
 # --- Social/political positive ---
-sülh	0.8
 demokratiya	0.7
-azadlıq	0.8
-ədalət	0.8
 bərabərlik	0.7
 müstəqillik	0.8
-inkişaf	0.7
 tərəqqi	0.7
 islahat	0.6
 modernləşmə	0.6
@@ -280,11 +271,7 @@ xeyriyyə	0.7
 tolerantlıq	0.6
 
 # --- Social/political negative ---
-müharibə	-0.9
-terror	-0.9
 terrorçu	-0.9
-cinayət	-0.9
-korrupsiya	-0.8
 saxtakarlıq	-0.8
 diktatura	-0.8
 repressiya	-0.8
@@ -308,7 +295,6 @@ keyfiyyət	0.7
 sürət	0.6
 davamlı	0.6
 etibarlı	0.7
-təmiz	0.6
 müasir	0.6
 yeni	0.5
 professional	0.7
@@ -321,7 +307,6 @@ lüks	0.5
 komfort	0.6
 rahatlıq	0.6
 əlverişli	0.6
-münasib	0.5
 pulsuz	0.5
 zəmanət	0.6
 xidmət	0.4
@@ -330,7 +315,6 @@ xidmət	0.4
 nasaz	-0.7
 qüsur	-0.7
 nöqsan	-0.6
-problem	-0.5
 xəta	-0.5
 gecikmə	-0.5
 ləng	-0.5
@@ -340,27 +324,18 @@ sınıq	-0.6
 zay	-0.7
 saxta	-0.8
 qeyri	-0.4
-bahalı	-0.4
 qıtlıq	-0.5
 çatışmazlıq	-0.5
-narahatlıq	-0.5
-şikayət	-0.5
 
 # --- Emotional states positive ---
-xoşbəxtlik	0.9
-sevinc	0.8
-həyəcan	0.6
 coşqu	0.7
 ilham	0.7
 ruh	0.5
-rahatlıq	0.6
 məmnuniyyət	0.8
 qürur	0.7
 iftixar	0.7
-fərəh	0.7
 həvəs	0.6
 arzu	0.5
-ümid	0.6
 nikbin	0.7
 optimist	0.7
 energi	0.5
@@ -372,7 +347,6 @@ sədaqət	0.7
 etibar	0.6
 
 # --- Emotional states negative ---
-kədər	-0.7
 qəm	-0.7
 hüzn	-0.7
 iztirab	-0.8
@@ -383,9 +357,7 @@ narahatlıq	-0.6
 həyəcan	-0.4
 vahimə	-0.7
 panika	-0.7
-qorxu	-0.8
 ikrah	-0.8
-nifrət	-0.9
 həsəd	-0.6
 qısqanclıq	-0.6
 xəcalət	-0.5
@@ -398,27 +370,21 @@ bədbin	-0.7
 pessimist	-0.7
 
 # --- News/media positive ---
-uğur	0.8
 nailiyyət	0.8
 rekord	0.6
-qələbə	0.8
 çempion	0.8
 medal	0.6
-mükafat	0.7
 ödül	0.7
 təltif	0.6
 irəliləyiş	0.7
 açılış	0.6
 istifadə	0.4
 müqavilə	0.4
-razılaşma	0.6
-əməkdaşlıq	0.7
 
 # --- News/media negative ---
 qəza	-0.8
 hadisə	-0.4
 faciə	-0.9
-fəlakət	-0.9
 yanğın	-0.8
 sel	-0.7
 zəlzələ	-0.8
@@ -429,9 +395,59 @@ soyğun	-0.8
 fırıldaqçılıq	-0.8
 rüşvət	-0.8
 həbs	-0.6
-ittiham	-0.5
 mühakimə	-0.4
 təxribat	-0.7
 provokasiya	-0.6
-böhran	-0.7
 təcavüz	-0.9
+
+# --- Corpus-derived positive words (v2, from 256K labeled texts) ---
+super	0.85
+mükemmel	0.85
+harika	0.85
+təşəkkür	0.8
+tövsiyə	0.75
+təbriklər	0.75
+mübarək	0.75
+sağol	0.75
+ideal	0.75
+yararlı	0.7
+sərfəli	0.7
+könül	0.7
+qəşəng	0.7
+bomba	0.7
+yaşasın	0.7
+bravo	0.7
+səliqə	0.65
+məmnun	0.65
+maşallah	0.65
+təbrik	0.65
+yenilik	0.6
+halal	0.6
+sevindir	0.6
+fəxr	0.6
+operativ	0.55
+yaradıcı	0.55
+qənaət	0.55
+asanlıq	0.55
+sağlıq	0.55
+əmək	0.5
+hediye	0.5
+geniş	0.45
+yüksək	0.45
+sadə	0.45
+ucuz	0.45
+kampaniya	0.4
+
+# --- Corpus-derived negative words (v2, from 256K labeled texts) ---
+bərbad	-0.85
+şərəfsiz	-0.8
+zibil	-0.75
+lənət	-0.7
+axmaq	-0.7
+bezdir	-0.65
+əsəb	-0.65
+xarab	-0.6
+zəhlə	-0.6
+heyif	-0.55
+təəssüf	-0.55
+darıx	-0.5
