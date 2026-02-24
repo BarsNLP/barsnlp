@@ -1,0 +1,859 @@
+[
+  {
+    "name": "iso_date",
+    "input": "2026-03-05",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "2026-03-05",
+        "start": 0,
+        "end": 10,
+        "type": "Date",
+        "time": "2026-03-05T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "dot_date",
+    "input": "05.03.2026",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "05.03.2026",
+        "start": 0,
+        "end": 10,
+        "type": "Date",
+        "time": "2026-03-05T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "slash_date",
+    "input": "05/03/2026",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "05/03/2026",
+        "start": 0,
+        "end": 10,
+        "type": "Date",
+        "time": "2026-03-05T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "time_hhmm",
+    "input": "14:30",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "14:30",
+        "start": 0,
+        "end": 5,
+        "type": "Time",
+        "time": "2026-02-20T14:30:00Z",
+        "explicit": 24
+      }
+    ]
+  },
+  {
+    "name": "time_hhmmss",
+    "input": "09:05:22",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "09:05:22",
+        "start": 0,
+        "end": 8,
+        "type": "Time",
+        "time": "2026-02-20T09:05:22Z",
+        "explicit": 56
+      }
+    ]
+  },
+  {
+    "name": "natural_full_date",
+    "input": "5 mart 2026",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "5 mart 2026",
+        "start": 0,
+        "end": 11,
+        "type": "Date",
+        "time": "2026-03-05T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "natural_day_month",
+    "input": "5 mart",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "5 mart",
+        "start": 0,
+        "end": 6,
+        "type": "Date",
+        "time": "2026-03-05T00:00:00Z",
+        "explicit": 6
+      }
+    ]
+  },
+  {
+    "name": "natural_month_only",
+    "input": "mart",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "mart",
+        "start": 0,
+        "end": 4,
+        "type": "Date",
+        "time": "2026-03-01T00:00:00Z",
+        "explicit": 2
+      }
+    ]
+  },
+  {
+    "name": "ordinal_ci",
+    "input": "5-ci mart",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "5-ci mart",
+        "start": 0,
+        "end": 9,
+        "type": "Date",
+        "time": "2026-03-05T00:00:00Z",
+        "explicit": 6
+      }
+    ]
+  },
+  {
+    "name": "ordinal_nci",
+    "input": "5-nci mart",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "5-nci mart",
+        "start": 0,
+        "end": 10,
+        "type": "Date",
+        "time": "2026-03-05T00:00:00Z",
+        "explicit": 6
+      }
+    ]
+  },
+  {
+    "name": "ordinal_inci",
+    "input": "1-inci yanvar 2026",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "1-inci yanvar 2026",
+        "start": 0,
+        "end": 18,
+        "type": "Date",
+        "time": "2026-01-01T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "genitive_ordinal",
+    "input": "martın 15-i",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "martın 15-i",
+        "start": 0,
+        "end": 12,
+        "type": "Date",
+        "time": "2026-03-15T00:00:00Z",
+        "explicit": 6
+      }
+    ]
+  },
+  {
+    "name": "possessive_compound",
+    "input": "mart ayının 15-i",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "mart ayının 15-i",
+        "start": 0,
+        "end": 18,
+        "type": "Date",
+        "time": "2026-03-15T00:00:00Z",
+        "explicit": 6
+      }
+    ]
+  },
+  {
+    "name": "possessive_compound_may",
+    "input": "may ayının 3-ü",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "may ayının 3-ü",
+        "start": 0,
+        "end": 17,
+        "type": "Date",
+        "time": "2026-05-03T00:00:00Z",
+        "explicit": 6
+      }
+    ]
+  },
+  {
+    "name": "case_locative",
+    "input": "martda",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "martda",
+        "start": 0,
+        "end": 6,
+        "type": "Date",
+        "time": "2026-03-01T00:00:00Z",
+        "explicit": 2
+      }
+    ]
+  },
+  {
+    "name": "case_ablative",
+    "input": "yanvardan",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "yanvardan",
+        "start": 0,
+        "end": 9,
+        "type": "Date",
+        "time": "2026-01-01T00:00:00Z",
+        "explicit": 2
+      }
+    ]
+  },
+  {
+    "name": "case_genitive",
+    "input": "fevralın",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "fevralın",
+        "start": 0,
+        "end": 9,
+        "type": "Date",
+        "time": "2026-02-01T00:00:00Z",
+        "explicit": 2
+      }
+    ]
+  },
+  {
+    "name": "case_accusative",
+    "input": "martı",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "martı",
+        "start": 0,
+        "end": 6,
+        "type": "Date",
+        "time": "2026-03-01T00:00:00Z",
+        "explicit": 2
+      }
+    ]
+  },
+  {
+    "name": "case_dative",
+    "input": "marta",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "marta",
+        "start": 0,
+        "end": 5,
+        "type": "Date",
+        "time": "2026-03-01T00:00:00Z",
+        "explicit": 2
+      }
+    ]
+  },
+  {
+    "name": "case_front_vowel_locative",
+    "input": "apreldə",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "apreldə",
+        "start": 0,
+        "end": 8,
+        "type": "Date",
+        "time": "2026-04-01T00:00:00Z",
+        "explicit": 2
+      }
+    ]
+  },
+  {
+    "name": "weekday_monday",
+    "input": "bazar ertəsi",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "bazar ertəsi",
+        "start": 0,
+        "end": 13,
+        "type": "Date",
+        "time": "2026-02-23T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "weekday_tuesday",
+    "input": "çərşənbə axşamı",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "çərşənbə axşamı",
+        "start": 0,
+        "end": 22,
+        "type": "Date",
+        "time": "2026-02-24T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "weekday_wednesday",
+    "input": "çərşənbə",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "çərşənbə",
+        "start": 0,
+        "end": 13,
+        "type": "Date",
+        "time": "2026-02-25T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "weekday_friday",
+    "input": "cümə",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "cümə",
+        "start": 0,
+        "end": 6,
+        "type": "Date",
+        "time": "2026-02-20T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "weekday_sunday",
+    "input": "bazar",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "bazar",
+        "start": 0,
+        "end": 5,
+        "type": "Date",
+        "time": "2026-02-22T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "relative_today",
+    "input": "bu gün",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "bu gün",
+        "start": 0,
+        "end": 7,
+        "type": "Date",
+        "time": "2026-02-20T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "relative_today_compact",
+    "input": "bugün",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "bugün",
+        "start": 0,
+        "end": 6,
+        "type": "Date",
+        "time": "2026-02-20T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "relative_tomorrow",
+    "input": "sabah",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "sabah",
+        "start": 0,
+        "end": 5,
+        "type": "Date",
+        "time": "2026-02-21T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "relative_yesterday",
+    "input": "dünən",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "dünən",
+        "start": 0,
+        "end": 7,
+        "type": "Date",
+        "time": "2026-02-19T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "relative_day_after_tomorrow",
+    "input": "birigün",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "birigün",
+        "start": 0,
+        "end": 8,
+        "type": "Date",
+        "time": "2026-02-22T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "relative_day_before_yesterday",
+    "input": "srağagün",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "srağagün",
+        "start": 0,
+        "end": 10,
+        "type": "Date",
+        "time": "2026-02-18T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "relative_last_week",
+    "input": "keçən həftə",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "keçən həftə",
+        "start": 0,
+        "end": 15,
+        "type": "Date",
+        "time": "2026-02-09T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "relative_next_week",
+    "input": "gələn həftə",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "gələn həftə",
+        "start": 0,
+        "end": 15,
+        "type": "Date",
+        "time": "2026-02-23T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "relative_this_month",
+    "input": "bu ay",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "bu ay",
+        "start": 0,
+        "end": 5,
+        "type": "Date",
+        "time": "2026-02-01T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "relative_last_month",
+    "input": "keçən ay",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "keçən ay",
+        "start": 0,
+        "end": 10,
+        "type": "Date",
+        "time": "2026-01-01T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "relative_next_month",
+    "input": "gələn ay",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "gələn ay",
+        "start": 0,
+        "end": 10,
+        "type": "Date",
+        "time": "2026-03-01T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "relative_this_year",
+    "input": "bu il",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "bu il",
+        "start": 0,
+        "end": 5,
+        "type": "Date",
+        "time": "2026-01-01T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "relative_last_year",
+    "input": "keçən il",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "keçən il",
+        "start": 0,
+        "end": 10,
+        "type": "Date",
+        "time": "2025-01-01T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "relative_next_year",
+    "input": "gələn il",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "gələn il",
+        "start": 0,
+        "end": 10,
+        "type": "Date",
+        "time": "2027-01-01T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "quantity_days_ago",
+    "input": "3 gün əvvəl",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "3 gün əvvəl",
+        "start": 0,
+        "end": 14,
+        "type": "Date",
+        "time": "2026-02-17T10:30:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "quantity_weeks_later",
+    "input": "2 həftə sonra",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "2 həftə sonra",
+        "start": 0,
+        "end": 15,
+        "type": "Date",
+        "time": "2026-03-06T10:30:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "quantity_days_once",
+    "input": "3 gün öncə",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "3 gün öncə",
+        "start": 0,
+        "end": 13,
+        "type": "Date",
+        "time": "2026-02-17T10:30:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "quantity_hours_ago",
+    "input": "5 saat əvvəl",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "5 saat əvvəl",
+        "start": 0,
+        "end": 14,
+        "type": "DateTime",
+        "time": "2026-02-20T05:30:00Z",
+        "explicit": 63
+      }
+    ]
+  },
+  {
+    "name": "prefixed_weekday_last",
+    "input": "keçən bazar ertəsi",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "keçən bazar ertəsi",
+        "start": 0,
+        "end": 21,
+        "type": "Date",
+        "time": "2026-02-16T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "prefixed_weekday_next",
+    "input": "gələn cümə",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "gələn cümə",
+        "start": 0,
+        "end": 14,
+        "type": "Date",
+        "time": "2026-02-27T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "saat_bare",
+    "input": "saat 3",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "saat 3",
+        "start": 0,
+        "end": 6,
+        "type": "Time",
+        "time": "2026-02-20T03:00:00Z",
+        "explicit": 8
+      }
+    ]
+  },
+  {
+    "name": "saat_pm",
+    "input": "axşam saat 7",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "axşam saat 7",
+        "start": 0,
+        "end": 13,
+        "type": "Time",
+        "time": "2026-02-20T19:00:00Z",
+        "explicit": 8
+      }
+    ]
+  },
+  {
+    "name": "saat_am",
+    "input": "səhər saat 7",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "səhər saat 7",
+        "start": 0,
+        "end": 14,
+        "type": "Time",
+        "time": "2026-02-20T07:00:00Z",
+        "explicit": 8
+      }
+    ]
+  },
+  {
+    "name": "merge_natural_date_time",
+    "input": "5 mart 2026 14:30",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "5 mart 2026 14:30",
+        "start": 0,
+        "end": 17,
+        "type": "DateTime",
+        "time": "2026-03-05T14:30:00Z",
+        "explicit": 31
+      }
+    ]
+  },
+  {
+    "name": "merge_iso_date_time",
+    "input": "2026-03-05 09:15",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "2026-03-05 09:15",
+        "start": 0,
+        "end": 16,
+        "type": "DateTime",
+        "time": "2026-03-05T09:15:00Z",
+        "explicit": 31
+      }
+    ]
+  },
+  {
+    "name": "iso_in_text",
+    "input": "tarix 2026-03-05 qeyd olunub",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "2026-03-05",
+        "start": 6,
+        "end": 16,
+        "type": "Date",
+        "time": "2026-03-05T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "multiple_spans",
+    "input": "dünən və 5 mart 2026",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "dünən",
+        "start": 0,
+        "end": 7,
+        "type": "Date",
+        "time": "2026-02-19T00:00:00Z",
+        "explicit": 7
+      },
+      {
+        "text": "5 mart 2026",
+        "start": 12,
+        "end": 23,
+        "type": "Date",
+        "time": "2026-03-05T00:00:00Z",
+        "explicit": 7
+      }
+    ]
+  },
+  {
+    "name": "negative_empty",
+    "input": "",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": null
+  },
+  {
+    "name": "negative_no_date",
+    "input": "abc xyz",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": null
+  },
+  {
+    "name": "negative_invalid_day",
+    "input": "32 mart 2026",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "mart 2026",
+        "start": 3,
+        "end": 12,
+        "type": "Date",
+        "time": "2026-03-01T00:00:00Z",
+        "explicit": 3
+      }
+    ]
+  },
+  {
+    "name": "negative_invalid_time",
+    "input": "25:99",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": null
+  },
+  {
+    "name": "negative_misspelled",
+    "input": "5 heft 2026",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": null
+  },
+  {
+    "name": "case_insensitive_upper",
+    "input": "MART",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "MART",
+        "start": 0,
+        "end": 4,
+        "type": "Date",
+        "time": "2026-03-01T00:00:00Z",
+        "explicit": 2
+      }
+    ]
+  },
+  {
+    "name": "case_insensitive_mixed",
+    "input": "Mart",
+    "ref": "2026-02-20T10:30:00Z",
+    "results": [
+      {
+        "text": "Mart",
+        "start": 0,
+        "end": 4,
+        "type": "Date",
+        "time": "2026-03-01T00:00:00Z",
+        "explicit": 2
+      }
+    ]
+  }
+]

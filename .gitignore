@@ -1,0 +1,50 @@
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary
+*.test
+
+# Output
+*.out
+*.prof
+
+# Go workspace
+go.work
+go.work.sum
+
+# Dependency directories
+vendor/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# AI agents
+.omc/
+.claude/
+.cursor/
+.aider*
+.codex/
+
+docs/
+CLAUDE.md
+BACKLOG.md
+/smoketest
+
+*.jsonl
+*.pdf
+.planning/*
+data/*.txt
+ROADMAP.md
+az_data/*

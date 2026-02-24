@@ -1,0 +1,108 @@
+name: CI
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-go@v6
+        with:
+          go-version-file: go.mod
+
+      - name: Run golangci-lint
+        uses: golangci/golangci-lint-action@v9
+        with:
+          version: latest
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-go@v6
+        with:
+          go-version-file: go.mod
+
+      - name: Run unit tests
+        run: go test ./... -race -short -count=1
+
+  bench:
+    name: Benchmark
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-go@v6
+        with:
+          go-version-file: go.mod
+
+      - name: Run benchmarks
+        run: go test ./... -bench=. -benchmem -run=^$ -count=1
+
+  fuzz:
+    name: Fuzz
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-go@v6
+        with:
+          go-version-file: go.mod
+
+      - name: Fuzz word tokenizer
+        run: go test ./tokenizer/ -fuzz=FuzzWordTokens -fuzztime=10s -parallel=1
+
+      - name: Fuzz sentence tokenizer
+        run: go test ./tokenizer/ -fuzz=FuzzSentenceTokens -fuzztime=10s -parallel=1
+
+      - name: Fuzz morph Stem
+        run: go test ./morph/ -fuzz=FuzzStem -fuzztime=10s -parallel=1
+
+      - name: Fuzz morph Analyze
+        run: go test ./morph/ -fuzz=FuzzAnalyze -fuzztime=10s -parallel=1
+
+      - name: Fuzz detect
+        run: go test ./detect/ -fuzz=FuzzDetect -fuzztime=10s -parallel=1
+
+      - name: Fuzz datetime
+        run: go test ./datetime/ -fuzz=FuzzExtract -fuzztime=10s -parallel=1
+
+      - name: Fuzz normalize
+        run: go test ./normalize/ -fuzz=FuzzNormalize$ -fuzztime=10s -parallel=1
+
+      - name: Fuzz normalize word
+        run: go test ./normalize/ -fuzz=FuzzNormalizeWord$ -fuzztime=10s -parallel=1
+
+      - name: Fuzz spell IsCorrect
+        run: go test ./spell/ -fuzz=FuzzIsCorrect -fuzztime=10s -parallel=1
+
+      - name: Fuzz spell Suggest
+        run: go test ./spell/ -fuzz=FuzzSuggest -fuzztime=10s -parallel=1
+
+      - name: Fuzz spell Correct
+        run: go test ./spell/ -fuzz=FuzzCorrect -fuzztime=10s -parallel=1
+
+      - name: Fuzz keywords ExtractTFIDF
+        run: go test ./keywords/ -fuzz=FuzzExtractTFIDF -fuzztime=10s -parallel=1
+
+      - name: Fuzz keywords ExtractTextRank
+        run: go test ./keywords/ -fuzz=FuzzExtractTextRank -fuzztime=10s -parallel=1
+
+      - name: Fuzz keywords Keywords
+        run: go test ./keywords/ -fuzz=FuzzKeywords -fuzztime=10s -parallel=1
+
+      - name: Fuzz validate
+        run: go test ./validate/ -fuzz=FuzzValidate -fuzztime=10s -parallel=1
+
+      - name: Fuzz sentiment
+        run: go test ./sentiment/ -fuzz=FuzzAnalyze -fuzztime=10s -parallel=1

@@ -1,0 +1,2528 @@
+[
+  {
+    "word": "kitab",
+    "stem": "kitab",
+    "morphemes": null
+  },
+  {
+    "word": "ev",
+    "stem": "ev",
+    "morphemes": null
+  },
+  {
+    "word": "su",
+    "stem": "su",
+    "morphemes": null
+  },
+  {
+    "word": "at",
+    "stem": "at",
+    "morphemes": null
+  },
+  {
+    "word": "gül",
+    "stem": "gül",
+    "morphemes": null
+  },
+  {
+    "word": "qız",
+    "stem": "qız",
+    "morphemes": null
+  },
+  {
+    "word": "oğlan",
+    "stem": "oğlan",
+    "morphemes": null
+  },
+  {
+    "word": "dəniz",
+    "stem": "dəniz",
+    "morphemes": null
+  },
+  {
+    "word": "gün",
+    "stem": "gün",
+    "morphemes": null
+  },
+  {
+    "word": "gecə",
+    "stem": "gecə",
+    "morphemes": null
+  },
+  {
+    "word": "yol",
+    "stem": "yol",
+    "morphemes": null
+  },
+  {
+    "word": "iş",
+    "stem": "iş",
+    "morphemes": null
+  },
+  {
+    "word": "göz",
+    "stem": "göz",
+    "morphemes": null
+  },
+  {
+    "word": "əl",
+    "stem": "əl",
+    "morphemes": null
+  },
+  {
+    "word": "baş",
+    "stem": "baş",
+    "morphemes": null
+  },
+  {
+    "word": "ürək",
+    "stem": "ürək",
+    "morphemes": null
+  },
+  {
+    "word": "qəlb",
+    "stem": "qəlb",
+    "morphemes": null
+  },
+  {
+    "word": "sevgi",
+    "stem": "sevgi",
+    "morphemes": null
+  },
+  {
+    "word": "dağ",
+    "stem": "dağ",
+    "morphemes": null
+  },
+  {
+    "word": "çay",
+    "stem": "çay",
+    "morphemes": null
+  },
+  {
+    "word": "kitablar",
+    "stem": "kitab",
+    "morphemes": [
+      {
+        "surface": "lar",
+        "tag": "Plural"
+      }
+    ]
+  },
+  {
+    "word": "evlər",
+    "stem": "ev",
+    "morphemes": [
+      {
+        "surface": "lər",
+        "tag": "Plural"
+      }
+    ]
+  },
+  {
+    "word": "uşaqlar",
+    "stem": "uşaq",
+    "morphemes": [
+      {
+        "surface": "lar",
+        "tag": "Plural"
+      }
+    ]
+  },
+  {
+    "word": "qızlar",
+    "stem": "qız",
+    "morphemes": [
+      {
+        "surface": "lar",
+        "tag": "Plural"
+      }
+    ]
+  },
+  {
+    "word": "günlər",
+    "stem": "gün",
+    "morphemes": [
+      {
+        "surface": "lər",
+        "tag": "Plural"
+      }
+    ]
+  },
+  {
+    "word": "yollar",
+    "stem": "yol",
+    "morphemes": [
+      {
+        "surface": "lar",
+        "tag": "Plural"
+      }
+    ]
+  },
+  {
+    "word": "işlər",
+    "stem": "iş",
+    "morphemes": [
+      {
+        "surface": "lər",
+        "tag": "Plural"
+      }
+    ]
+  },
+  {
+    "word": "dənizlər",
+    "stem": "dəniz",
+    "morphemes": [
+      {
+        "surface": "lər",
+        "tag": "Plural"
+      }
+    ]
+  },
+  {
+    "word": "dağlar",
+    "stem": "dağ",
+    "morphemes": [
+      {
+        "surface": "lar",
+        "tag": "Plural"
+      }
+    ]
+  },
+  {
+    "word": "gözlər",
+    "stem": "göz",
+    "morphemes": [
+      {
+        "surface": "lər",
+        "tag": "Plural"
+      }
+    ]
+  },
+  {
+    "word": "kitabım",
+    "stem": "kitab",
+    "morphemes": [
+      {
+        "surface": "ım",
+        "tag": "Poss1Sg"
+      }
+    ]
+  },
+  {
+    "word": "kitabın",
+    "stem": "kitab",
+    "morphemes": [
+      {
+        "surface": "ın",
+        "tag": "CaseGen"
+      }
+    ]
+  },
+  {
+    "word": "kitabı",
+    "stem": "kitab",
+    "morphemes": [
+      {
+        "surface": "ı",
+        "tag": "CaseAcc"
+      }
+    ]
+  },
+  {
+    "word": "kitabımız",
+    "stem": "kitab",
+    "morphemes": [
+      {
+        "surface": "ımız",
+        "tag": "Poss1Pl"
+      }
+    ]
+  },
+  {
+    "word": "kitabınız",
+    "stem": "kitab",
+    "morphemes": [
+      {
+        "surface": "ınız",
+        "tag": "Poss2Pl"
+      }
+    ]
+  },
+  {
+    "word": "kitabları",
+    "stem": "kitab",
+    "morphemes": [
+      {
+        "surface": "ları",
+        "tag": "Poss3Pl"
+      }
+    ]
+  },
+  {
+    "word": "evim",
+    "stem": "ev",
+    "morphemes": [
+      {
+        "surface": "im",
+        "tag": "Poss1Sg"
+      }
+    ]
+  },
+  {
+    "word": "evin",
+    "stem": "ev",
+    "morphemes": [
+      {
+        "surface": "in",
+        "tag": "CaseGen"
+      }
+    ]
+  },
+  {
+    "word": "evi",
+    "stem": "ev",
+    "morphemes": [
+      {
+        "surface": "i",
+        "tag": "CaseAcc"
+      }
+    ]
+  },
+  {
+    "word": "gülüm",
+    "stem": "gül",
+    "morphemes": [
+      {
+        "surface": "üm",
+        "tag": "Poss1Sg"
+      }
+    ]
+  },
+  {
+    "word": "gülün",
+    "stem": "gül",
+    "morphemes": [
+      {
+        "surface": "ün",
+        "tag": "CaseGen"
+      }
+    ]
+  },
+  {
+    "word": "gülü",
+    "stem": "gül",
+    "morphemes": [
+      {
+        "surface": "ü",
+        "tag": "CaseAcc"
+      }
+    ]
+  },
+  {
+    "word": "oğlum",
+    "stem": "oğlu",
+    "morphemes": [
+      {
+        "surface": "m",
+        "tag": "Poss1Sg"
+      }
+    ]
+  },
+  {
+    "word": "qızımız",
+    "stem": "qız",
+    "morphemes": [
+      {
+        "surface": "ımız",
+        "tag": "Poss1Pl"
+      }
+    ]
+  },
+  {
+    "word": "günləri",
+    "stem": "gün",
+    "morphemes": [
+      {
+        "surface": "ləri",
+        "tag": "Poss3Pl"
+      }
+    ]
+  },
+  {
+    "word": "kitaba",
+    "stem": "kitab",
+    "morphemes": [
+      {
+        "surface": "a",
+        "tag": "CaseDat"
+      }
+    ]
+  },
+  {
+    "word": "kitabda",
+    "stem": "kitab",
+    "morphemes": [
+      {
+        "surface": "da",
+        "tag": "CaseLoc"
+      }
+    ]
+  },
+  {
+    "word": "kitabdan",
+    "stem": "kitab",
+    "morphemes": [
+      {
+        "surface": "dan",
+        "tag": "CaseAbl"
+      }
+    ]
+  },
+  {
+    "word": "kitabla",
+    "stem": "kitab",
+    "morphemes": [
+      {
+        "surface": "la",
+        "tag": "CaseIns"
+      }
+    ]
+  },
+  {
+    "word": "evə",
+    "stem": "ev",
+    "morphemes": [
+      {
+        "surface": "ə",
+        "tag": "CaseDat"
+      }
+    ]
+  },
+  {
+    "word": "evdə",
+    "stem": "ev",
+    "morphemes": [
+      {
+        "surface": "də",
+        "tag": "CaseLoc"
+      }
+    ]
+  },
+  {
+    "word": "evdən",
+    "stem": "ev",
+    "morphemes": [
+      {
+        "surface": "dən",
+        "tag": "CaseAbl"
+      }
+    ]
+  },
+  {
+    "word": "evlə",
+    "stem": "ev",
+    "morphemes": [
+      {
+        "surface": "lə",
+        "tag": "CaseIns"
+      }
+    ]
+  },
+  {
+    "word": "yolun",
+    "stem": "yol",
+    "morphemes": [
+      {
+        "surface": "un",
+        "tag": "CaseGen"
+      }
+    ]
+  },
+  {
+    "word": "yola",
+    "stem": "yol",
+    "morphemes": [
+      {
+        "surface": "a",
+        "tag": "CaseDat"
+      }
+    ]
+  },
+  {
+    "word": "yolu",
+    "stem": "yol",
+    "morphemes": [
+      {
+        "surface": "u",
+        "tag": "CaseAcc"
+      }
+    ]
+  },
+  {
+    "word": "yolda",
+    "stem": "yol",
+    "morphemes": [
+      {
+        "surface": "da",
+        "tag": "CaseLoc"
+      }
+    ]
+  },
+  {
+    "word": "yoldan",
+    "stem": "yol",
+    "morphemes": [
+      {
+        "surface": "dan",
+        "tag": "CaseAbl"
+      }
+    ]
+  },
+  {
+    "word": "yolla",
+    "stem": "yolla",
+    "morphemes": null
+  },
+  {
+    "word": "kitabçı",
+    "stem": "kitab",
+    "morphemes": [
+      {
+        "surface": "çı",
+        "tag": "DerivAgent"
+      }
+    ]
+  },
+  {
+    "word": "kitabçılıq",
+    "stem": "kitab",
+    "morphemes": [
+      {
+        "surface": "çı",
+        "tag": "DerivAgent"
+      },
+      {
+        "surface": "lıq",
+        "tag": "DerivAbstract"
+      }
+    ]
+  },
+  {
+    "word": "kitabsız",
+    "stem": "kitab",
+    "morphemes": [
+      {
+        "surface": "sız",
+        "tag": "DerivPriv"
+      }
+    ]
+  },
+  {
+    "word": "kitablı",
+    "stem": "kitab",
+    "morphemes": [
+      {
+        "surface": "lı",
+        "tag": "DerivPoss"
+      }
+    ]
+  },
+  {
+    "word": "işçi",
+    "stem": "iş",
+    "morphemes": [
+      {
+        "surface": "çi",
+        "tag": "DerivAgent"
+      }
+    ]
+  },
+  {
+    "word": "işsiz",
+    "stem": "iş",
+    "morphemes": [
+      {
+        "surface": "siz",
+        "tag": "DerivPriv"
+      }
+    ]
+  },
+  {
+    "word": "işli",
+    "stem": "iş",
+    "morphemes": [
+      {
+        "surface": "li",
+        "tag": "DerivPoss"
+      }
+    ]
+  },
+  {
+    "word": "suçu",
+    "stem": "su",
+    "morphemes": [
+      {
+        "surface": "çu",
+        "tag": "DerivAgent"
+      }
+    ]
+  },
+  {
+    "word": "gözlük",
+    "stem": "göz",
+    "morphemes": [
+      {
+        "surface": "lük",
+        "tag": "DerivAbstract"
+      }
+    ]
+  },
+  {
+    "word": "günlük",
+    "stem": "gün",
+    "morphemes": [
+      {
+        "surface": "lük",
+        "tag": "DerivAbstract"
+      }
+    ]
+  },
+  {
+    "word": "yolçu",
+    "stem": "yol",
+    "morphemes": [
+      {
+        "surface": "çu",
+        "tag": "DerivAgent"
+      }
+    ]
+  },
+  {
+    "word": "yolsuz",
+    "stem": "yol",
+    "morphemes": [
+      {
+        "surface": "suz",
+        "tag": "DerivPriv"
+      }
+    ]
+  },
+  {
+    "word": "kitablardan",
+    "stem": "kitab",
+    "morphemes": [
+      {
+        "surface": "lar",
+        "tag": "Plural"
+      },
+      {
+        "surface": "dan",
+        "tag": "CaseAbl"
+      }
+    ]
+  },
+  {
+    "word": "evlərə",
+    "stem": "ev",
+    "morphemes": [
+      {
+        "surface": "lər",
+        "tag": "Plural"
+      },
+      {
+        "surface": "ə",
+        "tag": "CaseDat"
+      }
+    ]
+  },
+  {
+    "word": "uşaqlarla",
+    "stem": "uşaq",
+    "morphemes": [
+      {
+        "surface": "lar",
+        "tag": "Plural"
+      },
+      {
+        "surface": "la",
+        "tag": "CaseIns"
+      }
+    ]
+  },
+  {
+    "word": "evlərdə",
+    "stem": "ev",
+    "morphemes": [
+      {
+        "surface": "lər",
+        "tag": "Plural"
+      },
+      {
+        "surface": "də",
+        "tag": "CaseLoc"
+      }
+    ]
+  },
+  {
+    "word": "uşaqlara",
+    "stem": "uşaq",
+    "morphemes": [
+      {
+        "surface": "lar",
+        "tag": "Plural"
+      },
+      {
+        "surface": "a",
+        "tag": "CaseDat"
+      }
+    ]
+  },
+  {
+    "word": "evlərdən",
+    "stem": "ev",
+    "morphemes": [
+      {
+        "surface": "lər",
+        "tag": "Plural"
+      },
+      {
+        "surface": "dən",
+        "tag": "CaseAbl"
+      }
+    ]
+  },
+  {
+    "word": "günlərdə",
+    "stem": "gün",
+    "morphemes": [
+      {
+        "surface": "lər",
+        "tag": "Plural"
+      },
+      {
+        "surface": "də",
+        "tag": "CaseLoc"
+      }
+    ]
+  },
+  {
+    "word": "yollardan",
+    "stem": "yol",
+    "morphemes": [
+      {
+        "surface": "lar",
+        "tag": "Plural"
+      },
+      {
+        "surface": "dan",
+        "tag": "CaseAbl"
+      }
+    ]
+  },
+  {
+    "word": "dənizlərdə",
+    "stem": "dəniz",
+    "morphemes": [
+      {
+        "surface": "lər",
+        "tag": "Plural"
+      },
+      {
+        "surface": "də",
+        "tag": "CaseLoc"
+      }
+    ]
+  },
+  {
+    "word": "kitabçılıqda",
+    "stem": "kitab",
+    "morphemes": [
+      {
+        "surface": "çı",
+        "tag": "DerivAgent"
+      },
+      {
+        "surface": "lıq",
+        "tag": "DerivAbstract"
+      },
+      {
+        "surface": "da",
+        "tag": "CaseLoc"
+      }
+    ]
+  },
+  {
+    "word": "işçilərdən",
+    "stem": "işçi",
+    "morphemes": [
+      {
+        "surface": "lər",
+        "tag": "Plural"
+      },
+      {
+        "surface": "dən",
+        "tag": "CaseAbl"
+      }
+    ]
+  },
+  {
+    "word": "kitablarımızda",
+    "stem": "kitab",
+    "morphemes": [
+      {
+        "surface": "lar",
+        "tag": "Plural"
+      },
+      {
+        "surface": "ımız",
+        "tag": "Poss1Pl"
+      },
+      {
+        "surface": "da",
+        "tag": "CaseLoc"
+      }
+    ]
+  },
+  {
+    "word": "evlərimiz",
+    "stem": "ev",
+    "morphemes": [
+      {
+        "surface": "lər",
+        "tag": "Plural"
+      },
+      {
+        "surface": "imiz",
+        "tag": "Poss1Pl"
+      }
+    ]
+  },
+  {
+    "word": "günlərinizdə",
+    "stem": "gün",
+    "morphemes": [
+      {
+        "surface": "lər",
+        "tag": "Plural"
+      },
+      {
+        "surface": "iniz",
+        "tag": "Poss2Pl"
+      },
+      {
+        "surface": "də",
+        "tag": "CaseLoc"
+      }
+    ]
+  },
+  {
+    "word": "kitabımda",
+    "stem": "kitab",
+    "morphemes": [
+      {
+        "surface": "ım",
+        "tag": "Poss1Sg"
+      },
+      {
+        "surface": "da",
+        "tag": "CaseLoc"
+      }
+    ]
+  },
+  {
+    "word": "evində",
+    "stem": "ev",
+    "morphemes": [
+      {
+        "surface": "in",
+        "tag": "Poss2Sg"
+      },
+      {
+        "surface": "də",
+        "tag": "CaseLoc"
+      }
+    ]
+  },
+  {
+    "word": "kitablarımız",
+    "stem": "kitab",
+    "morphemes": [
+      {
+        "surface": "lar",
+        "tag": "Plural"
+      },
+      {
+        "surface": "ımız",
+        "tag": "Poss1Pl"
+      }
+    ]
+  },
+  {
+    "word": "kitablarınız",
+    "stem": "kitab",
+    "morphemes": [
+      {
+        "surface": "lar",
+        "tag": "Plural"
+      },
+      {
+        "surface": "ınız",
+        "tag": "Poss2Pl"
+      }
+    ]
+  },
+  {
+    "word": "yollarımızdan",
+    "stem": "yol",
+    "morphemes": [
+      {
+        "surface": "lar",
+        "tag": "Plural"
+      },
+      {
+        "surface": "ımız",
+        "tag": "Poss1Pl"
+      },
+      {
+        "surface": "dan",
+        "tag": "CaseAbl"
+      }
+    ]
+  },
+  {
+    "word": "işlərimizdə",
+    "stem": "iş",
+    "morphemes": [
+      {
+        "surface": "lər",
+        "tag": "Plural"
+      },
+      {
+        "surface": "imiz",
+        "tag": "Poss1Pl"
+      },
+      {
+        "surface": "də",
+        "tag": "CaseLoc"
+      }
+    ]
+  },
+  {
+    "word": "evlərindən",
+    "stem": "ev",
+    "morphemes": [
+      {
+        "surface": "ləri",
+        "tag": "Poss3Pl"
+      },
+      {
+        "surface": "ndən",
+        "tag": "CaseAbl"
+      }
+    ]
+  },
+  {
+    "word": "gözlərimiz",
+    "stem": "göz",
+    "morphemes": [
+      {
+        "surface": "lər",
+        "tag": "Plural"
+      },
+      {
+        "surface": "imiz",
+        "tag": "Poss1Pl"
+      }
+    ]
+  },
+  {
+    "word": "kitablarından",
+    "stem": "kitab",
+    "morphemes": [
+      {
+        "surface": "ları",
+        "tag": "Poss3Pl"
+      },
+      {
+        "surface": "ndan",
+        "tag": "CaseAbl"
+      }
+    ]
+  },
+  {
+    "word": "dənizlərimizdən",
+    "stem": "dəniz",
+    "morphemes": [
+      {
+        "surface": "lər",
+        "tag": "Plural"
+      },
+      {
+        "surface": "imiz",
+        "tag": "Poss1Pl"
+      },
+      {
+        "surface": "dən",
+        "tag": "CaseAbl"
+      }
+    ]
+  },
+  {
+    "word": "yollarınızda",
+    "stem": "yol",
+    "morphemes": [
+      {
+        "surface": "lar",
+        "tag": "Plural"
+      },
+      {
+        "surface": "ınız",
+        "tag": "Poss2Pl"
+      },
+      {
+        "surface": "da",
+        "tag": "CaseLoc"
+      }
+    ]
+  },
+  {
+    "word": "dağlarımızdan",
+    "stem": "dağ",
+    "morphemes": [
+      {
+        "surface": "lar",
+        "tag": "Plural"
+      },
+      {
+        "surface": "ımız",
+        "tag": "Poss1Pl"
+      },
+      {
+        "surface": "dan",
+        "tag": "CaseAbl"
+      }
+    ]
+  },
+  {
+    "word": "gəldim",
+    "stem": "gəl",
+    "morphemes": [
+      {
+        "surface": "di",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "m",
+        "tag": "Pers1Sg"
+      }
+    ]
+  },
+  {
+    "word": "gəldin",
+    "stem": "gəl",
+    "morphemes": [
+      {
+        "surface": "di",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "n",
+        "tag": "Pers2Sg"
+      }
+    ]
+  },
+  {
+    "word": "gəldi",
+    "stem": "gəl",
+    "morphemes": [
+      {
+        "surface": "di",
+        "tag": "TensePastDef"
+      }
+    ]
+  },
+  {
+    "word": "gəldik",
+    "stem": "gəl",
+    "morphemes": [
+      {
+        "surface": "di",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "k",
+        "tag": "Pers1Pl"
+      }
+    ]
+  },
+  {
+    "word": "gəldiniz",
+    "stem": "gəl",
+    "morphemes": [
+      {
+        "surface": "di",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "niz",
+        "tag": "Pers2Pl"
+      }
+    ]
+  },
+  {
+    "word": "gəldilər",
+    "stem": "gəl",
+    "morphemes": [
+      {
+        "surface": "di",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "lər",
+        "tag": "Pers3"
+      }
+    ]
+  },
+  {
+    "word": "yazdım",
+    "stem": "yaz",
+    "morphemes": [
+      {
+        "surface": "dı",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "m",
+        "tag": "Pers1Sg"
+      }
+    ]
+  },
+  {
+    "word": "yazdılar",
+    "stem": "yaz",
+    "morphemes": [
+      {
+        "surface": "dı",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "lar",
+        "tag": "Pers3"
+      }
+    ]
+  },
+  {
+    "word": "gəlmişdir",
+    "stem": "gəl",
+    "morphemes": [
+      {
+        "surface": "miş",
+        "tag": "TensePastIndef"
+      },
+      {
+        "surface": "dir",
+        "tag": "Copula"
+      }
+    ]
+  },
+  {
+    "word": "yazmışdır",
+    "stem": "yaz",
+    "morphemes": [
+      {
+        "surface": "mış",
+        "tag": "TensePastIndef"
+      },
+      {
+        "surface": "dır",
+        "tag": "Copula"
+      }
+    ]
+  },
+  {
+    "word": "gələcək",
+    "stem": "gəl",
+    "morphemes": [
+      {
+        "surface": "əcək",
+        "tag": "TenseFuture"
+      }
+    ]
+  },
+  {
+    "word": "yazacaq",
+    "stem": "yaz",
+    "morphemes": [
+      {
+        "surface": "acaq",
+        "tag": "TenseFuture"
+      }
+    ]
+  },
+  {
+    "word": "gəlir",
+    "stem": "gəl",
+    "morphemes": [
+      {
+        "surface": "ir",
+        "tag": "TensePresent"
+      }
+    ]
+  },
+  {
+    "word": "yazır",
+    "stem": "yaz",
+    "morphemes": [
+      {
+        "surface": "ır",
+        "tag": "TensePresent"
+      }
+    ]
+  },
+  {
+    "word": "gəlməlidir",
+    "stem": "gəl",
+    "morphemes": [
+      {
+        "surface": "məli",
+        "tag": "MoodOblig"
+      },
+      {
+        "surface": "dir",
+        "tag": "Copula"
+      }
+    ]
+  },
+  {
+    "word": "yazmalıdır",
+    "stem": "yaz",
+    "morphemes": [
+      {
+        "surface": "malı",
+        "tag": "MoodOblig"
+      },
+      {
+        "surface": "dır",
+        "tag": "Copula"
+      }
+    ]
+  },
+  {
+    "word": "gəlsə",
+    "stem": "gəl",
+    "morphemes": [
+      {
+        "surface": "sə",
+        "tag": "MoodCond"
+      }
+    ]
+  },
+  {
+    "word": "yazsa",
+    "stem": "yaz",
+    "morphemes": [
+      {
+        "surface": "sa",
+        "tag": "MoodCond"
+      }
+    ]
+  },
+  {
+    "word": "gələn",
+    "stem": "gəl",
+    "morphemes": [
+      {
+        "surface": "ən",
+        "tag": "Participle"
+      }
+    ]
+  },
+  {
+    "word": "yazan",
+    "stem": "yaz",
+    "morphemes": [
+      {
+        "surface": "an",
+        "tag": "Participle"
+      }
+    ]
+  },
+  {
+    "word": "gəlmədim",
+    "stem": "gəl",
+    "morphemes": [
+      {
+        "surface": "mə",
+        "tag": "Negation"
+      },
+      {
+        "surface": "di",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "m",
+        "tag": "Pers1Sg"
+      }
+    ]
+  },
+  {
+    "word": "yazmadılar",
+    "stem": "yaz",
+    "morphemes": [
+      {
+        "surface": "ma",
+        "tag": "Negation"
+      },
+      {
+        "surface": "dı",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "lar",
+        "tag": "Pers3"
+      }
+    ]
+  },
+  {
+    "word": "gəlmədi",
+    "stem": "gəl",
+    "morphemes": [
+      {
+        "surface": "mə",
+        "tag": "Negation"
+      },
+      {
+        "surface": "di",
+        "tag": "TensePastDef"
+      }
+    ]
+  },
+  {
+    "word": "yazmamışdır",
+    "stem": "yaz",
+    "morphemes": [
+      {
+        "surface": "ma",
+        "tag": "Negation"
+      },
+      {
+        "surface": "mış",
+        "tag": "TensePastIndef"
+      },
+      {
+        "surface": "dır",
+        "tag": "Copula"
+      }
+    ]
+  },
+  {
+    "word": "yazmadı",
+    "stem": "yaz",
+    "morphemes": [
+      {
+        "surface": "ma",
+        "tag": "Negation"
+      },
+      {
+        "surface": "dı",
+        "tag": "TensePastDef"
+      }
+    ]
+  },
+  {
+    "word": "gəlməmişdir",
+    "stem": "gəl",
+    "morphemes": [
+      {
+        "surface": "mə",
+        "tag": "Negation"
+      },
+      {
+        "surface": "miş",
+        "tag": "TensePastIndef"
+      },
+      {
+        "surface": "dir",
+        "tag": "Copula"
+      }
+    ]
+  },
+  {
+    "word": "yazmamış",
+    "stem": "yaz",
+    "morphemes": [
+      {
+        "surface": "ma",
+        "tag": "Negation"
+      },
+      {
+        "surface": "mış",
+        "tag": "TensePastIndef"
+      }
+    ]
+  },
+  {
+    "word": "gəlməsə",
+    "stem": "gəl",
+    "morphemes": [
+      {
+        "surface": "mə",
+        "tag": "Negation"
+      },
+      {
+        "surface": "sə",
+        "tag": "MoodCond"
+      }
+    ]
+  },
+  {
+    "word": "yazmamalıdır",
+    "stem": "yaz",
+    "morphemes": [
+      {
+        "surface": "ma",
+        "tag": "Negation"
+      },
+      {
+        "surface": "malı",
+        "tag": "MoodOblig"
+      },
+      {
+        "surface": "dır",
+        "tag": "Copula"
+      }
+    ]
+  },
+  {
+    "word": "müəllimdir",
+    "stem": "müəllim",
+    "morphemes": [
+      {
+        "surface": "dir",
+        "tag": "Copula"
+      }
+    ]
+  },
+  {
+    "word": "tələbədir",
+    "stem": "tələbə",
+    "morphemes": [
+      {
+        "surface": "dir",
+        "tag": "Copula"
+      }
+    ]
+  },
+  {
+    "word": "kitabdır",
+    "stem": "kitab",
+    "morphemes": [
+      {
+        "surface": "dır",
+        "tag": "Copula"
+      }
+    ]
+  },
+  {
+    "word": "yaxşıdır",
+    "stem": "yaxşı",
+    "morphemes": [
+      {
+        "surface": "dır",
+        "tag": "Copula"
+      }
+    ]
+  },
+  {
+    "word": "gözəldir",
+    "stem": "gözəl",
+    "morphemes": [
+      {
+        "surface": "dir",
+        "tag": "Copula"
+      }
+    ]
+  },
+  {
+    "word": "böyükdür",
+    "stem": "böyük",
+    "morphemes": [
+      {
+        "surface": "dür",
+        "tag": "Copula"
+      }
+    ]
+  },
+  {
+    "word": "doğrudur",
+    "stem": "doğru",
+    "morphemes": [
+      {
+        "surface": "dur",
+        "tag": "Copula"
+      }
+    ]
+  },
+  {
+    "word": "güclüdür",
+    "stem": "güclü",
+    "morphemes": [
+      {
+        "surface": "dür",
+        "tag": "Copula"
+      }
+    ]
+  },
+  {
+    "word": "gəldimi",
+    "stem": "gəl",
+    "morphemes": [
+      {
+        "surface": "di",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "mi",
+        "tag": "Question"
+      }
+    ]
+  },
+  {
+    "word": "yazdımı",
+    "stem": "yaz",
+    "morphemes": [
+      {
+        "surface": "dı",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "mı",
+        "tag": "Question"
+      }
+    ]
+  },
+  {
+    "word": "müəllimdirmi",
+    "stem": "müəllim",
+    "morphemes": [
+      {
+        "surface": "dir",
+        "tag": "Copula"
+      },
+      {
+        "surface": "mi",
+        "tag": "Question"
+      }
+    ]
+  },
+  {
+    "word": "gözəldirmi",
+    "stem": "gözəl",
+    "morphemes": [
+      {
+        "surface": "dir",
+        "tag": "Copula"
+      },
+      {
+        "surface": "mi",
+        "tag": "Question"
+      }
+    ]
+  },
+  {
+    "word": "gəldikmi",
+    "stem": "gəl",
+    "morphemes": [
+      {
+        "surface": "di",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "k",
+        "tag": "Pers1Pl"
+      },
+      {
+        "surface": "mi",
+        "tag": "Question"
+      }
+    ]
+  },
+  {
+    "word": "yazdılarmi",
+    "stem": "yazdılarmi",
+    "morphemes": null
+  },
+  {
+    "word": "ürəyi",
+    "stem": "ürək",
+    "morphemes": [
+      {
+        "surface": "i",
+        "tag": "CaseAcc"
+      }
+    ]
+  },
+  {
+    "word": "uşağı",
+    "stem": "uşaq",
+    "morphemes": [
+      {
+        "surface": "ı",
+        "tag": "CaseAcc"
+      }
+    ]
+  },
+  {
+    "word": "çiçəyi",
+    "stem": "çiçək",
+    "morphemes": [
+      {
+        "surface": "i",
+        "tag": "CaseAcc"
+      }
+    ]
+  },
+  {
+    "word": "ürəyim",
+    "stem": "ürək",
+    "morphemes": [
+      {
+        "surface": "im",
+        "tag": "Poss1Sg"
+      }
+    ]
+  },
+  {
+    "word": "uşağım",
+    "stem": "uşaq",
+    "morphemes": [
+      {
+        "surface": "ım",
+        "tag": "Poss1Sg"
+      }
+    ]
+  },
+  {
+    "word": "ürəyə",
+    "stem": "ürək",
+    "morphemes": [
+      {
+        "surface": "ə",
+        "tag": "CaseDat"
+      }
+    ]
+  },
+  {
+    "word": "uşağa",
+    "stem": "uşaq",
+    "morphemes": [
+      {
+        "surface": "a",
+        "tag": "CaseDat"
+      }
+    ]
+  },
+  {
+    "word": "çiçəyə",
+    "stem": "çiçək",
+    "morphemes": [
+      {
+        "surface": "ə",
+        "tag": "CaseDat"
+      }
+    ]
+  },
+  {
+    "word": "ağacda",
+    "stem": "ağac",
+    "morphemes": [
+      {
+        "surface": "da",
+        "tag": "CaseLoc"
+      }
+    ]
+  },
+  {
+    "word": "ağacdan",
+    "stem": "ağac",
+    "morphemes": [
+      {
+        "surface": "dan",
+        "tag": "CaseAbl"
+      }
+    ]
+  },
+  {
+    "word": "qələmdə",
+    "stem": "qələm",
+    "morphemes": [
+      {
+        "surface": "də",
+        "tag": "CaseLoc"
+      }
+    ]
+  },
+  {
+    "word": "qələmdən",
+    "stem": "qələm",
+    "morphemes": [
+      {
+        "surface": "dən",
+        "tag": "CaseAbl"
+      }
+    ]
+  },
+  {
+    "word": "ana",
+    "stem": "ana",
+    "morphemes": null
+  },
+  {
+    "word": "masa",
+    "stem": "masa",
+    "morphemes": null
+  },
+  {
+    "word": "dərs",
+    "stem": "dərs",
+    "morphemes": null
+  },
+  {
+    "word": "xəbər",
+    "stem": "xəbər",
+    "morphemes": null
+  },
+  {
+    "word": "nəfər",
+    "stem": "nəfər",
+    "morphemes": null
+  },
+  {
+    "word": "mənzil",
+    "stem": "mənzil",
+    "morphemes": null
+  },
+  {
+    "word": "pəncərə",
+    "stem": "pəncərə",
+    "morphemes": null
+  },
+  {
+    "word": "küçə",
+    "stem": "küçə",
+    "morphemes": null
+  },
+  {
+    "word": "meşə",
+    "stem": "meşə",
+    "morphemes": null
+  },
+  {
+    "word": "sahə",
+    "stem": "sahə",
+    "morphemes": null
+  },
+  {
+    "word": "xalça",
+    "stem": "xalça",
+    "morphemes": null
+  },
+  {
+    "word": "paltar",
+    "stem": "paltar",
+    "morphemes": null
+  },
+  {
+    "word": "qardaş",
+    "stem": "qardaş",
+    "morphemes": null
+  },
+  {
+    "word": "bacı",
+    "stem": "bacı",
+    "morphemes": null
+  },
+  {
+    "word": "dayı",
+    "stem": "dayı",
+    "morphemes": null
+  },
+  {
+    "word": "nənə",
+    "stem": "nənə",
+    "morphemes": null
+  },
+  {
+    "word": "bala",
+    "stem": "bala",
+    "morphemes": null
+  },
+  {
+    "word": "alma",
+    "stem": "alma",
+    "morphemes": null
+  },
+  {
+    "word": "çanta",
+    "stem": "çanta",
+    "morphemes": null
+  },
+  {
+    "word": "lampa",
+    "stem": "lampa",
+    "morphemes": null
+  },
+  {
+    "word": "oxudum",
+    "stem": "oxu",
+    "morphemes": [
+      {
+        "surface": "du",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "m",
+        "tag": "Pers1Sg"
+      }
+    ]
+  },
+  {
+    "word": "oxudun",
+    "stem": "oxu",
+    "morphemes": [
+      {
+        "surface": "du",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "n",
+        "tag": "Pers2Sg"
+      }
+    ]
+  },
+  {
+    "word": "oxudu",
+    "stem": "oxu",
+    "morphemes": [
+      {
+        "surface": "du",
+        "tag": "TensePastDef"
+      }
+    ]
+  },
+  {
+    "word": "oxuduq",
+    "stem": "oxu",
+    "morphemes": [
+      {
+        "surface": "du",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "q",
+        "tag": "Pers1Pl"
+      }
+    ]
+  },
+  {
+    "word": "oxudunuz",
+    "stem": "oxu",
+    "morphemes": [
+      {
+        "surface": "du",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "nuz",
+        "tag": "Pers2Pl"
+      }
+    ]
+  },
+  {
+    "word": "oxudular",
+    "stem": "oxu",
+    "morphemes": [
+      {
+        "surface": "du",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "lar",
+        "tag": "Pers3"
+      }
+    ]
+  },
+  {
+    "word": "bilir",
+    "stem": "bil",
+    "morphemes": [
+      {
+        "surface": "ir",
+        "tag": "TensePresent"
+      }
+    ]
+  },
+  {
+    "word": "bilirəm",
+    "stem": "bil",
+    "morphemes": [
+      {
+        "surface": "ir",
+        "tag": "TensePresent"
+      },
+      {
+        "surface": "əm",
+        "tag": "Pers1Sg"
+      }
+    ]
+  },
+  {
+    "word": "bilirsən",
+    "stem": "bil",
+    "morphemes": [
+      {
+        "surface": "ir",
+        "tag": "TensePresent"
+      },
+      {
+        "surface": "sən",
+        "tag": "Pers2Sg"
+      }
+    ]
+  },
+  {
+    "word": "bilirik",
+    "stem": "bil",
+    "morphemes": [
+      {
+        "surface": "ir",
+        "tag": "TensePresent"
+      },
+      {
+        "surface": "ik",
+        "tag": "Pers1Pl"
+      }
+    ]
+  },
+  {
+    "word": "bilirsiniz",
+    "stem": "bil",
+    "morphemes": [
+      {
+        "surface": "ir",
+        "tag": "TensePresent"
+      },
+      {
+        "surface": "siniz",
+        "tag": "Pers2Pl"
+      }
+    ]
+  },
+  {
+    "word": "bilirlər",
+    "stem": "bil",
+    "morphemes": [
+      {
+        "surface": "ir",
+        "tag": "TensePresent"
+      },
+      {
+        "surface": "lər",
+        "tag": "Pers3"
+      }
+    ]
+  },
+  {
+    "word": "görəcək",
+    "stem": "gör",
+    "morphemes": [
+      {
+        "surface": "əcək",
+        "tag": "TenseFuture"
+      }
+    ]
+  },
+  {
+    "word": "görəcəyəm",
+    "stem": "gör",
+    "morphemes": [
+      {
+        "surface": "əcək",
+        "tag": "TenseFuture"
+      },
+      {
+        "surface": "əm",
+        "tag": "Pers1Sg"
+      }
+    ]
+  },
+  {
+    "word": "görəcəksən",
+    "stem": "gör",
+    "morphemes": [
+      {
+        "surface": "əcək",
+        "tag": "TenseFuture"
+      },
+      {
+        "surface": "sən",
+        "tag": "Pers2Sg"
+      }
+    ]
+  },
+  {
+    "word": "görəcəyik",
+    "stem": "gör",
+    "morphemes": [
+      {
+        "surface": "əcək",
+        "tag": "TenseFuture"
+      },
+      {
+        "surface": "ik",
+        "tag": "Pers1Pl"
+      }
+    ]
+  },
+  {
+    "word": "görəcəksiniz",
+    "stem": "gör",
+    "morphemes": [
+      {
+        "surface": "əcək",
+        "tag": "TenseFuture"
+      },
+      {
+        "surface": "siniz",
+        "tag": "Pers2Pl"
+      }
+    ]
+  },
+  {
+    "word": "görəcəklər",
+    "stem": "gör",
+    "morphemes": [
+      {
+        "surface": "əcək",
+        "tag": "TenseFuture"
+      },
+      {
+        "surface": "lər",
+        "tag": "Pers3"
+      }
+    ]
+  },
+  {
+    "word": "demişəm",
+    "stem": "de",
+    "morphemes": [
+      {
+        "surface": "miş",
+        "tag": "TensePastIndef"
+      },
+      {
+        "surface": "əm",
+        "tag": "Pers1Sg"
+      }
+    ]
+  },
+  {
+    "word": "demişsən",
+    "stem": "de",
+    "morphemes": [
+      {
+        "surface": "miş",
+        "tag": "TensePastIndef"
+      },
+      {
+        "surface": "sən",
+        "tag": "Pers2Sg"
+      }
+    ]
+  },
+  {
+    "word": "demişik",
+    "stem": "de",
+    "morphemes": [
+      {
+        "surface": "miş",
+        "tag": "TensePastIndef"
+      },
+      {
+        "surface": "ik",
+        "tag": "Pers1Pl"
+      }
+    ]
+  },
+  {
+    "word": "demişsiniz",
+    "stem": "de",
+    "morphemes": [
+      {
+        "surface": "miş",
+        "tag": "TensePastIndef"
+      },
+      {
+        "surface": "siniz",
+        "tag": "Pers2Pl"
+      }
+    ]
+  },
+  {
+    "word": "demiş",
+    "stem": "de",
+    "morphemes": [
+      {
+        "surface": "miş",
+        "tag": "TensePastIndef"
+      }
+    ]
+  },
+  {
+    "word": "başlayaraq",
+    "stem": "başlay",
+    "morphemes": [
+      {
+        "surface": "araq",
+        "tag": "Gerund"
+      }
+    ]
+  },
+  {
+    "word": "görərək",
+    "stem": "gör",
+    "morphemes": [
+      {
+        "surface": "ərək",
+        "tag": "Gerund"
+      }
+    ]
+  },
+  {
+    "word": "açılır",
+    "stem": "açıl",
+    "morphemes": [
+      {
+        "surface": "ır",
+        "tag": "TensePresent"
+      }
+    ]
+  },
+  {
+    "word": "açılırdı",
+    "stem": "açıl",
+    "morphemes": [
+      {
+        "surface": "ır",
+        "tag": "TensePresent"
+      },
+      {
+        "surface": "dı",
+        "tag": "TensePastDef"
+      }
+    ]
+  },
+  {
+    "word": "açılmışdır",
+    "stem": "açıl",
+    "morphemes": [
+      {
+        "surface": "mış",
+        "tag": "TensePastIndef"
+      },
+      {
+        "surface": "dır",
+        "tag": "Copula"
+      }
+    ]
+  },
+  {
+    "word": "geyinir",
+    "stem": "geyin",
+    "morphemes": [
+      {
+        "surface": "ir",
+        "tag": "TensePresent"
+      }
+    ]
+  },
+  {
+    "word": "geyinirəm",
+    "stem": "geyin",
+    "morphemes": [
+      {
+        "surface": "ir",
+        "tag": "TensePresent"
+      },
+      {
+        "surface": "əm",
+        "tag": "Pers1Sg"
+      }
+    ]
+  },
+  {
+    "word": "görüşür",
+    "stem": "görüş",
+    "morphemes": [
+      {
+        "surface": "ür",
+        "tag": "TensePresent"
+      }
+    ]
+  },
+  {
+    "word": "görüşdülər",
+    "stem": "görüş",
+    "morphemes": [
+      {
+        "surface": "dü",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "lər",
+        "tag": "Pers3"
+      }
+    ]
+  },
+  {
+    "word": "böyütdü",
+    "stem": "böyüt",
+    "morphemes": [
+      {
+        "surface": "dü",
+        "tag": "TensePastDef"
+      }
+    ]
+  },
+  {
+    "word": "böyütdüm",
+    "stem": "böyüt",
+    "morphemes": [
+      {
+        "surface": "dü",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "m",
+        "tag": "Pers1Sg"
+      }
+    ]
+  },
+  {
+    "word": "sevilir",
+    "stem": "sev",
+    "morphemes": [
+      {
+        "surface": "il",
+        "tag": "VoicePass"
+      },
+      {
+        "surface": "ir",
+        "tag": "TensePresent"
+      }
+    ]
+  },
+  {
+    "word": "sevildi",
+    "stem": "sev",
+    "morphemes": [
+      {
+        "surface": "il",
+        "tag": "VoicePass"
+      },
+      {
+        "surface": "di",
+        "tag": "TensePastDef"
+      }
+    ]
+  },
+  {
+    "word": "baxılır",
+    "stem": "bax",
+    "morphemes": [
+      {
+        "surface": "ıl",
+        "tag": "VoicePass"
+      },
+      {
+        "surface": "ır",
+        "tag": "TensePresent"
+      }
+    ]
+  },
+  {
+    "word": "baxıldı",
+    "stem": "bax",
+    "morphemes": [
+      {
+        "surface": "ıl",
+        "tag": "VoicePass"
+      },
+      {
+        "surface": "dı",
+        "tag": "TensePastDef"
+      }
+    ]
+  },
+  {
+    "word": "oxuyur",
+    "stem": "oxuy",
+    "morphemes": [
+      {
+        "surface": "ur",
+        "tag": "TensePresent"
+      }
+    ]
+  },
+  {
+    "word": "oxuyuram",
+    "stem": "oxuy",
+    "morphemes": [
+      {
+        "surface": "ur",
+        "tag": "TensePresent"
+      },
+      {
+        "surface": "am",
+        "tag": "Pers1Sg"
+      }
+    ]
+  },
+  {
+    "word": "oxuyursan",
+    "stem": "oxuy",
+    "morphemes": [
+      {
+        "surface": "ur",
+        "tag": "TensePresent"
+      },
+      {
+        "surface": "san",
+        "tag": "Pers2Sg"
+      }
+    ]
+  },
+  {
+    "word": "oxuyuruq",
+    "stem": "oxuy",
+    "morphemes": [
+      {
+        "surface": "ur",
+        "tag": "TensePresent"
+      },
+      {
+        "surface": "uq",
+        "tag": "Pers1Pl"
+      }
+    ]
+  },
+  {
+    "word": "oxuyursunuz",
+    "stem": "oxuy",
+    "morphemes": [
+      {
+        "surface": "ur",
+        "tag": "TensePresent"
+      },
+      {
+        "surface": "sunuz",
+        "tag": "Pers2Pl"
+      }
+    ]
+  },
+  {
+    "word": "oxuyurlar",
+    "stem": "oxuy",
+    "morphemes": [
+      {
+        "surface": "ur",
+        "tag": "TensePresent"
+      },
+      {
+        "surface": "lar",
+        "tag": "Pers3"
+      }
+    ]
+  },
+  {
+    "word": "danışır",
+    "stem": "danış",
+    "morphemes": [
+      {
+        "surface": "ır",
+        "tag": "TensePresent"
+      }
+    ]
+  },
+  {
+    "word": "danışdı",
+    "stem": "danış",
+    "morphemes": [
+      {
+        "surface": "dı",
+        "tag": "TensePastDef"
+      }
+    ]
+  },
+  {
+    "word": "danışmışdır",
+    "stem": "danış",
+    "morphemes": [
+      {
+        "surface": "mış",
+        "tag": "TensePastIndef"
+      },
+      {
+        "surface": "dır",
+        "tag": "Copula"
+      }
+    ]
+  },
+  {
+    "word": "danışacaq",
+    "stem": "danış",
+    "morphemes": [
+      {
+        "surface": "acaq",
+        "tag": "TenseFuture"
+      }
+    ]
+  },
+  {
+    "word": "danışmalıdır",
+    "stem": "danış",
+    "morphemes": [
+      {
+        "surface": "malı",
+        "tag": "MoodOblig"
+      },
+      {
+        "surface": "dır",
+        "tag": "Copula"
+      }
+    ]
+  },
+  {
+    "word": "danışsa",
+    "stem": "danış",
+    "morphemes": [
+      {
+        "surface": "sa",
+        "tag": "MoodCond"
+      }
+    ]
+  },
+  {
+    "word": "başladım",
+    "stem": "başla",
+    "morphemes": [
+      {
+        "surface": "dı",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "m",
+        "tag": "Pers1Sg"
+      }
+    ]
+  },
+  {
+    "word": "başladın",
+    "stem": "başla",
+    "morphemes": [
+      {
+        "surface": "dı",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "n",
+        "tag": "Pers2Sg"
+      }
+    ]
+  },
+  {
+    "word": "başladı",
+    "stem": "başla",
+    "morphemes": [
+      {
+        "surface": "dı",
+        "tag": "TensePastDef"
+      }
+    ]
+  },
+  {
+    "word": "başladıq",
+    "stem": "başla",
+    "morphemes": [
+      {
+        "surface": "dı",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "q",
+        "tag": "Pers1Pl"
+      }
+    ]
+  },
+  {
+    "word": "başladınız",
+    "stem": "başla",
+    "morphemes": [
+      {
+        "surface": "dı",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "nız",
+        "tag": "Pers2Pl"
+      }
+    ]
+  },
+  {
+    "word": "başladılar",
+    "stem": "başla",
+    "morphemes": [
+      {
+        "surface": "dı",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "lar",
+        "tag": "Pers3"
+      }
+    ]
+  },
+  {
+    "word": "qurtarmışıq",
+    "stem": "qurtar",
+    "morphemes": [
+      {
+        "surface": "mış",
+        "tag": "TensePastIndef"
+      },
+      {
+        "surface": "ıq",
+        "tag": "Pers1Pl"
+      }
+    ]
+  },
+  {
+    "word": "qurtarmışdıq",
+    "stem": "qurtar",
+    "morphemes": [
+      {
+        "surface": "mış",
+        "tag": "TensePastIndef"
+      },
+      {
+        "surface": "dı",
+        "tag": "TensePastDef"
+      },
+      {
+        "surface": "q",
+        "tag": "Pers1Pl"
+      }
+    ]
+  }
+]

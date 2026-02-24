@@ -1,0 +1,5229 @@
+[
+  {
+    "name": "abbreviation_academic_titles",
+    "input": "Dr. Məmmədov və Prof. dr. Əliyev gəldi.",
+    "words": [
+      "Dr",
+      "Məmmədov",
+      "və",
+      "Prof",
+      "dr",
+      "Əliyev",
+      "gəldi"
+    ],
+    "sentences": [
+      "Dr. Məmmədov və Prof. dr. Əliyev gəldi."
+    ]
+  },
+  {
+    "name": "abbreviation_ak",
+    "input": "Ak. Əliyev tədqiqat apardı.",
+    "words": [
+      "Ak",
+      "Əliyev",
+      "tədqiqat",
+      "apardı"
+    ],
+    "sentences": [
+      "Ak. Əliyev tədqiqat apardı."
+    ]
+  },
+  {
+    "name": "abbreviation_ar",
+    "input": "Müəllif ar. dilində yazdı.",
+    "words": [
+      "Müəllif",
+      "ar",
+      "dilində",
+      "yazdı"
+    ],
+    "sentences": [
+      "Müəllif ar. dilində yazdı."
+    ]
+  },
+  {
+    "name": "abbreviation_at_end_of_input",
+    "input": "Bunu prof. dedi",
+    "words": [
+      "Bunu",
+      "prof",
+      "dedi"
+    ],
+    "sentences": [
+      "Bunu prof. dedi"
+    ]
+  },
+  {
+    "name": "abbreviation_at_end_of_sentence",
+    "input": "Meyvələr: alma, armud vb. Bunlar dadlıdır.",
+    "words": [
+      "Meyvələr",
+      "alma",
+      "armud",
+      "vb",
+      "Bunlar",
+      "dadlıdır"
+    ],
+    "sentences": [
+      "Meyvələr: alma, armud vb. Bunlar dadlıdır."
+    ]
+  },
+  {
+    "name": "abbreviation_at_start",
+    "input": "Prof. Əliyev danışdı.",
+    "words": [
+      "Prof",
+      "Əliyev",
+      "danışdı"
+    ],
+    "sentences": [
+      "Prof. Əliyev danışdı."
+    ]
+  },
+  {
+    "name": "abbreviation_azr_multipart",
+    "input": "Az.R. Konstitusiyası qəbul edildi.",
+    "words": [
+      "Az",
+      "R",
+      "Konstitusiyası",
+      "qəbul",
+      "edildi"
+    ],
+    "sentences": [
+      "Az.R.",
+      " Konstitusiyası qəbul edildi."
+    ]
+  },
+  {
+    "name": "abbreviation_be",
+    "input": "Tarix b.e. 500-cü ildir.",
+    "words": [
+      "Tarix",
+      "b",
+      "e",
+      "cü",
+      "ildir"
+    ],
+    "sentences": [
+      "Tarix b.e. 500-cü ildir."
+    ]
+  },
+  {
+    "name": "abbreviation_dos",
+    "input": "Dos. Məmmədov gəldi.",
+    "words": [
+      "Dos",
+      "Məmmədov",
+      "gəldi"
+    ],
+    "sentences": [
+      "Dos. Məmmədov gəldi."
+    ]
+  },
+  {
+    "name": "abbreviation_dr",
+    "input": "Dr. Məmmədov müalicə etdi.",
+    "words": [
+      "Dr",
+      "Məmmədov",
+      "müalicə",
+      "etdi"
+    ],
+    "sentences": [
+      "Dr. Məmmədov müalicə etdi."
+    ]
+  },
+  {
+    "name": "abbreviation_ea",
+    "input": "Tarix e.ə. başlayır.",
+    "words": [
+      "Tarix",
+      "e",
+      "ə",
+      "başlayır"
+    ],
+    "sentences": [
+      "Tarix e.ə. başlayır."
+    ]
+  },
+  {
+    "name": "abbreviation_followed_by_lowercase",
+    "input": "Prof. dedi ki, gəlməyəcək.",
+    "words": [
+      "Prof",
+      "dedi",
+      "ki",
+      "gəlməyəcək"
+    ],
+    "sentences": [
+      "Prof. dedi ki, gəlməyəcək."
+    ]
+  },
+  {
+    "name": "abbreviation_followed_by_uppercase_space",
+    "input": "Tarix b.e. 500-cü ildə. Bu vaxt Roma dövrüdür.",
+    "words": [
+      "Tarix",
+      "b",
+      "e",
+      "cü",
+      "ildə",
+      "Bu",
+      "vaxt",
+      "Roma",
+      "dövrüdür"
+    ],
+    "sentences": [
+      "Tarix b.e. 500-cü ildə.",
+      " Bu vaxt Roma dövrüdür."
+    ]
+  },
+  {
+    "name": "abbreviation_km",
+    "input": "Məsafə 5 km. uzaqlıqdadır.",
+    "words": [
+      "Məsafə",
+      "km",
+      "uzaqlıqdadır"
+    ],
+    "sentences": [
+      "Məsafə 5 km. uzaqlıqdadır."
+    ]
+  },
+  {
+    "name": "abbreviation_kq",
+    "input": "Çəki 10 kq. ağırdır.",
+    "words": [
+      "Çəki",
+      "kq",
+      "ağırdır"
+    ],
+    "sentences": [
+      "Çəki 10 kq. ağırdır."
+    ]
+  },
+  {
+    "name": "abbreviation_lowercase",
+    "input": "Saat saat 14:30 idi v.b. deyillər.",
+    "words": [
+      "Saat",
+      "saat",
+      "idi",
+      "v",
+      "b",
+      "deyillər"
+    ],
+    "sentences": [
+      "Saat saat 14:30 idi v.b. deyillər."
+    ]
+  },
+  {
+    "name": "abbreviation_me",
+    "input": "Bu m.e. 2024-cü ildir.",
+    "words": [
+      "Bu",
+      "m",
+      "e",
+      "cü",
+      "ildir"
+    ],
+    "sentences": [
+      "Bu m.e. 2024-cü ildir."
+    ]
+  },
+  {
+    "name": "abbreviation_min",
+    "input": "Vaxt 30 min. keçdi.",
+    "words": [
+      "Vaxt",
+      "min",
+      "keçdi"
+    ],
+    "sentences": [
+      "Vaxt 30 min. keçdi."
+    ]
+  },
+  {
+    "name": "abbreviation_multi_word",
+    "input": "Kitablar və s. satıldı.",
+    "words": [
+      "Kitablar",
+      "və",
+      "s",
+      "satıldı"
+    ],
+    "sentences": [
+      "Kitablar və s. satıldı."
+    ]
+  },
+  {
+    "name": "abbreviation_multipart",
+    "input": "Az.R. qanununa əsasən.",
+    "words": [
+      "Az",
+      "R",
+      "qanununa",
+      "əsasən"
+    ],
+    "sentences": [
+      "Az.R. qanununa əsasən."
+    ]
+  },
+  {
+    "name": "abbreviation_prof",
+    "input": "Prof. Əliyev gəldi.",
+    "words": [
+      "Prof",
+      "Əliyev",
+      "gəldi"
+    ],
+    "sentences": [
+      "Prof. Əliyev gəldi."
+    ]
+  },
+  {
+    "name": "abbreviation_prof_mid_sentence",
+    "input": "Mən prof. Əliyevi tanıyıram.",
+    "words": [
+      "Mən",
+      "prof",
+      "Əliyevi",
+      "tanıyıram"
+    ],
+    "sentences": [
+      "Mən prof. Əliyevi tanıyıram."
+    ]
+  },
+  {
+    "name": "abbreviation_sequences",
+    "input": "A.B.C. təşkilatı.",
+    "words": [
+      "A",
+      "B",
+      "C",
+      "təşkilatı"
+    ],
+    "sentences": [
+      "A.B.C. təşkilatı."
+    ]
+  },
+  {
+    "name": "abbreviation_sm",
+    "input": "Uzunluq 15 sm. ölçüsündədir.",
+    "words": [
+      "Uzunluq",
+      "sm",
+      "ölçüsündədir"
+    ],
+    "sentences": [
+      "Uzunluq 15 sm. ölçüsündədir."
+    ]
+  },
+  {
+    "name": "abbreviation_vb",
+    "input": "Alma, armud, banan vb. meyvələr.",
+    "words": [
+      "Alma",
+      "armud",
+      "banan",
+      "vb",
+      "meyvələr"
+    ],
+    "sentences": [
+      "Alma, armud, banan vb. meyvələr."
+    ]
+  },
+  {
+    "name": "abbreviation_year_date",
+    "input": "Hadisə e.ə. 500-ci ildə olub.",
+    "words": [
+      "Hadisə",
+      "e",
+      "ə",
+      "ci",
+      "ildə",
+      "olub"
+    ],
+    "sentences": [
+      "Hadisə e.ə. 500-ci ildə olub."
+    ]
+  },
+  {
+    "name": "academic_reference",
+    "input": "Məqalə (Əliyev və b., 2024) nəticələri təsdiq edir.",
+    "words": [
+      "Məqalə",
+      "Əliyev",
+      "və",
+      "b",
+      "nəticələri",
+      "təsdiq",
+      "edir"
+    ],
+    "sentences": [
+      "Məqalə (Əliyev və b., 2024) nəticələri təsdiq edir."
+    ]
+  },
+  {
+    "name": "address_with_numbers",
+    "input": "28 May küçəsi, ev 15.",
+    "words": [
+      "May",
+      "küçəsi",
+      "ev"
+    ],
+    "sentences": [
+      "28 May küçəsi, ev 15."
+    ]
+  },
+  {
+    "name": "all_azerbaijani_special_chars",
+    "input": "Əlövcə şüşə çörək ığdır İsmayıl",
+    "words": [
+      "Əlövcə",
+      "şüşə",
+      "çörək",
+      "ığdır",
+      "İsmayıl"
+    ],
+    "sentences": [
+      "Əlövcə şüşə çörək ığdır İsmayıl"
+    ]
+  },
+  {
+    "name": "ampersand",
+    "input": "sən \u0026 mən",
+    "words": [
+      "sən",
+      "mən"
+    ],
+    "sentences": [
+      "sən \u0026 mən"
+    ]
+  },
+  {
+    "name": "apostrophe_after_digit",
+    "input": "Rəqəm 5'ci yerdədir.",
+    "words": [
+      "Rəqəm",
+      "ci",
+      "yerdədir"
+    ],
+    "sentences": [
+      "Rəqəm 5'ci yerdədir."
+    ],
+    "word_tokens": [
+      {
+        "text": "Rəqəm",
+        "start": 0,
+        "end": 7,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 7,
+        "end": 8,
+        "type": "Space"
+      },
+      {
+        "text": "5",
+        "start": 8,
+        "end": 9,
+        "type": "Number"
+      },
+      {
+        "text": "'",
+        "start": 9,
+        "end": 10,
+        "type": "Punctuation"
+      },
+      {
+        "text": "ci",
+        "start": 10,
+        "end": 12,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 12,
+        "end": 13,
+        "type": "Space"
+      },
+      {
+        "text": "yerdədir",
+        "start": 13,
+        "end": 22,
+        "type": "Word"
+      },
+      {
+        "text": ".",
+        "start": 22,
+        "end": 23,
+        "type": "Punctuation"
+      }
+    ]
+  },
+  {
+    "name": "apostrophe_modifier_letter",
+    "input": "Bakıʼnın mərkəzi.",
+    "words": [
+      "Bakıʼnın",
+      "mərkəzi"
+    ],
+    "sentences": [
+      "Bakıʼnın mərkəzi."
+    ]
+  },
+  {
+    "name": "apostrophe_right_quote",
+    "input": "Bakı’nın küçələri.",
+    "words": [
+      "Bakı’nın",
+      "küçələri"
+    ],
+    "sentences": [
+      "Bakı’nın küçələri."
+    ]
+  },
+  {
+    "name": "apostrophe_suffix",
+    "input": "Bakı'nın küçələri gözəldir.",
+    "words": [
+      "Bakı'nın",
+      "küçələri",
+      "gözəldir"
+    ],
+    "sentences": [
+      "Bakı'nın küçələri gözəldir."
+    ]
+  },
+  {
+    "name": "arabic_script_text",
+    "input": "العربية يازيسي.",
+    "words": [
+      "العربية",
+      "يازيسي"
+    ],
+    "sentences": [
+      "العربية يازيسي."
+    ]
+  },
+  {
+    "name": "arabic_script_words",
+    "input": "بسم الله test söz.",
+    "words": [
+      "بسم",
+      "الله",
+      "test",
+      "söz"
+    ],
+    "sentences": [
+      "بسم الله test söz."
+    ]
+  },
+  {
+    "name": "at_mention_not_email",
+    "input": "İstifadəçi @username bildiriş aldı.",
+    "words": [
+      "İstifadəçi",
+      "username",
+      "bildiriş",
+      "aldı"
+    ],
+    "sentences": [
+      "İstifadəçi @username bildiriş aldı."
+    ]
+  },
+  {
+    "name": "at_sign_alone",
+    "input": "bax @ yerə",
+    "words": [
+      "bax",
+      "yerə"
+    ],
+    "sentences": [
+      "bax @ yerə"
+    ]
+  },
+  {
+    "name": "at_symbol_not_email",
+    "input": "İşarə @ simvol olaraq.",
+    "words": [
+      "İşarə",
+      "simvol",
+      "olaraq"
+    ],
+    "sentences": [
+      "İşarə @ simvol olaraq."
+    ]
+  },
+  {
+    "name": "azerbaijani_full_alphabet",
+    "input": "Əlifba: a b c ç d e ə f g ğ h x ı i j k q l m n o ö p r s ş t u ü v y z.",
+    "words": [
+      "Əlifba",
+      "a",
+      "b",
+      "c",
+      "ç",
+      "d",
+      "e",
+      "ə",
+      "f",
+      "g",
+      "ğ",
+      "h",
+      "x",
+      "ı",
+      "i",
+      "j",
+      "k",
+      "q",
+      "l",
+      "m",
+      "n",
+      "o",
+      "ö",
+      "p",
+      "r",
+      "s",
+      "ş",
+      "t",
+      "u",
+      "ü",
+      "v",
+      "y",
+      "z"
+    ],
+    "sentences": [
+      "Əlifba: a b c ç d e ə f g ğ h x ı i j k q l m n o ö p r s ş t u ü v y z."
+    ]
+  },
+  {
+    "name": "azerbaijani_special_chars",
+    "input": "Əliyev şəhərdə gözəl günlər keçirdi.",
+    "words": [
+      "Əliyev",
+      "şəhərdə",
+      "gözəl",
+      "günlər",
+      "keçirdi"
+    ],
+    "sentences": [
+      "Əliyev şəhərdə gözəl günlər keçirdi."
+    ]
+  },
+  {
+    "name": "azerbaijani_with_right_quote",
+    "input": "məktəb'in qapısı",
+    "words": [
+      "məktəb'in",
+      "qapısı"
+    ],
+    "sentences": [
+      "məktəb'in qapısı"
+    ]
+  },
+  {
+    "name": "backslash",
+    "input": "C:\\yol\\u000cayl",
+    "words": [
+      "C",
+      "yol",
+      "u000cayl"
+    ],
+    "sentences": [
+      "C:\\yol\\u000cayl"
+    ]
+  },
+  {
+    "name": "brackets_square_curly",
+    "input": "Massiv [1, 2, 3] və obyekt {a: 1} verildi.",
+    "words": [
+      "Massiv",
+      "və",
+      "obyekt",
+      "a",
+      "verildi"
+    ],
+    "sentences": [
+      "Massiv [1, 2, 3] və obyekt {a: 1} verildi."
+    ]
+  },
+  {
+    "name": "bullet_points",
+    "input": "Siyahı: • birinci • ikinci • üçüncü.",
+    "words": [
+      "Siyahı",
+      "birinci",
+      "ikinci",
+      "üçüncü"
+    ],
+    "sentences": [
+      "Siyahı: • birinci • ikinci • üçüncü."
+    ]
+  },
+  {
+    "name": "business_report_multi_abbrev",
+    "input": "Dr. Məmmədov və prof. Əliyev hesabatı təqdim etdilər.",
+    "words": [
+      "Dr",
+      "Məmmədov",
+      "və",
+      "prof",
+      "Əliyev",
+      "hesabatı",
+      "təqdim",
+      "etdilər"
+    ],
+    "sentences": [
+      "Dr. Məmmədov və prof. Əliyev hesabatı təqdim etdilər."
+    ]
+  },
+  {
+    "name": "capital_azerbaijani_chars",
+    "input": "BAKI ŞƏHƏRİ GÖZƏL GÜNƏŞLİ.",
+    "words": [
+      "BAKI",
+      "ŞƏHƏRİ",
+      "GÖZƏL",
+      "GÜNƏŞLİ"
+    ],
+    "sentences": [
+      "BAKI ŞƏHƏRİ GÖZƏL GÜNƏŞLİ."
+    ]
+  },
+  {
+    "name": "capital_i_dotted",
+    "input": "İstanbul İran İsgəndər",
+    "words": [
+      "İstanbul",
+      "İran",
+      "İsgəndər"
+    ],
+    "sentences": [
+      "İstanbul İran İsgəndər"
+    ]
+  },
+  {
+    "name": "carriage_return",
+    "input": "birinci\rikinci",
+    "words": [
+      "birinci",
+      "ikinci"
+    ],
+    "sentences": [
+      "birinci\rikinci"
+    ]
+  },
+  {
+    "name": "case_sensitivity_prof_uppercase",
+    "input": "PROF. Əliyev tədqiqat apardı.",
+    "words": [
+      "PROF",
+      "Əliyev",
+      "tədqiqat",
+      "apardı"
+    ],
+    "sentences": [
+      "PROF. Əliyev tədqiqat apardı."
+    ]
+  },
+  {
+    "name": "chinese_characters",
+    "input": "Bu 中文 mətndir.",
+    "words": [
+      "Bu",
+      "中文",
+      "mətndir"
+    ],
+    "sentences": [
+      "Bu 中文 mətndir."
+    ]
+  },
+  {
+    "name": "cjk_characters",
+    "input": "中文 test sözü.",
+    "words": [
+      "中文",
+      "test",
+      "sözü"
+    ],
+    "sentences": [
+      "中文 test sözü."
+    ]
+  },
+  {
+    "name": "colon_semicolon_usage",
+    "input": "Siyahı: alma; armud; gilas.",
+    "words": [
+      "Siyahı",
+      "alma",
+      "armud",
+      "gilas"
+    ],
+    "sentences": [
+      "Siyahı: alma; armud; gilas."
+    ]
+  },
+  {
+    "name": "colon_usage",
+    "input": "Nəticə: yaxşıdır",
+    "words": [
+      "Nəticə",
+      "yaxşıdır"
+    ],
+    "sentences": [
+      "Nəticə: yaxşıdır"
+    ]
+  },
+  {
+    "name": "combined_thousand_and_decimal",
+    "input": "Məbləğ 5.432,10 manat.",
+    "words": [
+      "Məbləğ",
+      "manat"
+    ],
+    "sentences": [
+      "Məbləğ 5.432,10 manat."
+    ],
+    "word_tokens": [
+      {
+        "text": "Məbləğ",
+        "start": 0,
+        "end": 9,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 9,
+        "end": 10,
+        "type": "Space"
+      },
+      {
+        "text": "5.432,10",
+        "start": 10,
+        "end": 18,
+        "type": "Number"
+      },
+      {
+        "text": " ",
+        "start": 18,
+        "end": 19,
+        "type": "Space"
+      },
+      {
+        "text": "manat",
+        "start": 19,
+        "end": 24,
+        "type": "Word"
+      },
+      {
+        "text": ".",
+        "start": 24,
+        "end": 25,
+        "type": "Punctuation"
+      }
+    ]
+  },
+  {
+    "name": "commerce_discount",
+    "input": "Endirim 30%! Qiymətlər 5,99 manatdan başlayır.",
+    "words": [
+      "Endirim",
+      "Qiymətlər",
+      "manatdan",
+      "başlayır"
+    ],
+    "sentences": [
+      "Endirim 30%!",
+      " Qiymətlər 5,99 manatdan başlayır."
+    ]
+  },
+  {
+    "name": "complex_real_world_news",
+    "input": "Bakı, 16 fevral (APA) — Prezident İlham Əliyev bu gün Türkiyəyə səfər edib. Ətraflı məlumat https://apa.az/news/12345 saytında.",
+    "words": [
+      "Bakı",
+      "fevral",
+      "APA",
+      "Prezident",
+      "İlham",
+      "Əliyev",
+      "bu",
+      "gün",
+      "Türkiyəyə",
+      "səfər",
+      "edib",
+      "Ətraflı",
+      "məlumat",
+      "saytında"
+    ],
+    "sentences": [
+      "Bakı, 16 fevral (APA) — Prezident İlham Əliyev bu gün Türkiyəyə səfər edib.",
+      " Ətraflı məlumat https://apa.az/news/12345 saytında."
+    ],
+    "word_tokens": [
+      {
+        "text": "Bakı",
+        "start": 0,
+        "end": 5,
+        "type": "Word"
+      },
+      {
+        "text": ",",
+        "start": 5,
+        "end": 6,
+        "type": "Punctuation"
+      },
+      {
+        "text": " ",
+        "start": 6,
+        "end": 7,
+        "type": "Space"
+      },
+      {
+        "text": "16",
+        "start": 7,
+        "end": 9,
+        "type": "Number"
+      },
+      {
+        "text": " ",
+        "start": 9,
+        "end": 10,
+        "type": "Space"
+      },
+      {
+        "text": "fevral",
+        "start": 10,
+        "end": 16,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 16,
+        "end": 17,
+        "type": "Space"
+      },
+      {
+        "text": "(",
+        "start": 17,
+        "end": 18,
+        "type": "Punctuation"
+      },
+      {
+        "text": "APA",
+        "start": 18,
+        "end": 21,
+        "type": "Word"
+      },
+      {
+        "text": ")",
+        "start": 21,
+        "end": 22,
+        "type": "Punctuation"
+      },
+      {
+        "text": " ",
+        "start": 22,
+        "end": 23,
+        "type": "Space"
+      },
+      {
+        "text": "—",
+        "start": 23,
+        "end": 26,
+        "type": "Punctuation"
+      },
+      {
+        "text": " ",
+        "start": 26,
+        "end": 27,
+        "type": "Space"
+      },
+      {
+        "text": "Prezident",
+        "start": 27,
+        "end": 36,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 36,
+        "end": 37,
+        "type": "Space"
+      },
+      {
+        "text": "İlham",
+        "start": 37,
+        "end": 43,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 43,
+        "end": 44,
+        "type": "Space"
+      },
+      {
+        "text": "Əliyev",
+        "start": 44,
+        "end": 51,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 51,
+        "end": 52,
+        "type": "Space"
+      },
+      {
+        "text": "bu",
+        "start": 52,
+        "end": 54,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 54,
+        "end": 55,
+        "type": "Space"
+      },
+      {
+        "text": "gün",
+        "start": 55,
+        "end": 59,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 59,
+        "end": 60,
+        "type": "Space"
+      },
+      {
+        "text": "Türkiyəyə",
+        "start": 60,
+        "end": 72,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 72,
+        "end": 73,
+        "type": "Space"
+      },
+      {
+        "text": "səfər",
+        "start": 73,
+        "end": 80,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 80,
+        "end": 81,
+        "type": "Space"
+      },
+      {
+        "text": "edib",
+        "start": 81,
+        "end": 85,
+        "type": "Word"
+      },
+      {
+        "text": ".",
+        "start": 85,
+        "end": 86,
+        "type": "Punctuation"
+      },
+      {
+        "text": " ",
+        "start": 86,
+        "end": 87,
+        "type": "Space"
+      },
+      {
+        "text": "Ətraflı",
+        "start": 87,
+        "end": 96,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 96,
+        "end": 97,
+        "type": "Space"
+      },
+      {
+        "text": "məlumat",
+        "start": 97,
+        "end": 105,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 105,
+        "end": 106,
+        "type": "Space"
+      },
+      {
+        "text": "https://apa.az/news/12345",
+        "start": 106,
+        "end": 131,
+        "type": "URL"
+      },
+      {
+        "text": " ",
+        "start": 131,
+        "end": 132,
+        "type": "Space"
+      },
+      {
+        "text": "saytında",
+        "start": 132,
+        "end": 141,
+        "type": "Word"
+      },
+      {
+        "text": ".",
+        "start": 141,
+        "end": 142,
+        "type": "Punctuation"
+      }
+    ]
+  },
+  {
+    "name": "compound_semicolon",
+    "input": "Birinci işi bitir; sonra ikinciyə başla.",
+    "words": [
+      "Birinci",
+      "işi",
+      "bitir",
+      "sonra",
+      "ikinciyə",
+      "başla"
+    ],
+    "sentences": [
+      "Birinci işi bitir; sonra ikinciyə başla."
+    ]
+  },
+  {
+    "name": "compound_word_hyphens",
+    "input": "Sosial-iqtisadi və elmi-texniki inkişaf davam edir.",
+    "words": [
+      "Sosial-iqtisadi",
+      "və",
+      "elmi-texniki",
+      "inkişaf",
+      "davam",
+      "edir"
+    ],
+    "sentences": [
+      "Sosial-iqtisadi və elmi-texniki inkişaf davam edir."
+    ]
+  },
+  {
+    "name": "consecutive_hyphens_merge",
+    "input": "Aralıq--arası--son mətn.",
+    "words": [
+      "Aralıq",
+      "arası",
+      "son",
+      "mətn"
+    ],
+    "sentences": [
+      "Aralıq--arası--son mətn."
+    ]
+  },
+  {
+    "name": "consecutive_mixed_punct_no_merge",
+    "input": "Sual?!?! cavab.",
+    "words": [
+      "Sual",
+      "cavab"
+    ],
+    "sentences": [
+      "Sual?!?! cavab."
+    ]
+  },
+  {
+    "name": "consecutive_sentences_no_space",
+    "input": "Bəli.Xeyr.",
+    "words": [
+      "Bəli",
+      "Xeyr"
+    ],
+    "sentences": [
+      "Bəli.Xeyr."
+    ]
+  },
+  {
+    "name": "curly_braces",
+    "input": "{data}",
+    "words": [
+      "data"
+    ],
+    "sentences": [
+      "{data}"
+    ]
+  },
+  {
+    "name": "currency_symbols",
+    "input": "Qiymət €50 və ₼100 olaraq.",
+    "words": [
+      "Qiymət",
+      "və",
+      "olaraq"
+    ],
+    "sentences": [
+      "Qiymət €50 və ₼100 olaraq."
+    ]
+  },
+  {
+    "name": "cyrillic_abbreviation",
+    "input": "Проф. Иванов gəldi.",
+    "words": [
+      "Проф",
+      "Иванов",
+      "gəldi"
+    ],
+    "sentences": [
+      "Проф.",
+      " Иванов gəldi."
+    ]
+  },
+  {
+    "name": "cyrillic_sentence_split",
+    "input": "Первый текст. Второй текст.",
+    "words": [
+      "Первый",
+      "текст",
+      "Второй",
+      "текст"
+    ],
+    "sentences": [
+      "Первый текст.",
+      " Второй текст."
+    ]
+  },
+  {
+    "name": "cyrillic_text",
+    "input": "Москва шəhəridir.",
+    "words": [
+      "Москва",
+      "шəhəridir"
+    ],
+    "sentences": [
+      "Москва шəhəridir."
+    ]
+  },
+  {
+    "name": "cyrillic_with_hyphen",
+    "input": "Москва-дан gəldi.",
+    "words": [
+      "Москва-дан",
+      "gəldi"
+    ],
+    "sentences": [
+      "Москва-дан gəldi."
+    ]
+  },
+  {
+    "name": "date_formats_mixed",
+    "input": "Tarix 16.02.2026 və ya 16/02/2026 kimi yazılır.",
+    "words": [
+      "Tarix",
+      "və",
+      "ya",
+      "kimi",
+      "yazılır"
+    ],
+    "sentences": [
+      "Tarix 16.02.2026 və ya 16/02/2026 kimi yazılır."
+    ]
+  },
+  {
+    "name": "date_in_text",
+    "input": "5 mart 2024-cü ildə baş verdi.",
+    "words": [
+      "mart",
+      "cü",
+      "ildə",
+      "baş",
+      "verdi"
+    ],
+    "sentences": [
+      "5 mart 2024-cü ildə baş verdi."
+    ]
+  },
+  {
+    "name": "decimal_comma",
+    "input": "Qiymət 3,14 manatdır.",
+    "words": [
+      "Qiymət",
+      "manatdır"
+    ],
+    "sentences": [
+      "Qiymət 3,14 manatdır."
+    ]
+  },
+  {
+    "name": "decimal_comma_multiple_digits",
+    "input": "Dəyər 123,456789 olaraq.",
+    "words": [
+      "Dəyər",
+      "olaraq"
+    ],
+    "sentences": [
+      "Dəyər 123,456789 olaraq."
+    ],
+    "word_tokens": [
+      {
+        "text": "Dəyər",
+        "start": 0,
+        "end": 7,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 7,
+        "end": 8,
+        "type": "Space"
+      },
+      {
+        "text": "123,456789",
+        "start": 8,
+        "end": 18,
+        "type": "Number"
+      },
+      {
+        "text": " ",
+        "start": 18,
+        "end": 19,
+        "type": "Space"
+      },
+      {
+        "text": "olaraq",
+        "start": 19,
+        "end": 25,
+        "type": "Word"
+      },
+      {
+        "text": ".",
+        "start": 25,
+        "end": 26,
+        "type": "Punctuation"
+      }
+    ]
+  },
+  {
+    "name": "decimal_in_sentence",
+    "input": "Nəticə 3,14159 olaraq hesablandı.",
+    "words": [
+      "Nəticə",
+      "olaraq",
+      "hesablandı"
+    ],
+    "sentences": [
+      "Nəticə 3,14159 olaraq hesablandı."
+    ]
+  },
+  {
+    "name": "degree_symbol",
+    "input": "Temperatur 25° idi.",
+    "words": [
+      "Temperatur",
+      "idi"
+    ],
+    "sentences": [
+      "Temperatur 25° idi."
+    ]
+  },
+  {
+    "name": "devanagari_script",
+    "input": "हिन्दी dili test.",
+    "words": [
+      "ह",
+      "न",
+      "द",
+      "dili",
+      "test"
+    ],
+    "sentences": [
+      "हिन्दी dili test."
+    ]
+  },
+  {
+    "name": "dialog_with_quotes",
+    "input": "\"Gəlirsənmi?\" - \"Bəli, gəlirəm.\"",
+    "words": [
+      "Gəlirsənmi",
+      "Bəli",
+      "gəlirəm"
+    ],
+    "sentences": [
+      "\"Gəlirsənmi?\" - \"Bəli, gəlirəm.\""
+    ]
+  },
+  {
+    "name": "double_hyphen_splits",
+    "input": "Bəli--xeyr cavabı.",
+    "words": [
+      "Bəli",
+      "xeyr",
+      "cavabı"
+    ],
+    "sentences": [
+      "Bəli--xeyr cavabı."
+    ]
+  },
+  {
+    "name": "double_newline_paragraph",
+    "input": "Birinci paraqraf.\n\nİkinci paraqraf.",
+    "words": [
+      "Birinci",
+      "paraqraf",
+      "İkinci",
+      "paraqraf"
+    ],
+    "sentences": [
+      "Birinci paraqraf.",
+      "\n\n",
+      "İkinci paraqraf."
+    ]
+  },
+  {
+    "name": "double_newline_splits",
+    "input": "Birinci\n\nİkinci",
+    "words": [
+      "Birinci",
+      "İkinci"
+    ],
+    "sentences": [
+      "Birinci\n\n",
+      "İkinci"
+    ]
+  },
+  {
+    "name": "double_quotes",
+    "input": "\"test\" sözü",
+    "words": [
+      "test",
+      "sözü"
+    ],
+    "sentences": [
+      "\"test\" sözü"
+    ]
+  },
+  {
+    "name": "education_lecture",
+    "input": "Prof. Məmmədov tələbələrə mühazirə oxudu.",
+    "words": [
+      "Prof",
+      "Məmmədov",
+      "tələbələrə",
+      "mühazirə",
+      "oxudu"
+    ],
+    "sentences": [
+      "Prof. Məmmədov tələbələrə mühazirə oxudu."
+    ]
+  },
+  {
+    "name": "ellipsis_ascii",
+    "input": "Ola bilər... Bəlkə.",
+    "words": [
+      "Ola",
+      "bilər",
+      "Bəlkə"
+    ],
+    "sentences": [
+      "Ola bilər...",
+      " Bəlkə."
+    ]
+  },
+  {
+    "name": "ellipsis_ascii_four_dots",
+    "input": "Düşünürəm.... Bəlkə doğrudur.",
+    "words": [
+      "Düşünürəm",
+      "Bəlkə",
+      "doğrudur"
+    ],
+    "sentences": [
+      "Düşünürəm....",
+      " Bəlkə doğrudur."
+    ]
+  },
+  {
+    "name": "ellipsis_unicode",
+    "input": "Ola bilər… Bəlkə.",
+    "words": [
+      "Ola",
+      "bilər",
+      "Bəlkə"
+    ],
+    "sentences": [
+      "Ola bilər…",
+      " Bəlkə."
+    ]
+  },
+  {
+    "name": "ellipsis_unicode_multiple",
+    "input": "Ola bilər… Yox… Bəli.",
+    "words": [
+      "Ola",
+      "bilər",
+      "Yox",
+      "Bəli"
+    ],
+    "sentences": [
+      "Ola bilər…",
+      " Yox…",
+      " Bəli."
+    ]
+  },
+  {
+    "name": "em_dash_splits",
+    "input": "Gəldim—getdim.",
+    "words": [
+      "Gəldim",
+      "getdim"
+    ],
+    "sentences": [
+      "Gəldim—getdim."
+    ]
+  },
+  {
+    "name": "email_at_only_symbol",
+    "input": "Simvol @ ortadadır.",
+    "words": [
+      "Simvol",
+      "ortadadır"
+    ],
+    "sentences": [
+      "Simvol @ ortadadır."
+    ]
+  },
+  {
+    "name": "email_at_sentence_end",
+    "input": "Əlaqə user@mail.az",
+    "words": [
+      "Əlaqə"
+    ],
+    "sentences": [
+      "Əlaqə user@mail.az"
+    ]
+  },
+  {
+    "name": "email_complex",
+    "input": "Əlaqə: test.user+tag@domain.co.az burada.",
+    "words": [
+      "Əlaqə",
+      "burada"
+    ],
+    "sentences": [
+      "Əlaqə: test.user+tag@domain.co.az burada."
+    ]
+  },
+  {
+    "name": "email_leading_dot_stripped",
+    "input": "Göndərin .user@mail.az ünvanına.",
+    "words": [
+      "Göndərin",
+      "ünvanına"
+    ],
+    "sentences": [
+      "Göndərin .user@mail.az ünvanına."
+    ],
+    "word_tokens": [
+      {
+        "text": "Göndərin",
+        "start": 0,
+        "end": 10,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 10,
+        "end": 11,
+        "type": "Space"
+      },
+      {
+        "text": ".",
+        "start": 11,
+        "end": 12,
+        "type": "Punctuation"
+      },
+      {
+        "text": "user@mail.az",
+        "start": 12,
+        "end": 24,
+        "type": "Email"
+      },
+      {
+        "text": " ",
+        "start": 24,
+        "end": 25,
+        "type": "Space"
+      },
+      {
+        "text": "ünvanına",
+        "start": 25,
+        "end": 35,
+        "type": "Word"
+      },
+      {
+        "text": ".",
+        "start": 35,
+        "end": 36,
+        "type": "Punctuation"
+      }
+    ]
+  },
+  {
+    "name": "email_no_tld",
+    "input": "Düzgün deyil user@domain yazı.",
+    "words": [
+      "Düzgün",
+      "deyil",
+      "user",
+      "domain",
+      "yazı"
+    ],
+    "sentences": [
+      "Düzgün deyil user@domain yazı."
+    ]
+  },
+  {
+    "name": "email_simple",
+    "input": "Yazın user@mail.az ünvanına.",
+    "words": [
+      "Yazın",
+      "ünvanına"
+    ],
+    "sentences": [
+      "Yazın user@mail.az ünvanına."
+    ]
+  },
+  {
+    "name": "email_trailing_dot_stripped",
+    "input": "Ünvan info@company.az. buradır.",
+    "words": [
+      "Ünvan",
+      "buradır"
+    ],
+    "sentences": [
+      "Ünvan info@company.az. buradır."
+    ]
+  },
+  {
+    "name": "email_with_numbers",
+    "input": "Yazın user123@mail2.az cavab üçün.",
+    "words": [
+      "Yazın",
+      "cavab",
+      "üçün"
+    ],
+    "sentences": [
+      "Yazın user123@mail2.az cavab üçün."
+    ]
+  },
+  {
+    "name": "email_with_offsets",
+    "input": "Yazın: user@mail.az mənə.",
+    "words": [
+      "Yazın",
+      "mənə"
+    ],
+    "sentences": [
+      "Yazın: user@mail.az mənə."
+    ],
+    "word_tokens": [
+      {
+        "text": "Yazın",
+        "start": 0,
+        "end": 6,
+        "type": "Word"
+      },
+      {
+        "text": ":",
+        "start": 6,
+        "end": 7,
+        "type": "Punctuation"
+      },
+      {
+        "text": " ",
+        "start": 7,
+        "end": 8,
+        "type": "Space"
+      },
+      {
+        "text": "user@mail.az",
+        "start": 8,
+        "end": 20,
+        "type": "Email"
+      },
+      {
+        "text": " ",
+        "start": 20,
+        "end": 21,
+        "type": "Space"
+      },
+      {
+        "text": "mənə",
+        "start": 21,
+        "end": 27,
+        "type": "Word"
+      },
+      {
+        "text": ".",
+        "start": 27,
+        "end": 28,
+        "type": "Punctuation"
+      }
+    ]
+  },
+  {
+    "name": "email_with_plus_sign",
+    "input": "Qeydiyyat admin+test@company.az ilə edildi.",
+    "words": [
+      "Qeydiyyat",
+      "ilə",
+      "edildi"
+    ],
+    "sentences": [
+      "Qeydiyyat admin+test@company.az ilə edildi."
+    ]
+  },
+  {
+    "name": "email_with_underscores",
+    "input": "Əlaqə first_last@domain.co.az ilə.",
+    "words": [
+      "Əlaqə",
+      "ilə"
+    ],
+    "sentences": [
+      "Əlaqə first_last@domain.co.az ilə."
+    ]
+  },
+  {
+    "name": "emoji_face_symbols",
+    "input": "Gülümsədi 😊 və dedi 👋 salam.",
+    "words": [
+      "Gülümsədi",
+      "və",
+      "dedi",
+      "salam"
+    ],
+    "sentences": [
+      "Gülümsədi 😊 və dedi 👋 salam."
+    ]
+  },
+  {
+    "name": "emoji_multiple_codepoints",
+    "input": "Şəhər 🏙️ və bayram 🎉 görmək istədik.",
+    "words": [
+      "Şəhər",
+      "və",
+      "bayram",
+      "görmək",
+      "istədik"
+    ],
+    "sentences": [
+      "Şəhər 🏙️ və bayram 🎉 görmək istədik."
+    ]
+  },
+  {
+    "name": "emoji_sequence",
+    "input": "Salam 😊 dünya 🌍 necəsən?",
+    "words": [
+      "Salam",
+      "dünya",
+      "necəsən"
+    ],
+    "sentences": [
+      "Salam 😊 dünya 🌍 necəsən?"
+    ]
+  },
+  {
+    "name": "emoji_symbol",
+    "input": "Salam dünya 🏙️!",
+    "words": [
+      "Salam",
+      "dünya"
+    ],
+    "sentences": [
+      "Salam dünya 🏙️!"
+    ]
+  },
+  {
+    "name": "empty_parentheses",
+    "input": "Funksiya test() çağırıldı.",
+    "words": [
+      "Funksiya",
+      "test",
+      "çağırıldı"
+    ],
+    "sentences": [
+      "Funksiya test() çağırıldı."
+    ]
+  },
+  {
+    "name": "empty_string",
+    "input": "",
+    "words": null,
+    "sentences": null
+  },
+  {
+    "name": "en_dash_splits",
+    "input": "Beş–altı gün keçdi.",
+    "words": [
+      "Beş",
+      "altı",
+      "gün",
+      "keçdi"
+    ],
+    "sentences": [
+      "Beş–altı gün keçdi."
+    ]
+  },
+  {
+    "name": "enumeration_colon",
+    "input": "Meyvələr: alma, armud, üzüm.",
+    "words": [
+      "Meyvələr",
+      "alma",
+      "armud",
+      "üzüm"
+    ],
+    "sentences": [
+      "Meyvələr: alma, armud, üzüm."
+    ]
+  },
+  {
+    "name": "exclamation_splitting",
+    "input": "Gəl buraya! Tez ol!",
+    "words": [
+      "Gəl",
+      "buraya",
+      "Tez",
+      "ol"
+    ],
+    "sentences": [
+      "Gəl buraya!",
+      " Tez ol!"
+    ]
+  },
+  {
+    "name": "financial_report_gdp",
+    "input": "ÜDM 5,7% artıb. İxracat 10.000.000 dollardır.",
+    "words": [
+      "ÜDM",
+      "artıb",
+      "İxracat",
+      "dollardır"
+    ],
+    "sentences": [
+      "ÜDM 5,7% artıb.",
+      " İxracat 10.000.000 dollardır."
+    ]
+  },
+  {
+    "name": "form_feed",
+    "input": "birinci\fikinci",
+    "words": [
+      "birinci",
+      "ikinci"
+    ],
+    "sentences": [
+      "birinci\fikinci"
+    ]
+  },
+  {
+    "name": "formal_letter_opening",
+    "input": "Hörmətli cənab Əliyev! Məktubunuzu aldım.",
+    "words": [
+      "Hörmətli",
+      "cənab",
+      "Əliyev",
+      "Məktubunuzu",
+      "aldım"
+    ],
+    "sentences": [
+      "Hörmətli cənab Əliyev!",
+      " Məktubunuzu aldım."
+    ]
+  },
+  {
+    "name": "four_sentences_period",
+    "input": "Bir. İki. Üç. Dörd.",
+    "words": [
+      "Bir",
+      "İki",
+      "Üç",
+      "Dörd"
+    ],
+    "sentences": [
+      "Bir.",
+      " İki.",
+      " Üç.",
+      " Dörd."
+    ]
+  },
+  {
+    "name": "geography_caspian",
+    "input": "Xəzər dənizi 371.000 km² ərazini əhatə edir.",
+    "words": [
+      "Xəzər",
+      "dənizi",
+      "km",
+      "ərazini",
+      "əhatə",
+      "edir"
+    ],
+    "sentences": [
+      "Xəzər dənizi 371.000 km² ərazini əhatə edir."
+    ]
+  },
+  {
+    "name": "greek_letters_science",
+    "input": "α və β dəyərləri.",
+    "words": [
+      "α",
+      "və",
+      "β",
+      "dəyərləri"
+    ],
+    "sentences": [
+      "α və β dəyərləri."
+    ]
+  },
+  {
+    "name": "guillemets",
+    "input": "«test» sözü",
+    "words": [
+      "test",
+      "sözü"
+    ],
+    "sentences": [
+      "«test» sözü"
+    ]
+  },
+  {
+    "name": "guillemets_punctuation",
+    "input": "Dedi: «Salam, necəsən?»",
+    "words": [
+      "Dedi",
+      "Salam",
+      "necəsən"
+    ],
+    "sentences": [
+      "Dedi: «Salam, necəsən?»"
+    ]
+  },
+  {
+    "name": "hash",
+    "input": "#birinci sətir",
+    "words": [
+      "birinci",
+      "sətir"
+    ],
+    "sentences": [
+      "#birinci sətir"
+    ]
+  },
+  {
+    "name": "hashtag_and_mention",
+    "input": "Bax #Bakı2024 və @user profili.",
+    "words": [
+      "Bax",
+      "Bakı2024",
+      "və",
+      "user",
+      "profili"
+    ],
+    "sentences": [
+      "Bax #Bakı2024 və @user profili."
+    ]
+  },
+  {
+    "name": "hashtag_not_special",
+    "input": "Etiket #barsnlp və #azərbaycan istifadə olundu.",
+    "words": [
+      "Etiket",
+      "barsnlp",
+      "və",
+      "azərbaycan",
+      "istifadə",
+      "olundu"
+    ],
+    "sentences": [
+      "Etiket #barsnlp və #azərbaycan istifadə olundu."
+    ],
+    "word_tokens": [
+      {
+        "text": "Etiket",
+        "start": 0,
+        "end": 6,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 6,
+        "end": 7,
+        "type": "Space"
+      },
+      {
+        "text": "#",
+        "start": 7,
+        "end": 8,
+        "type": "Punctuation"
+      },
+      {
+        "text": "barsnlp",
+        "start": 8,
+        "end": 15,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 15,
+        "end": 16,
+        "type": "Space"
+      },
+      {
+        "text": "və",
+        "start": 16,
+        "end": 19,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 19,
+        "end": 20,
+        "type": "Space"
+      },
+      {
+        "text": "#",
+        "start": 20,
+        "end": 21,
+        "type": "Punctuation"
+      },
+      {
+        "text": "azərbaycan",
+        "start": 21,
+        "end": 32,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 32,
+        "end": 33,
+        "type": "Space"
+      },
+      {
+        "text": "istifadə",
+        "start": 33,
+        "end": 42,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 42,
+        "end": 43,
+        "type": "Space"
+      },
+      {
+        "text": "olundu",
+        "start": 43,
+        "end": 49,
+        "type": "Word"
+      },
+      {
+        "text": ".",
+        "start": 49,
+        "end": 50,
+        "type": "Punctuation"
+      }
+    ]
+  },
+  {
+    "name": "history_republic",
+    "input": "1918-ci ildə Azərbaycan Xalq Cümhuriyyəti quruldu.",
+    "words": [
+      "ci",
+      "ildə",
+      "Azərbaycan",
+      "Xalq",
+      "Cümhuriyyəti",
+      "quruldu"
+    ],
+    "sentences": [
+      "1918-ci ildə Azərbaycan Xalq Cümhuriyyəti quruldu."
+    ]
+  },
+  {
+    "name": "hyphen_between_numbers",
+    "input": "Səhifə 10-15 arasıdır.",
+    "words": [
+      "Səhifə",
+      "arasıdır"
+    ],
+    "sentences": [
+      "Səhifə 10-15 arasıdır."
+    ]
+  },
+  {
+    "name": "hyphen_chain_multiple",
+    "input": "Bu a-b-c-d sözdür.",
+    "words": [
+      "Bu",
+      "a-b-c-d",
+      "sözdür"
+    ],
+    "sentences": [
+      "Bu a-b-c-d sözdür."
+    ]
+  },
+  {
+    "name": "hyphen_joining_letter_digit",
+    "input": "F-16 təyyarəsi uçdu.",
+    "words": [
+      "F-16",
+      "təyyarəsi",
+      "uçdu"
+    ],
+    "sentences": [
+      "F-16 təyyarəsi uçdu."
+    ]
+  },
+  {
+    "name": "hyphen_joining_letters",
+    "input": "Sosial-iqtisadi vəziyyət yaxşıdır.",
+    "words": [
+      "Sosial-iqtisadi",
+      "vəziyyət",
+      "yaxşıdır"
+    ],
+    "sentences": [
+      "Sosial-iqtisadi vəziyyət yaxşıdır."
+    ]
+  },
+  {
+    "name": "hyphen_with_cyrillic",
+    "input": "Москва-Баку reysləri.",
+    "words": [
+      "Москва-Баку",
+      "reysləri"
+    ],
+    "sentences": [
+      "Москва-Баку reysləri."
+    ]
+  },
+  {
+    "name": "invalid_four_digit_grouping",
+    "input": "Kod 1.0000 deyil.",
+    "words": [
+      "Kod",
+      "deyil"
+    ],
+    "sentences": [
+      "Kod 1.0000 deyil."
+    ],
+    "word_tokens": [
+      {
+        "text": "Kod",
+        "start": 0,
+        "end": 3,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 3,
+        "end": 4,
+        "type": "Space"
+      },
+      {
+        "text": "1",
+        "start": 4,
+        "end": 5,
+        "type": "Number"
+      },
+      {
+        "text": ".",
+        "start": 5,
+        "end": 6,
+        "type": "Punctuation"
+      },
+      {
+        "text": "0000",
+        "start": 6,
+        "end": 10,
+        "type": "Number"
+      },
+      {
+        "text": " ",
+        "start": 10,
+        "end": 11,
+        "type": "Space"
+      },
+      {
+        "text": "deyil",
+        "start": 11,
+        "end": 16,
+        "type": "Word"
+      },
+      {
+        "text": ".",
+        "start": 16,
+        "end": 17,
+        "type": "Punctuation"
+      }
+    ]
+  },
+  {
+    "name": "invalid_thousand_separator_two_digits",
+    "input": "Qiymət 3.14 manatdır.",
+    "words": [
+      "Qiymət",
+      "manatdır"
+    ],
+    "sentences": [
+      "Qiymət 3.14 manatdır."
+    ],
+    "word_tokens": [
+      {
+        "text": "Qiymət",
+        "start": 0,
+        "end": 7,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 7,
+        "end": 8,
+        "type": "Space"
+      },
+      {
+        "text": "3",
+        "start": 8,
+        "end": 9,
+        "type": "Number"
+      },
+      {
+        "text": ".",
+        "start": 9,
+        "end": 10,
+        "type": "Punctuation"
+      },
+      {
+        "text": "14",
+        "start": 10,
+        "end": 12,
+        "type": "Number"
+      },
+      {
+        "text": " ",
+        "start": 12,
+        "end": 13,
+        "type": "Space"
+      },
+      {
+        "text": "manatdır",
+        "start": 13,
+        "end": 22,
+        "type": "Word"
+      },
+      {
+        "text": ".",
+        "start": 22,
+        "end": 23,
+        "type": "Punctuation"
+      }
+    ]
+  },
+  {
+    "name": "japanese_hiragana",
+    "input": "こんにちは dünya.",
+    "words": [
+      "こんにちは",
+      "dünya"
+    ],
+    "sentences": [
+      "こんにちは dünya."
+    ]
+  },
+  {
+    "name": "korean_hangul",
+    "input": "한국어 sözü test.",
+    "words": [
+      "한국어",
+      "sözü",
+      "test"
+    ],
+    "sentences": [
+      "한국어 sözü test."
+    ]
+  },
+  {
+    "name": "latin_cyrillic_mixed_sentence",
+    "input": "Bu Москва şəhəridir.",
+    "words": [
+      "Bu",
+      "Москва",
+      "şəhəridir"
+    ],
+    "sentences": [
+      "Bu Москва şəhəridir."
+    ]
+  },
+  {
+    "name": "leading_apostrophe",
+    "input": "Bu 'test' sözüdür.",
+    "words": [
+      "Bu",
+      "test",
+      "sözüdür"
+    ],
+    "sentences": [
+      "Bu 'test' sözüdür."
+    ]
+  },
+  {
+    "name": "leading_hyphen",
+    "input": "Bu -test sözüdür.",
+    "words": [
+      "Bu",
+      "test",
+      "sözüdür"
+    ],
+    "sentences": [
+      "Bu -test sözüdür."
+    ]
+  },
+  {
+    "name": "leading_trailing_whitespace",
+    "input": "   salam dünya   ",
+    "words": [
+      "salam",
+      "dünya"
+    ],
+    "sentences": [
+      "   salam dünya   "
+    ]
+  },
+  {
+    "name": "legal_constitution",
+    "input": "Az.R. Konstitusiyasının 25-ci maddəsinə əsasən.",
+    "words": [
+      "Az",
+      "R",
+      "Konstitusiyasının",
+      "ci",
+      "maddəsinə",
+      "əsasən"
+    ],
+    "sentences": [
+      "Az.R.",
+      " Konstitusiyasının 25-ci maddəsinə əsasən."
+    ]
+  },
+  {
+    "name": "letter_digit_mixed",
+    "input": "A4 B12 test5",
+    "words": [
+      "A4",
+      "B12",
+      "test5"
+    ],
+    "sentences": [
+      "A4 B12 test5"
+    ]
+  },
+  {
+    "name": "literature_dialog",
+    "input": "O dedi: 'Mən gedirəm.' Sonra qapını bağladı.",
+    "words": [
+      "O",
+      "dedi",
+      "Mən",
+      "gedirəm",
+      "Sonra",
+      "qapını",
+      "bağladı"
+    ],
+    "sentences": [
+      "O dedi: 'Mən gedirəm.' Sonra qapını bağladı."
+    ]
+  },
+  {
+    "name": "long_compound_hyphenated",
+    "input": "Azərbaycan-Türkiyə-Gürcüstan əməkdaşlığı.",
+    "words": [
+      "Azərbaycan-Türkiyə-Gürcüstan",
+      "əməkdaşlığı"
+    ],
+    "sentences": [
+      "Azərbaycan-Türkiyə-Gürcüstan əməkdaşlığı."
+    ]
+  },
+  {
+    "name": "long_sentence_clauses",
+    "input": "O gəldi, məni gördü, salam verdi, sonra da getdi.",
+    "words": [
+      "O",
+      "gəldi",
+      "məni",
+      "gördü",
+      "salam",
+      "verdi",
+      "sonra",
+      "da",
+      "getdi"
+    ],
+    "sentences": [
+      "O gəldi, məni gördü, salam verdi, sonra da getdi."
+    ]
+  },
+  {
+    "name": "long_sentence_no_breaks",
+    "input": "Bu çox uzun bir cümlə olub heç bir fasilə yoxdur və davam edir.",
+    "words": [
+      "Bu",
+      "çox",
+      "uzun",
+      "bir",
+      "cümlə",
+      "olub",
+      "heç",
+      "bir",
+      "fasilə",
+      "yoxdur",
+      "və",
+      "davam",
+      "edir"
+    ],
+    "sentences": [
+      "Bu çox uzun bir cümlə olub heç bir fasilə yoxdur və davam edir."
+    ]
+  },
+  {
+    "name": "lowercase_azerbaijani",
+    "input": "əliyev şəhərdədir",
+    "words": [
+      "əliyev",
+      "şəhərdədir"
+    ],
+    "sentences": [
+      "əliyev şəhərdədir"
+    ]
+  },
+  {
+    "name": "lowercase_i_dotless",
+    "input": "ışıq ılğım imtina",
+    "words": [
+      "ışıq",
+      "ılğım",
+      "imtina"
+    ],
+    "sentences": [
+      "ışıq ılğım imtina"
+    ]
+  },
+  {
+    "name": "mathematical_symbols",
+    "input": "Toplam 2+2=4 olaraq.",
+    "words": [
+      "Toplam",
+      "olaraq"
+    ],
+    "sentences": [
+      "Toplam 2+2=4 olaraq."
+    ]
+  },
+  {
+    "name": "measurement_units_mixed",
+    "input": "Uzunluq 150sm., çəki 75kq., həcm 500ml-dir.",
+    "words": [
+      "Uzunluq",
+      "sm",
+      "çəki",
+      "kq",
+      "həcm",
+      "ml-dir"
+    ],
+    "sentences": [
+      "Uzunluq 150sm., çəki 75kq., həcm 500ml-dir."
+    ]
+  },
+  {
+    "name": "medical_examination",
+    "input": "Dr. Əliyeva xəstəyə müayinə yazdı.",
+    "words": [
+      "Dr",
+      "Əliyeva",
+      "xəstəyə",
+      "müayinə",
+      "yazdı"
+    ],
+    "sentences": [
+      "Dr. Əliyeva xəstəyə müayinə yazdı."
+    ]
+  },
+  {
+    "name": "mixed_azerbaijani_english",
+    "input": "Software mühəndisləri coding işi görürlər.",
+    "words": [
+      "Software",
+      "mühəndisləri",
+      "coding",
+      "işi",
+      "görürlər"
+    ],
+    "sentences": [
+      "Software mühəndisləri coding işi görürlər."
+    ]
+  },
+  {
+    "name": "mixed_azerbaijani_russian",
+    "input": "Bu трамвай Баку-дан keçir.",
+    "words": [
+      "Bu",
+      "трамвай",
+      "Баку-дан",
+      "keçir"
+    ],
+    "sentences": [
+      "Bu трамвай Баку-дан keçir."
+    ]
+  },
+  {
+    "name": "mixed_case_word",
+    "input": "BaKı",
+    "words": [
+      "BaKı"
+    ],
+    "sentences": [
+      "BaKı"
+    ]
+  },
+  {
+    "name": "mixed_case_words",
+    "input": "BakıDa ŞəhəR məRkəZi.",
+    "words": [
+      "BakıDa",
+      "ŞəhəR",
+      "məRkəZi"
+    ],
+    "sentences": [
+      "BakıDa ŞəhəR məRkəZi."
+    ]
+  },
+  {
+    "name": "mixed_content_news",
+    "input": "Prof. Əliyev 1.000 manat ödədi.",
+    "words": [
+      "Prof",
+      "Əliyev",
+      "manat",
+      "ödədi"
+    ],
+    "sentences": [
+      "Prof. Əliyev 1.000 manat ödədi."
+    ]
+  },
+  {
+    "name": "mixed_cyrillic_with_numbers",
+    "input": "Bu 3-cü Москва-дан.",
+    "words": [
+      "Bu",
+      "cü",
+      "Москва-дан"
+    ],
+    "sentences": [
+      "Bu 3-cü Москва-дан."
+    ]
+  },
+  {
+    "name": "mixed_latin_cyrillic",
+    "input": "Bu Москва-дан gəldi.",
+    "words": [
+      "Bu",
+      "Москва-дан",
+      "gəldi"
+    ],
+    "sentences": [
+      "Bu Москва-дан gəldi."
+    ]
+  },
+  {
+    "name": "mixed_numbers_and_units",
+    "input": "Məsafə 150km, çəki 75kq idi.",
+    "words": [
+      "Məsafə",
+      "km",
+      "çəki",
+      "kq",
+      "idi"
+    ],
+    "sentences": [
+      "Məsafə 150km, çəki 75kq idi."
+    ]
+  },
+  {
+    "name": "mixed_punct_cluster_exclaim_question",
+    "input": "Doğrudanmı!? Bəli.",
+    "words": [
+      "Doğrudanmı",
+      "Bəli"
+    ],
+    "sentences": [
+      "Doğrudanmı!?",
+      " Bəli."
+    ]
+  },
+  {
+    "name": "mixed_script_abbreviation",
+    "input": "Az.R. və РФ Konstitusiyası.",
+    "words": [
+      "Az",
+      "R",
+      "və",
+      "РФ",
+      "Konstitusiyası"
+    ],
+    "sentences": [
+      "Az.R. və РФ Konstitusiyası."
+    ]
+  },
+  {
+    "name": "mixed_scripts_no_hyphen",
+    "input": "Azərbaycan Москва şəhəri.",
+    "words": [
+      "Azərbaycan",
+      "Москва",
+      "şəhəri"
+    ],
+    "sentences": [
+      "Azərbaycan Москва şəhəri."
+    ]
+  },
+  {
+    "name": "mixed_symbols_and_words",
+    "input": "$kitab@ #test%",
+    "words": [
+      "kitab",
+      "test"
+    ],
+    "sentences": [
+      "$kitab@ #test%"
+    ]
+  },
+  {
+    "name": "mixed_terminal_punct",
+    "input": "Nə istəyirsən? Bilmirəm. Gedək!",
+    "words": [
+      "Nə",
+      "istəyirsən",
+      "Bilmirəm",
+      "Gedək"
+    ],
+    "sentences": [
+      "Nə istəyirsən?",
+      " Bilmirəm.",
+      " Gedək!"
+    ]
+  },
+  {
+    "name": "mixed_three_scripts",
+    "input": "Bu текст və content qarışıqdır.",
+    "words": [
+      "Bu",
+      "текст",
+      "və",
+      "content",
+      "qarışıqdır"
+    ],
+    "sentences": [
+      "Bu текст və content qarışıqdır."
+    ]
+  },
+  {
+    "name": "mixed_whitespace",
+    "input": "Söz \t \n arası.",
+    "words": [
+      "Söz",
+      "arası"
+    ],
+    "sentences": [
+      "Söz \t \n arası."
+    ]
+  },
+  {
+    "name": "money_with_currency_symbol",
+    "input": "Qazanc €500 və ₺1.000 idi.",
+    "words": [
+      "Qazanc",
+      "və",
+      "idi"
+    ],
+    "sentences": [
+      "Qazanc €500 və ₺1.000 idi."
+    ]
+  },
+  {
+    "name": "multiple_abbrev_with_numbers",
+    "input": "Prof. Əliyev 10 km. yol getdi.",
+    "words": [
+      "Prof",
+      "Əliyev",
+      "km",
+      "yol",
+      "getdi"
+    ],
+    "sentences": [
+      "Prof. Əliyev 10 km. yol getdi."
+    ]
+  },
+  {
+    "name": "multiple_abbreviations_same_sentence",
+    "input": "Prof. Əliyev və dr. Məmmədov gəldi.",
+    "words": [
+      "Prof",
+      "Əliyev",
+      "və",
+      "dr",
+      "Məmmədov",
+      "gəldi"
+    ],
+    "sentences": [
+      "Prof. Əliyev və dr. Məmmədov gəldi."
+    ]
+  },
+  {
+    "name": "multiple_ellipsis_mixed",
+    "input": "Düşünürəm... Bəlkə… Yox.",
+    "words": [
+      "Düşünürəm",
+      "Bəlkə",
+      "Yox"
+    ],
+    "sentences": [
+      "Düşünürəm...",
+      " Bəlkə…",
+      " Yox."
+    ]
+  },
+  {
+    "name": "multiple_emails",
+    "input": "Yazın admin@site.az və ya support@site.com ünvanlarına.",
+    "words": [
+      "Yazın",
+      "və",
+      "ya",
+      "ünvanlarına"
+    ],
+    "sentences": [
+      "Yazın admin@site.az və ya support@site.com ünvanlarına."
+    ]
+  },
+  {
+    "name": "multiple_newlines_single",
+    "input": "birinci\n\n\n\nikinci",
+    "words": [
+      "birinci",
+      "ikinci"
+    ],
+    "sentences": [
+      "birinci\n\n\n\n",
+      "ikinci"
+    ]
+  },
+  {
+    "name": "multiple_sentences_with_numbers",
+    "input": "Birinci 100 nəfər. İkinci 200 nəfər.",
+    "words": [
+      "Birinci",
+      "nəfər",
+      "İkinci",
+      "nəfər"
+    ],
+    "sentences": [
+      "Birinci 100 nəfər.",
+      " İkinci 200 nəfər."
+    ]
+  },
+  {
+    "name": "multiple_spaces_between_sentences",
+    "input": "Birinci.   İkinci.",
+    "words": [
+      "Birinci",
+      "İkinci"
+    ],
+    "sentences": [
+      "Birinci.",
+      "   İkinci."
+    ]
+  },
+  {
+    "name": "multiple_spaces_between_words",
+    "input": "bir    iki     üç",
+    "words": [
+      "bir",
+      "iki",
+      "üç"
+    ],
+    "sentences": [
+      "bir    iki     üç"
+    ]
+  },
+  {
+    "name": "multiple_spaces_preserved",
+    "input": "Söz    çox    boşluqla    yazıldı.",
+    "words": [
+      "Söz",
+      "çox",
+      "boşluqla",
+      "yazıldı"
+    ],
+    "sentences": [
+      "Söz    çox    boşluqla    yazıldı."
+    ]
+  },
+  {
+    "name": "negative_sign_separate",
+    "input": "Temperatur -5 dərəcə idi.",
+    "words": [
+      "Temperatur",
+      "dərəcə",
+      "idi"
+    ],
+    "sentences": [
+      "Temperatur -5 dərəcə idi."
+    ],
+    "word_tokens": [
+      {
+        "text": "Temperatur",
+        "start": 0,
+        "end": 10,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 10,
+        "end": 11,
+        "type": "Space"
+      },
+      {
+        "text": "-",
+        "start": 11,
+        "end": 12,
+        "type": "Punctuation"
+      },
+      {
+        "text": "5",
+        "start": 12,
+        "end": 13,
+        "type": "Number"
+      },
+      {
+        "text": " ",
+        "start": 13,
+        "end": 14,
+        "type": "Space"
+      },
+      {
+        "text": "dərəcə",
+        "start": 14,
+        "end": 23,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 23,
+        "end": 24,
+        "type": "Space"
+      },
+      {
+        "text": "idi",
+        "start": 24,
+        "end": 27,
+        "type": "Word"
+      },
+      {
+        "text": ".",
+        "start": 27,
+        "end": 28,
+        "type": "Punctuation"
+      }
+    ]
+  },
+  {
+    "name": "newline_uppercase_no_split",
+    "input": "Birinci satır\nİkinci satır davam edir.",
+    "words": [
+      "Birinci",
+      "satır",
+      "İkinci",
+      "satır",
+      "davam",
+      "edir"
+    ],
+    "sentences": [
+      "Birinci satır\nİkinci satır davam edir."
+    ]
+  },
+  {
+    "name": "news_headline_with_numbers",
+    "input": "Azərbaycan 2024-cü ildə 1.000.000 turist qəbul edib.",
+    "words": [
+      "Azərbaycan",
+      "cü",
+      "ildə",
+      "turist",
+      "qəbul",
+      "edib"
+    ],
+    "sentences": [
+      "Azərbaycan 2024-cü ildə 1.000.000 turist qəbul edib."
+    ]
+  },
+  {
+    "name": "news_president_meeting",
+    "input": "Prezident İlham Əliyev Türkiyə prezidenti Rəcəb Tayyib Ərdoğan ilə görüşüb.",
+    "words": [
+      "Prezident",
+      "İlham",
+      "Əliyev",
+      "Türkiyə",
+      "prezidenti",
+      "Rəcəb",
+      "Tayyib",
+      "Ərdoğan",
+      "ilə",
+      "görüşüb"
+    ],
+    "sentences": [
+      "Prezident İlham Əliyev Türkiyə prezidenti Rəcəb Tayyib Ərdoğan ilə görüşüb."
+    ]
+  },
+  {
+    "name": "no_split_period_no_uppercase_after",
+    "input": "Bu prof. əliyevdir.",
+    "words": [
+      "Bu",
+      "prof",
+      "əliyevdir"
+    ],
+    "sentences": [
+      "Bu prof. əliyevdir."
+    ]
+  },
+  {
+    "name": "no_terminal_punctuation",
+    "input": "Bu cümlə sonu yoxdur",
+    "words": [
+      "Bu",
+      "cümlə",
+      "sonu",
+      "yoxdur"
+    ],
+    "sentences": [
+      "Bu cümlə sonu yoxdur"
+    ]
+  },
+  {
+    "name": "non_ascii_digit_symbol",
+    "input": "Dəyər 𝟢 və ٠ deyil.",
+    "words": [
+      "Dəyər",
+      "və",
+      "deyil"
+    ],
+    "sentences": [
+      "Dəyər 𝟢 və ٠ deyil."
+    ]
+  },
+  {
+    "name": "non_breaking_space",
+    "input": "bir iki",
+    "words": [
+      "bir",
+      "iki"
+    ],
+    "sentences": [
+      "bir iki"
+    ]
+  },
+  {
+    "name": "number_followed_by_letters",
+    "input": "Məsafə 5km qalıb.",
+    "words": [
+      "Məsafə",
+      "km",
+      "qalıb"
+    ],
+    "sentences": [
+      "Məsafə 5km qalıb."
+    ],
+    "word_tokens": [
+      {
+        "text": "Məsafə",
+        "start": 0,
+        "end": 8,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 8,
+        "end": 9,
+        "type": "Space"
+      },
+      {
+        "text": "5",
+        "start": 9,
+        "end": 10,
+        "type": "Number"
+      },
+      {
+        "text": "km",
+        "start": 10,
+        "end": 12,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 12,
+        "end": 13,
+        "type": "Space"
+      },
+      {
+        "text": "qalıb",
+        "start": 13,
+        "end": 19,
+        "type": "Word"
+      },
+      {
+        "text": ".",
+        "start": 19,
+        "end": 20,
+        "type": "Punctuation"
+      }
+    ]
+  },
+  {
+    "name": "number_unit_split",
+    "input": "Məsafə 5km-dir.",
+    "words": [
+      "Məsafə",
+      "km-dir"
+    ],
+    "sentences": [
+      "Məsafə 5km-dir."
+    ]
+  },
+  {
+    "name": "numbered_list_item",
+    "input": "1. Birinci maddə",
+    "words": [
+      "Birinci",
+      "maddə"
+    ],
+    "sentences": [
+      "1.",
+      " Birinci maddə"
+    ]
+  },
+  {
+    "name": "numbers_at_sentence_end",
+    "input": "Əhali 100 nəfərdir.",
+    "words": [
+      "Əhali",
+      "nəfərdir"
+    ],
+    "sentences": [
+      "Əhali 100 nəfərdir."
+    ]
+  },
+  {
+    "name": "numbers_at_sentence_start",
+    "input": "123 nəfər gəldi.",
+    "words": [
+      "nəfər",
+      "gəldi"
+    ],
+    "sentences": [
+      "123 nəfər gəldi."
+    ]
+  },
+  {
+    "name": "only_numbers",
+    "input": "123 456 789",
+    "words": [],
+    "sentences": [
+      "123 456 789"
+    ]
+  },
+  {
+    "name": "only_punctuation",
+    "input": "...!?",
+    "words": [],
+    "sentences": [
+      "...!?"
+    ]
+  },
+  {
+    "name": "only_symbols",
+    "input": "$$$",
+    "words": [],
+    "sentences": [
+      "$$$"
+    ]
+  },
+  {
+    "name": "only_whitespace",
+    "input": "   \t\n  ",
+    "words": [],
+    "sentences": [
+      "   \t\n  "
+    ]
+  },
+  {
+    "name": "ordinal_numbers_sequence",
+    "input": "Birinci, ikinci və 3-cü yerlər.",
+    "words": [
+      "Birinci",
+      "ikinci",
+      "və",
+      "cü",
+      "yerlər"
+    ],
+    "sentences": [
+      "Birinci, ikinci və 3-cü yerlər."
+    ]
+  },
+  {
+    "name": "ordinal_suffix_ci",
+    "input": "XIX əsrin 20-ci ili əhəmiyyətli idi.",
+    "words": [
+      "XIX",
+      "əsrin",
+      "ci",
+      "ili",
+      "əhəmiyyətli",
+      "idi"
+    ],
+    "sentences": [
+      "XIX əsrin 20-ci ili əhəmiyyətli idi."
+    ]
+  },
+  {
+    "name": "ordinal_suffix_inci",
+    "input": "Bu 3-üncü cəhdi idi.",
+    "words": [
+      "Bu",
+      "üncü",
+      "cəhdi",
+      "idi"
+    ],
+    "sentences": [
+      "Bu 3-üncü cəhdi idi."
+    ]
+  },
+  {
+    "name": "ordinal_suffix_nci",
+    "input": "12-nci nömrəli məktəb yaxşıdır.",
+    "words": [
+      "nci",
+      "nömrəli",
+      "məktəb",
+      "yaxşıdır"
+    ],
+    "sentences": [
+      "12-nci nömrəli məktəb yaxşıdır."
+    ]
+  },
+  {
+    "name": "ordinal_with_period",
+    "input": "1. Bənd. 2. Bənd.",
+    "words": [
+      "Bənd",
+      "Bənd"
+    ],
+    "sentences": [
+      "1.",
+      " Bənd. 2.",
+      " Bənd."
+    ]
+  },
+  {
+    "name": "parentheses_and_brackets",
+    "input": "Şəhər (Bakı) və [Gəncə] yaşayış yerləri.",
+    "words": [
+      "Şəhər",
+      "Bakı",
+      "və",
+      "Gəncə",
+      "yaşayış",
+      "yerləri"
+    ],
+    "sentences": [
+      "Şəhər (Bakı) və [Gəncə] yaşayış yerləri."
+    ]
+  },
+  {
+    "name": "parentheses_nested",
+    "input": "Kitab (Əliyev (2026) tərəfindən) nəşr olundu.",
+    "words": [
+      "Kitab",
+      "Əliyev",
+      "tərəfindən",
+      "nəşr",
+      "olundu"
+    ],
+    "sentences": [
+      "Kitab (Əliyev (2026) tərəfindən) nəşr olundu."
+    ]
+  },
+  {
+    "name": "parenthesized_expression",
+    "input": "(test)",
+    "words": [
+      "test"
+    ],
+    "sentences": [
+      "(test)"
+    ]
+  },
+  {
+    "name": "parenthesized_text",
+    "input": "O (yəni mən) gəldi.",
+    "words": [
+      "O",
+      "yəni",
+      "mən",
+      "gəldi"
+    ],
+    "sentences": [
+      "O (yəni mən) gəldi."
+    ]
+  },
+  {
+    "name": "parenthetical_capital",
+    "input": "Bakı (Azərbaycanın paytaxtı) gözəl şəhərdir.",
+    "words": [
+      "Bakı",
+      "Azərbaycanın",
+      "paytaxtı",
+      "gözəl",
+      "şəhərdir"
+    ],
+    "sentences": [
+      "Bakı (Azərbaycanın paytaxtı) gözəl şəhərdir."
+    ]
+  },
+  {
+    "name": "percent_and_symbols",
+    "input": "Faiz 25% və ya $100 olaraq.",
+    "words": [
+      "Faiz",
+      "və",
+      "ya",
+      "olaraq"
+    ],
+    "sentences": [
+      "Faiz 25% və ya $100 olaraq."
+    ]
+  },
+  {
+    "name": "percentage_growth",
+    "input": "50% artım qeydə alındı.",
+    "words": [
+      "artım",
+      "qeydə",
+      "alındı"
+    ],
+    "sentences": [
+      "50% artım qeydə alındı."
+    ]
+  },
+  {
+    "name": "percentage_symbol",
+    "input": "Dəyişiklik %15,5 təşkil etdi.",
+    "words": [
+      "Dəyişiklik",
+      "təşkil",
+      "etdi"
+    ],
+    "sentences": [
+      "Dəyişiklik %15,5 təşkil etdi."
+    ]
+  },
+  {
+    "name": "period_after_digit",
+    "input": "İl 2024. Yeni dövr başladı.",
+    "words": [
+      "İl",
+      "Yeni",
+      "dövr",
+      "başladı"
+    ],
+    "sentences": [
+      "İl 2024.",
+      " Yeni dövr başladı."
+    ]
+  },
+  {
+    "name": "period_after_lowercase_end",
+    "input": "salam.",
+    "words": [
+      "salam"
+    ],
+    "sentences": [
+      "salam."
+    ]
+  },
+  {
+    "name": "period_after_lowercase_then_uppercase",
+    "input": "salam. Necəsən?",
+    "words": [
+      "salam",
+      "Necəsən"
+    ],
+    "sentences": [
+      "salam.",
+      " Necəsən?"
+    ]
+  },
+  {
+    "name": "phone_like_numbers",
+    "input": "Əlaqə: 012-555-1234 nömrəsinə zəng edin.",
+    "words": [
+      "Əlaqə",
+      "nömrəsinə",
+      "zəng",
+      "edin"
+    ],
+    "sentences": [
+      "Əlaqə: 012-555-1234 nömrəsinə zəng edin."
+    ]
+  },
+  {
+    "name": "phone_number_punctuation",
+    "input": "Əlaqə nömrəsi (+994) 12-345-67-89 buradadır.",
+    "words": [
+      "Əlaqə",
+      "nömrəsi",
+      "buradadır"
+    ],
+    "sentences": [
+      "Əlaqə nömrəsi (+994) 12-345-67-89 buradadır."
+    ]
+  },
+  {
+    "name": "price_with_dollar",
+    "input": "Qiymət $100 idi.",
+    "words": [
+      "Qiymət",
+      "idi"
+    ],
+    "sentences": [
+      "Qiymət $100 idi."
+    ]
+  },
+  {
+    "name": "punctuation_at_start",
+    "input": ".başla",
+    "words": [
+      "başla"
+    ],
+    "sentences": [
+      ".başla"
+    ]
+  },
+  {
+    "name": "punctuation_cluster",
+    "input": "Nə?! Doğru.",
+    "words": [
+      "Nə",
+      "Doğru"
+    ],
+    "sentences": [
+      "Nə?!",
+      " Doğru."
+    ]
+  },
+  {
+    "name": "pure_cyrillic_azerbaijani",
+    "input": "Бакы шəhəридир.",
+    "words": [
+      "Бакы",
+      "шəhəридир"
+    ],
+    "sentences": [
+      "Бакы шəhəридир."
+    ]
+  },
+  {
+    "name": "question_exclamation_combined",
+    "input": "Necə?! Doğrudanmı?!",
+    "words": [
+      "Necə",
+      "Doğrudanmı"
+    ],
+    "sentences": [
+      "Necə?!",
+      " Doğrudanmı?!"
+    ]
+  },
+  {
+    "name": "question_mark_splitting",
+    "input": "Nə baş verir? Bilmirəm.",
+    "words": [
+      "Nə",
+      "baş",
+      "verir",
+      "Bilmirəm"
+    ],
+    "sentences": [
+      "Nə baş verir?",
+      " Bilmirəm."
+    ]
+  },
+  {
+    "name": "quotation_marks_various",
+    "input": "\"Salam\" və 'xoş gəlmisiniz' dedi.",
+    "words": [
+      "Salam",
+      "və",
+      "xoş",
+      "gəlmisiniz",
+      "dedi"
+    ],
+    "sentences": [
+      "\"Salam\" və 'xoş gəlmisiniz' dedi."
+    ]
+  },
+  {
+    "name": "quoted_speech",
+    "input": "\"Salam\" dedi. \"Necəsən?\" soruşdu.",
+    "words": [
+      "Salam",
+      "dedi",
+      "Necəsən",
+      "soruşdu"
+    ],
+    "sentences": [
+      "\"Salam\" dedi. \"Necəsən?\" soruşdu."
+    ]
+  },
+  {
+    "name": "quoted_word_full",
+    "input": "Bu 'mətn' yazıdır.",
+    "words": [
+      "Bu",
+      "mətn",
+      "yazıdır"
+    ],
+    "sentences": [
+      "Bu 'mətn' yazıdır."
+    ]
+  },
+  {
+    "name": "quotes_single_double_mixed",
+    "input": "\"Salam\" dedi və 'necəsən?' soruşdu.",
+    "words": [
+      "Salam",
+      "dedi",
+      "və",
+      "necəsən",
+      "soruşdu"
+    ],
+    "sentences": [
+      "\"Salam\" dedi və 'necəsən?' soruşdu."
+    ]
+  },
+  {
+    "name": "repeated_same_character",
+    "input": "aaaaaa",
+    "words": [
+      "aaaaaa"
+    ],
+    "sentences": [
+      "aaaaaa"
+    ]
+  },
+  {
+    "name": "replacement_character",
+    "input": "test�data",
+    "words": [
+      "test",
+      "data"
+    ],
+    "sentences": [
+      "test�data"
+    ]
+  },
+  {
+    "name": "russian_text_cyrillic",
+    "input": "Санкт-Петербург şəhəri Rusiyadadır.",
+    "words": [
+      "Санкт-Петербург",
+      "şəhəri",
+      "Rusiyadadır"
+    ],
+    "sentences": [
+      "Санкт-Петербург şəhəri Rusiyadadır."
+    ]
+  },
+  {
+    "name": "semicolon_usage",
+    "input": "Birinci; ikinci",
+    "words": [
+      "Birinci",
+      "ikinci"
+    ],
+    "sentences": [
+      "Birinci; ikinci"
+    ]
+  },
+  {
+    "name": "sentence_ending_multiple_punct",
+    "input": "Nə istəyirsən?! Bilmirəm.",
+    "words": [
+      "Nə",
+      "istəyirsən",
+      "Bilmirəm"
+    ],
+    "sentences": [
+      "Nə istəyirsən?!",
+      " Bilmirəm."
+    ]
+  },
+  {
+    "name": "sentence_no_final_punct",
+    "input": "Bu cümlə nöqtəsiz",
+    "words": [
+      "Bu",
+      "cümlə",
+      "nöqtəsiz"
+    ],
+    "sentences": [
+      "Bu cümlə nöqtəsiz"
+    ]
+  },
+  {
+    "name": "simple_greeting",
+    "input": "Salam, dünya!",
+    "words": [
+      "Salam",
+      "dünya"
+    ],
+    "sentences": [
+      "Salam, dünya!"
+    ]
+  },
+  {
+    "name": "single_character_sentence",
+    "input": "A.",
+    "words": [
+      "A"
+    ],
+    "sentences": [
+      "A."
+    ]
+  },
+  {
+    "name": "single_digit",
+    "input": "5",
+    "words": [],
+    "sentences": [
+      "5"
+    ]
+  },
+  {
+    "name": "single_letter",
+    "input": "a",
+    "words": [
+      "a"
+    ],
+    "sentences": [
+      "a"
+    ]
+  },
+  {
+    "name": "single_letter_azerbaijani",
+    "input": "ə",
+    "words": [
+      "ə"
+    ],
+    "sentences": [
+      "ə"
+    ]
+  },
+  {
+    "name": "single_letter_word",
+    "input": "a",
+    "words": [
+      "a"
+    ],
+    "sentences": [
+      "a"
+    ]
+  },
+  {
+    "name": "single_newline_no_split",
+    "input": "Birinci\nİkinci",
+    "words": [
+      "Birinci",
+      "İkinci"
+    ],
+    "sentences": [
+      "Birinci\nİkinci"
+    ]
+  },
+  {
+    "name": "single_punct",
+    "input": ".",
+    "words": [],
+    "sentences": [
+      "."
+    ]
+  },
+  {
+    "name": "single_quotes",
+    "input": "'test' sözü",
+    "words": [
+      "test",
+      "sözü"
+    ],
+    "sentences": [
+      "'test' sözü"
+    ]
+  },
+  {
+    "name": "single_word",
+    "input": "Söz",
+    "words": [
+      "Söz"
+    ],
+    "sentences": [
+      "Söz"
+    ]
+  },
+  {
+    "name": "slash",
+    "input": "və/yaxud",
+    "words": [
+      "və",
+      "yaxud"
+    ],
+    "sentences": [
+      "və/yaxud"
+    ]
+  },
+  {
+    "name": "slash_backslash_symbols",
+    "input": "Yol C:\\Users\\name və /home/user/dir buradadır.",
+    "words": [
+      "Yol",
+      "C",
+      "Users",
+      "name",
+      "və",
+      "home",
+      "user",
+      "dir",
+      "buradadır"
+    ],
+    "sentences": [
+      "Yol C:\\Users\\name və /home/user/dir buradadır."
+    ]
+  },
+  {
+    "name": "slash_in_text",
+    "input": "Ünvan Bakı/Nəsimi rayonu.",
+    "words": [
+      "Ünvan",
+      "Bakı",
+      "Nəsimi",
+      "rayonu"
+    ],
+    "sentences": [
+      "Ünvan Bakı/Nəsimi rayonu."
+    ]
+  },
+  {
+    "name": "social_ellipsis_exclaim",
+    "input": "Bakı'nın köhnə şəhərində gəzinti... Çox gözəl idi!",
+    "words": [
+      "Bakı'nın",
+      "köhnə",
+      "şəhərində",
+      "gəzinti",
+      "Çox",
+      "gözəl",
+      "idi"
+    ],
+    "sentences": [
+      "Bakı'nın köhnə şəhərində gəzinti...",
+      " Çox gözəl idi!"
+    ]
+  },
+  {
+    "name": "social_media_style",
+    "input": "Nə gözəl!!! Çox xoşuma gəldi!!",
+    "words": [
+      "Nə",
+      "gözəl",
+      "Çox",
+      "xoşuma",
+      "gəldi"
+    ],
+    "sentences": [
+      "Nə gözəl!!!",
+      " Çox xoşuma gəldi!!"
+    ]
+  },
+  {
+    "name": "sports_score",
+    "input": "Qarabağ 2-1 hesabı ilə qalib gəldi.",
+    "words": [
+      "Qarabağ",
+      "hesabı",
+      "ilə",
+      "qalib",
+      "gəldi"
+    ],
+    "sentences": [
+      "Qarabağ 2-1 hesabı ilə qalib gəldi."
+    ]
+  },
+  {
+    "name": "sports_transfer",
+    "input": "Qarabağ FK 1.000.000 avro transferə xərcləyib. Komanda gücləndi.",
+    "words": [
+      "Qarabağ",
+      "FK",
+      "avro",
+      "transferə",
+      "xərcləyib",
+      "Komanda",
+      "gücləndi"
+    ],
+    "sentences": [
+      "Qarabağ FK 1.000.000 avro transferə xərcləyib.",
+      " Komanda gücləndi."
+    ]
+  },
+  {
+    "name": "square_brackets",
+    "input": "[məlumat]",
+    "words": [
+      "məlumat"
+    ],
+    "sentences": [
+      "[məlumat]"
+    ]
+  },
+  {
+    "name": "symbol_copyright_trademark",
+    "input": "Məhsul © 2026 şirkəti™ tərəfindən hazırlanıb.",
+    "words": [
+      "Məhsul",
+      "şirkəti",
+      "tərəfindən",
+      "hazırlanıb"
+    ],
+    "sentences": [
+      "Məhsul © 2026 şirkəti™ tərəfindən hazırlanıb."
+    ]
+  },
+  {
+    "name": "symbol_currency_manat",
+    "input": "Qiymət 100₼ təşkil edir.",
+    "words": [
+      "Qiymət",
+      "təşkil",
+      "edir"
+    ],
+    "sentences": [
+      "Qiymət 100₼ təşkil edir."
+    ]
+  },
+  {
+    "name": "symbol_dollar_euro",
+    "input": "Məzənnə $1 = €0.92 = ₼1.70 təşkil edir.",
+    "words": [
+      "Məzənnə",
+      "təşkil",
+      "edir"
+    ],
+    "sentences": [
+      "Məzənnə $1 = €0.92 = ₼1.70 təşkil edir."
+    ],
+    "word_tokens": [
+      {
+        "text": "Məzənnə",
+        "start": 0,
+        "end": 10,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 10,
+        "end": 11,
+        "type": "Space"
+      },
+      {
+        "text": "$",
+        "start": 11,
+        "end": 12,
+        "type": "Symbol"
+      },
+      {
+        "text": "1",
+        "start": 12,
+        "end": 13,
+        "type": "Number"
+      },
+      {
+        "text": " ",
+        "start": 13,
+        "end": 14,
+        "type": "Space"
+      },
+      {
+        "text": "=",
+        "start": 14,
+        "end": 15,
+        "type": "Symbol"
+      },
+      {
+        "text": " ",
+        "start": 15,
+        "end": 16,
+        "type": "Space"
+      },
+      {
+        "text": "€",
+        "start": 16,
+        "end": 19,
+        "type": "Symbol"
+      },
+      {
+        "text": "0",
+        "start": 19,
+        "end": 20,
+        "type": "Number"
+      },
+      {
+        "text": ".",
+        "start": 20,
+        "end": 21,
+        "type": "Punctuation"
+      },
+      {
+        "text": "92",
+        "start": 21,
+        "end": 23,
+        "type": "Number"
+      },
+      {
+        "text": " ",
+        "start": 23,
+        "end": 24,
+        "type": "Space"
+      },
+      {
+        "text": "=",
+        "start": 24,
+        "end": 25,
+        "type": "Symbol"
+      },
+      {
+        "text": " ",
+        "start": 25,
+        "end": 26,
+        "type": "Space"
+      },
+      {
+        "text": "₼",
+        "start": 26,
+        "end": 29,
+        "type": "Symbol"
+      },
+      {
+        "text": "1",
+        "start": 29,
+        "end": 30,
+        "type": "Number"
+      },
+      {
+        "text": ".",
+        "start": 30,
+        "end": 31,
+        "type": "Punctuation"
+      },
+      {
+        "text": "70",
+        "start": 31,
+        "end": 33,
+        "type": "Number"
+      },
+      {
+        "text": " ",
+        "start": 33,
+        "end": 34,
+        "type": "Space"
+      },
+      {
+        "text": "təşkil",
+        "start": 34,
+        "end": 42,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 42,
+        "end": 43,
+        "type": "Space"
+      },
+      {
+        "text": "edir",
+        "start": 43,
+        "end": 47,
+        "type": "Word"
+      },
+      {
+        "text": ".",
+        "start": 47,
+        "end": 48,
+        "type": "Punctuation"
+      }
+    ]
+  },
+  {
+    "name": "symbol_math_constants",
+    "input": "Dairə sahəsi πr² düsturu ilə hesablanır.",
+    "words": [
+      "Dairə",
+      "sahəsi",
+      "πr",
+      "düsturu",
+      "ilə",
+      "hesablanır"
+    ],
+    "sentences": [
+      "Dairə sahəsi πr² düsturu ilə hesablanır."
+    ]
+  },
+  {
+    "name": "symbol_math_operators",
+    "input": "Nəticə 5 + 3 = 8 və 10 − 2 ≠ 9 oldu.",
+    "words": [
+      "Nəticə",
+      "və",
+      "oldu"
+    ],
+    "sentences": [
+      "Nəticə 5 + 3 = 8 və 10 − 2 ≠ 9 oldu."
+    ]
+  },
+  {
+    "name": "tab_between_sentences",
+    "input": "Birinci.\tİkinci.",
+    "words": [
+      "Birinci",
+      "İkinci"
+    ],
+    "sentences": [
+      "Birinci.",
+      "\tİkinci."
+    ]
+  },
+  {
+    "name": "tab_characters",
+    "input": "Söz\tarası\ttab.",
+    "words": [
+      "Söz",
+      "arası",
+      "tab"
+    ],
+    "sentences": [
+      "Söz\tarası\ttab."
+    ]
+  },
+  {
+    "name": "technology_website",
+    "input": "Saytımız https://example.az ünvanında fəaliyyət göstərir.",
+    "words": [
+      "Saytımız",
+      "ünvanında",
+      "fəaliyyət",
+      "göstərir"
+    ],
+    "sentences": [
+      "Saytımız https://example.az ünvanında fəaliyyət göstərir."
+    ]
+  },
+  {
+    "name": "temperature_celsius",
+    "input": "Hava 35°C olacaq.",
+    "words": [
+      "Hava",
+      "C",
+      "olacaq"
+    ],
+    "sentences": [
+      "Hava 35°C olacaq."
+    ]
+  },
+  {
+    "name": "thai_script",
+    "input": "ภาษาไทย və Azərbaycan.",
+    "words": [
+      "ภาษาไทย",
+      "və",
+      "Azərbaycan"
+    ],
+    "sentences": [
+      "ภาษาไทย və Azərbaycan."
+    ]
+  },
+  {
+    "name": "thousand_sep_with_offsets",
+    "input": "Məbləğ 1.000.000,50 manatdır.",
+    "words": [
+      "Məbləğ",
+      "manatdır"
+    ],
+    "sentences": [
+      "Məbləğ 1.000.000,50 manatdır."
+    ],
+    "word_tokens": [
+      {
+        "text": "Məbləğ",
+        "start": 0,
+        "end": 9,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 9,
+        "end": 10,
+        "type": "Space"
+      },
+      {
+        "text": "1.000.000,50",
+        "start": 10,
+        "end": 22,
+        "type": "Number"
+      },
+      {
+        "text": " ",
+        "start": 22,
+        "end": 23,
+        "type": "Space"
+      },
+      {
+        "text": "manatdır",
+        "start": 23,
+        "end": 32,
+        "type": "Word"
+      },
+      {
+        "text": ".",
+        "start": 32,
+        "end": 33,
+        "type": "Punctuation"
+      }
+    ]
+  },
+  {
+    "name": "thousand_separator",
+    "input": "Əhali 1.000.000 nəfərdir.",
+    "words": [
+      "Əhali",
+      "nəfərdir"
+    ],
+    "sentences": [
+      "Əhali 1.000.000 nəfərdir."
+    ]
+  },
+  {
+    "name": "three_scripts_mixed",
+    "input": "Latin Кирилл عربي hər üçü.",
+    "words": [
+      "Latin",
+      "Кирилл",
+      "عربي",
+      "hər",
+      "üçü"
+    ],
+    "sentences": [
+      "Latin Кирилл عربي hər üçü."
+    ]
+  },
+  {
+    "name": "three_sentences_period",
+    "input": "Birinci. İkinci cümlə. Üçüncü cümlə.",
+    "words": [
+      "Birinci",
+      "İkinci",
+      "cümlə",
+      "Üçüncü",
+      "cümlə"
+    ],
+    "sentences": [
+      "Birinci.",
+      " İkinci cümlə.",
+      " Üçüncü cümlə."
+    ]
+  },
+  {
+    "name": "three_words_with_schwa",
+    "input": "mən səni sevirəm",
+    "words": [
+      "mən",
+      "səni",
+      "sevirəm"
+    ],
+    "sentences": [
+      "mən səni sevirəm"
+    ]
+  },
+  {
+    "name": "time_format_colon",
+    "input": "Saat 14:30:45 oldu.",
+    "words": [
+      "Saat",
+      "oldu"
+    ],
+    "sentences": [
+      "Saat 14:30:45 oldu."
+    ]
+  },
+  {
+    "name": "time_notation",
+    "input": "Saat 14:30-da görüş olacaq.",
+    "words": [
+      "Saat",
+      "da",
+      "görüş",
+      "olacaq"
+    ],
+    "sentences": [
+      "Saat 14:30-da görüş olacaq."
+    ]
+  },
+  {
+    "name": "trademark_symbols",
+    "input": "Apple® və Microsoft™ şirkətləri.",
+    "words": [
+      "Apple",
+      "və",
+      "Microsoft",
+      "şirkətləri"
+    ],
+    "sentences": [
+      "Apple® və Microsoft™ şirkətləri."
+    ]
+  },
+  {
+    "name": "trailing_apostrophe",
+    "input": "Sözün sonu' burada.",
+    "words": [
+      "Sözün",
+      "sonu",
+      "burada"
+    ],
+    "sentences": [
+      "Sözün sonu' burada."
+    ]
+  },
+  {
+    "name": "trailing_comma_no_digits",
+    "input": "Rəqəm 3, sonra davam.",
+    "words": [
+      "Rəqəm",
+      "sonra",
+      "davam"
+    ],
+    "sentences": [
+      "Rəqəm 3, sonra davam."
+    ],
+    "word_tokens": [
+      {
+        "text": "Rəqəm",
+        "start": 0,
+        "end": 7,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 7,
+        "end": 8,
+        "type": "Space"
+      },
+      {
+        "text": "3",
+        "start": 8,
+        "end": 9,
+        "type": "Number"
+      },
+      {
+        "text": ",",
+        "start": 9,
+        "end": 10,
+        "type": "Punctuation"
+      },
+      {
+        "text": " ",
+        "start": 10,
+        "end": 11,
+        "type": "Space"
+      },
+      {
+        "text": "sonra",
+        "start": 11,
+        "end": 16,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 16,
+        "end": 17,
+        "type": "Space"
+      },
+      {
+        "text": "davam",
+        "start": 17,
+        "end": 22,
+        "type": "Word"
+      },
+      {
+        "text": ".",
+        "start": 22,
+        "end": 23,
+        "type": "Punctuation"
+      }
+    ]
+  },
+  {
+    "name": "trailing_hyphen",
+    "input": "Sözün test- hissəsi.",
+    "words": [
+      "Sözün",
+      "test",
+      "hissəsi"
+    ],
+    "sentences": [
+      "Sözün test- hissəsi."
+    ]
+  },
+  {
+    "name": "triple_dashes",
+    "input": "bax---yox",
+    "words": [
+      "bax",
+      "yox"
+    ],
+    "sentences": [
+      "bax---yox"
+    ]
+  },
+  {
+    "name": "triple_dots",
+    "input": "bax...",
+    "words": [
+      "bax"
+    ],
+    "sentences": [
+      "bax..."
+    ]
+  },
+  {
+    "name": "triple_newline",
+    "input": "Birinci.\n\n\nİkinci.",
+    "words": [
+      "Birinci",
+      "İkinci"
+    ],
+    "sentences": [
+      "Birinci.",
+      "\n\n\n",
+      "İkinci."
+    ]
+  },
+  {
+    "name": "triple_newline_splits",
+    "input": "Birinci.\n\n\nİkinci.",
+    "words": [
+      "Birinci",
+      "İkinci"
+    ],
+    "sentences": [
+      "Birinci.",
+      "\n\n\n",
+      "İkinci."
+    ]
+  },
+  {
+    "name": "triple_question_marks",
+    "input": "Nə??? Mümkün deyil!",
+    "words": [
+      "Nə",
+      "Mümkün",
+      "deyil"
+    ],
+    "sentences": [
+      "Nə???",
+      " Mümkün deyil!"
+    ]
+  },
+  {
+    "name": "two_sentences",
+    "input": "Birinci cümlə. İkinci cümlə.",
+    "words": [
+      "Birinci",
+      "cümlə",
+      "İkinci",
+      "cümlə"
+    ],
+    "sentences": [
+      "Birinci cümlə.",
+      " İkinci cümlə."
+    ]
+  },
+  {
+    "name": "two_sentences_period",
+    "input": "Birinci cümlə davam edir. İkinci cümlə başlayır.",
+    "words": [
+      "Birinci",
+      "cümlə",
+      "davam",
+      "edir",
+      "İkinci",
+      "cümlə",
+      "başlayır"
+    ],
+    "sentences": [
+      "Birinci cümlə davam edir.",
+      " İkinci cümlə başlayır."
+    ]
+  },
+  {
+    "name": "two_words",
+    "input": "yaxşı gün",
+    "words": [
+      "yaxşı",
+      "gün"
+    ],
+    "sentences": [
+      "yaxşı gün"
+    ]
+  },
+  {
+    "name": "unicode_digit_arabic",
+    "input": "Ərəb rəqəmi ٠١٢ burada.",
+    "words": [
+      "Ərəb",
+      "rəqəmi",
+      "burada"
+    ],
+    "sentences": [
+      "Ərəb rəqəmi ٠١٢ burada."
+    ]
+  },
+  {
+    "name": "unicode_digit_mathematical",
+    "input": "Riyazi simvol 𝟢𝟣𝟤 görünür.",
+    "words": [
+      "Riyazi",
+      "simvol",
+      "görünür"
+    ],
+    "sentences": [
+      "Riyazi simvol 𝟢𝟣𝟤 görünür."
+    ],
+    "word_tokens": [
+      {
+        "text": "Riyazi",
+        "start": 0,
+        "end": 6,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 6,
+        "end": 7,
+        "type": "Space"
+      },
+      {
+        "text": "simvol",
+        "start": 7,
+        "end": 13,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 13,
+        "end": 14,
+        "type": "Space"
+      },
+      {
+        "text": "𝟢",
+        "start": 14,
+        "end": 18,
+        "type": "Symbol"
+      },
+      {
+        "text": "𝟣",
+        "start": 18,
+        "end": 22,
+        "type": "Symbol"
+      },
+      {
+        "text": "𝟤",
+        "start": 22,
+        "end": 26,
+        "type": "Symbol"
+      },
+      {
+        "text": " ",
+        "start": 26,
+        "end": 27,
+        "type": "Space"
+      },
+      {
+        "text": "görünür",
+        "start": 27,
+        "end": 37,
+        "type": "Word"
+      },
+      {
+        "text": ".",
+        "start": 37,
+        "end": 38,
+        "type": "Punctuation"
+      }
+    ]
+  },
+  {
+    "name": "unicode_digit_not_number",
+    "input": "Rəqəm 𝟢 budur.",
+    "words": [
+      "Rəqəm",
+      "budur"
+    ],
+    "sentences": [
+      "Rəqəm 𝟢 budur."
+    ]
+  },
+  {
+    "name": "unknown_abbreviation_ltd",
+    "input": "Ltd. Şirkəti quruldu. Fəaliyyətə başladı.",
+    "words": [
+      "Ltd",
+      "Şirkəti",
+      "quruldu",
+      "Fəaliyyətə",
+      "başladı"
+    ],
+    "sentences": [
+      "Ltd.",
+      " Şirkəti quruldu.",
+      " Fəaliyyətə başladı."
+    ]
+  },
+  {
+    "name": "uppercase_azerbaijani",
+    "input": "ƏLİYEV ŞƏHƏRDƏDİR",
+    "words": [
+      "ƏLİYEV",
+      "ŞƏHƏRDƏDİR"
+    ],
+    "sentences": [
+      "ƏLİYEV ŞƏHƏRDƏDİR"
+    ]
+  },
+  {
+    "name": "url_and_email_combined",
+    "input": "Sayt https://example.az və email info@example.az burada.",
+    "words": [
+      "Sayt",
+      "və",
+      "email",
+      "burada"
+    ],
+    "sentences": [
+      "Sayt https://example.az və email info@example.az burada."
+    ]
+  },
+  {
+    "name": "url_https",
+    "input": "Sayt: https://gov.az/doc baxın.",
+    "words": [
+      "Sayt",
+      "baxın"
+    ],
+    "sentences": [
+      "Sayt: https://gov.az/doc baxın."
+    ]
+  },
+  {
+    "name": "url_incomplete_not_detected",
+    "input": "Sadəcə http:// yazıldı.",
+    "words": [
+      "Sadəcə",
+      "http",
+      "yazıldı"
+    ],
+    "sentences": [
+      "Sadəcə http:// yazıldı."
+    ]
+  },
+  {
+    "name": "url_mixed_case_protocol",
+    "input": "Keçid HtTpS://gov.az/az buradadır.",
+    "words": [
+      "Keçid",
+      "buradadır"
+    ],
+    "sentences": [
+      "Keçid HtTpS://gov.az/az buradadır."
+    ]
+  },
+  {
+    "name": "url_no_protocol",
+    "input": "Sayt www.example.com işləyir.",
+    "words": [
+      "Sayt",
+      "www",
+      "example",
+      "com",
+      "işləyir"
+    ],
+    "sentences": [
+      "Sayt www.example.com işləyir."
+    ]
+  },
+  {
+    "name": "url_trailing_comma",
+    "input": "Keçidlər https://gov.az, https://edu.az mövcuddur.",
+    "words": [
+      "Keçidlər",
+      "mövcuddur"
+    ],
+    "sentences": [
+      "Keçidlər https://gov.az, https://edu.az mövcuddur."
+    ]
+  },
+  {
+    "name": "url_trailing_exclamation",
+    "input": "Ziyarət edin https://prezident.az!",
+    "words": [
+      "Ziyarət",
+      "edin"
+    ],
+    "sentences": [
+      "Ziyarət edin https://prezident.az!"
+    ]
+  },
+  {
+    "name": "url_trailing_punct",
+    "input": "Baxın https://gov.az.",
+    "words": [
+      "Baxın"
+    ],
+    "sentences": [
+      "Baxın https://gov.az."
+    ]
+  },
+  {
+    "name": "url_trailing_question",
+    "input": "Baxdınız https://gov.az?",
+    "words": [
+      "Baxdınız"
+    ],
+    "sentences": [
+      "Baxdınız https://gov.az?"
+    ]
+  },
+  {
+    "name": "url_uppercase_protocol",
+    "input": "Baxın HTTP://EXAMPLE.COM sayta.",
+    "words": [
+      "Baxın",
+      "sayta"
+    ],
+    "sentences": [
+      "Baxın HTTP://EXAMPLE.COM sayta."
+    ],
+    "word_tokens": [
+      {
+        "text": "Baxın",
+        "start": 0,
+        "end": 6,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 6,
+        "end": 7,
+        "type": "Space"
+      },
+      {
+        "text": "HTTP://EXAMPLE.COM",
+        "start": 7,
+        "end": 25,
+        "type": "URL"
+      },
+      {
+        "text": " ",
+        "start": 25,
+        "end": 26,
+        "type": "Space"
+      },
+      {
+        "text": "sayta",
+        "start": 26,
+        "end": 31,
+        "type": "Word"
+      },
+      {
+        "text": ".",
+        "start": 31,
+        "end": 32,
+        "type": "Punctuation"
+      }
+    ]
+  },
+  {
+    "name": "url_with_fragment",
+    "input": "Bölməyə get https://wiki.az/article#section_2 keçid.",
+    "words": [
+      "Bölməyə",
+      "get",
+      "keçid"
+    ],
+    "sentences": [
+      "Bölməyə get https://wiki.az/article#section_2 keçid."
+    ]
+  },
+  {
+    "name": "url_with_offsets",
+    "input": "Bax https://gov.az/doc keçid.",
+    "words": [
+      "Bax",
+      "keçid"
+    ],
+    "sentences": [
+      "Bax https://gov.az/doc keçid."
+    ],
+    "word_tokens": [
+      {
+        "text": "Bax",
+        "start": 0,
+        "end": 3,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 3,
+        "end": 4,
+        "type": "Space"
+      },
+      {
+        "text": "https://gov.az/doc",
+        "start": 4,
+        "end": 22,
+        "type": "URL"
+      },
+      {
+        "text": " ",
+        "start": 22,
+        "end": 23,
+        "type": "Space"
+      },
+      {
+        "text": "keçid",
+        "start": 23,
+        "end": 29,
+        "type": "Word"
+      },
+      {
+        "text": ".",
+        "start": 29,
+        "end": 30,
+        "type": "Punctuation"
+      }
+    ]
+  },
+  {
+    "name": "url_with_port",
+    "input": "Server http://localhost:8080/api işləyir.",
+    "words": [
+      "Server",
+      "işləyir"
+    ],
+    "sentences": [
+      "Server http://localhost:8080/api işləyir."
+    ]
+  },
+  {
+    "name": "url_with_query_params",
+    "input": "Linkə bax http://site.az/page?id=123\u0026lang=az açın.",
+    "words": [
+      "Linkə",
+      "bax",
+      "açın"
+    ],
+    "sentences": [
+      "Linkə bax http://site.az/page?id=123\u0026lang=az açın."
+    ],
+    "word_tokens": [
+      {
+        "text": "Linkə",
+        "start": 0,
+        "end": 6,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 6,
+        "end": 7,
+        "type": "Space"
+      },
+      {
+        "text": "bax",
+        "start": 7,
+        "end": 10,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 10,
+        "end": 11,
+        "type": "Space"
+      },
+      {
+        "text": "http://site.az/page?id=123\u0026lang=az",
+        "start": 11,
+        "end": 45,
+        "type": "URL"
+      },
+      {
+        "text": " ",
+        "start": 45,
+        "end": 46,
+        "type": "Space"
+      },
+      {
+        "text": "açın",
+        "start": 46,
+        "end": 52,
+        "type": "Word"
+      },
+      {
+        "text": ".",
+        "start": 52,
+        "end": 53,
+        "type": "Punctuation"
+      }
+    ]
+  },
+  {
+    "name": "url_without_protocol",
+    "input": "Bax www.gov.az saytına.",
+    "words": [
+      "Bax",
+      "www",
+      "gov",
+      "az",
+      "saytına"
+    ],
+    "sentences": [
+      "Bax www.gov.az saytına."
+    ]
+  },
+  {
+    "name": "valid_thousand_separator_double",
+    "input": "Əhali 10.000.000 nəfər.",
+    "words": [
+      "Əhali",
+      "nəfər"
+    ],
+    "sentences": [
+      "Əhali 10.000.000 nəfər."
+    ],
+    "word_tokens": [
+      {
+        "text": "Əhali",
+        "start": 0,
+        "end": 6,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 6,
+        "end": 7,
+        "type": "Space"
+      },
+      {
+        "text": "10.000.000",
+        "start": 7,
+        "end": 17,
+        "type": "Number"
+      },
+      {
+        "text": " ",
+        "start": 17,
+        "end": 18,
+        "type": "Space"
+      },
+      {
+        "text": "nəfər",
+        "start": 18,
+        "end": 25,
+        "type": "Word"
+      },
+      {
+        "text": ".",
+        "start": 25,
+        "end": 26,
+        "type": "Punctuation"
+      }
+    ]
+  },
+  {
+    "name": "valid_thousand_separator_single",
+    "input": "Qiymət 1.000 manat.",
+    "words": [
+      "Qiymət",
+      "manat"
+    ],
+    "sentences": [
+      "Qiymət 1.000 manat."
+    ],
+    "word_tokens": [
+      {
+        "text": "Qiymət",
+        "start": 0,
+        "end": 7,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 7,
+        "end": 8,
+        "type": "Space"
+      },
+      {
+        "text": "1.000",
+        "start": 8,
+        "end": 13,
+        "type": "Number"
+      },
+      {
+        "text": " ",
+        "start": 13,
+        "end": 14,
+        "type": "Space"
+      },
+      {
+        "text": "manat",
+        "start": 14,
+        "end": 19,
+        "type": "Word"
+      },
+      {
+        "text": ".",
+        "start": 19,
+        "end": 20,
+        "type": "Punctuation"
+      }
+    ]
+  },
+  {
+    "name": "ve_s_at_end_of_sentence",
+    "input": "Meyvələr və s. hazırdır. Gəl.",
+    "words": [
+      "Meyvələr",
+      "və",
+      "s",
+      "hazırdır",
+      "Gəl"
+    ],
+    "sentences": [
+      "Meyvələr və s. hazırdır.",
+      " Gəl."
+    ]
+  },
+  {
+    "name": "ve_s_multiword_abbreviation",
+    "input": "Kitablar, dəftərlər və s. satıldı.",
+    "words": [
+      "Kitablar",
+      "dəftərlər",
+      "və",
+      "s",
+      "satıldı"
+    ],
+    "sentences": [
+      "Kitablar, dəftərlər və s. satıldı."
+    ]
+  },
+  {
+    "name": "version_number",
+    "input": "Proqram v2.5.1 versiyasıdır.",
+    "words": [
+      "Proqram",
+      "v2",
+      "versiyasıdır"
+    ],
+    "sentences": [
+      "Proqram v2.5.1 versiyasıdır."
+    ],
+    "word_tokens": [
+      {
+        "text": "Proqram",
+        "start": 0,
+        "end": 7,
+        "type": "Word"
+      },
+      {
+        "text": " ",
+        "start": 7,
+        "end": 8,
+        "type": "Space"
+      },
+      {
+        "text": "v2",
+        "start": 8,
+        "end": 10,
+        "type": "Word"
+      },
+      {
+        "text": ".",
+        "start": 10,
+        "end": 11,
+        "type": "Punctuation"
+      },
+      {
+        "text": "5",
+        "start": 11,
+        "end": 12,
+        "type": "Number"
+      },
+      {
+        "text": ".",
+        "start": 12,
+        "end": 13,
+        "type": "Punctuation"
+      },
+      {
+        "text": "1",
+        "start": 13,
+        "end": 14,
+        "type": "Number"
+      },
+      {
+        "text": " ",
+        "start": 14,
+        "end": 15,
+        "type": "Space"
+      },
+      {
+        "text": "versiyasıdır",
+        "start": 15,
+        "end": 29,
+        "type": "Word"
+      },
+      {
+        "text": ".",
+        "start": 29,
+        "end": 30,
+        "type": "Punctuation"
+      }
+    ]
+  },
+  {
+    "name": "vertical_tab",
+    "input": "birinci\u000bikinci",
+    "words": [
+      "birinci",
+      "ikinci"
+    ],
+    "sentences": [
+      "birinci\u000bikinci"
+    ]
+  },
+  {
+    "name": "very_long_input",
+    "input": "Bu çox uzun bir cümlədir və yüzdən çox simvolu var ki nəticədə tokenizatorun uzun mətnləri düzgün işləyə biləcəyini göstərsin və heç bir problem yaranmasın.",
+    "words": [
+      "Bu",
+      "çox",
+      "uzun",
+      "bir",
+      "cümlədir",
+      "və",
+      "yüzdən",
+      "çox",
+      "simvolu",
+      "var",
+      "ki",
+      "nəticədə",
+      "tokenizatorun",
+      "uzun",
+      "mətnləri",
+      "düzgün",
+      "işləyə",
+      "biləcəyini",
+      "göstərsin",
+      "və",
+      "heç",
+      "bir",
+      "problem",
+      "yaranmasın"
+    ],
+    "sentences": [
+      "Bu çox uzun bir cümlədir və yüzdən çox simvolu var ki nəticədə tokenizatorun uzun mətnləri düzgün işləyə biləcəyini göstərsin və heç bir problem yaranmasın."
+    ]
+  },
+  {
+    "name": "very_long_word",
+    "input": "mənzərəsizdirəmənzərəsizdirəmənzərəsizdir",
+    "words": [
+      "mənzərəsizdirəmənzərəsizdirəmənzərəsizdir"
+    ],
+    "sentences": [
+      "mənzərəsizdirəmənzərəsizdirəmənzərəsizdir"
+    ]
+  },
+  {
+    "name": "very_short_exchange",
+    "input": "Bəli. Xeyr. Bəlkə.",
+    "words": [
+      "Bəli",
+      "Xeyr",
+      "Bəlkə"
+    ],
+    "sentences": [
+      "Bəli.",
+      " Xeyr.",
+      " Bəlkə."
+    ]
+  },
+  {
+    "name": "very_short_sentences",
+    "input": "Bəli. Xeyr. Ola bilər.",
+    "words": [
+      "Bəli",
+      "Xeyr",
+      "Ola",
+      "bilər"
+    ],
+    "sentences": [
+      "Bəli.",
+      " Xeyr.",
+      " Ola bilər."
+    ]
+  },
+  {
+    "name": "weather_forecast",
+    "input": "Bakıda hava +15°C, küləkli olacaq.",
+    "words": [
+      "Bakıda",
+      "hava",
+      "C",
+      "küləkli",
+      "olacaq"
+    ],
+    "sentences": [
+      "Bakıda hava +15°C, küləkli olacaq."
+    ]
+  },
+  {
+    "name": "whitespace_tabs_newlines",
+    "input": "Birinci\tsətir\nİkinci\tsətir",
+    "words": [
+      "Birinci",
+      "sətir",
+      "İkinci",
+      "sətir"
+    ],
+    "sentences": [
+      "Birinci\tsətir\nİkinci\tsətir"
+    ]
+  },
+  {
+    "name": "words_with_inner_apostrophe",
+    "input": "o'nun sizin'ki",
+    "words": [
+      "o'nun",
+      "sizin'ki"
+    ],
+    "sentences": [
+      "o'nun sizin'ki"
+    ]
+  },
+  {
+    "name": "xml_html_tags",
+    "input": "Teq \u003cdiv\u003eməzmun\u003c/div\u003e göstərildi.",
+    "words": [
+      "Teq",
+      "div",
+      "məzmun",
+      "div",
+      "göstərildi"
+    ],
+    "sentences": [
+      "Teq \u003cdiv\u003eməzmun\u003c/div\u003e göstərildi."
+    ]
+  },
+  {
+    "name": "year_range",
+    "input": "1990-2020-ci illər arası dövr.",
+    "words": [
+      "ci",
+      "illər",
+      "arası",
+      "dövr"
+    ],
+    "sentences": [
+      "1990-2020-ci illər arası dövr."
+    ]
+  },
+  {
+    "name": "zero_width_joiner",
+    "input": "test‍data",
+    "words": [
+      "test",
+      "data"
+    ],
+    "sentences": [
+      "test‍data"
+    ]
+  },
+  {
+    "name": "zero_width_space",
+    "input": "bir​ikinci",
+    "words": [
+      "bir",
+      "ikinci"
+    ],
+    "sentences": [
+      "bir​ikinci"
+    ]
+  },
+  {
+    "name": "news_economy",
+    "input": "Azərbaycan Mərkəzi Bankı uçot dərəcəsini 7.25%-ə endirdi.",
+    "words": [
+      "Azərbaycan",
+      "Mərkəzi",
+      "Bankı",
+      "uçot",
+      "dərəcəsini",
+      "ə",
+      "endirdi"
+    ],
+    "sentences": [
+      "Azərbaycan Mərkəzi Bankı uçot dərəcəsini 7.25%-ə endirdi."
+    ]
+  },
+  {
+    "name": "news_politics",
+    "input": "Prezident İlham Əliyev Türkiyə Prezidenti R.T. Ərdoğan ilə görüşüb.",
+    "words": [
+      "Prezident",
+      "İlham",
+      "Əliyev",
+      "Türkiyə",
+      "Prezidenti",
+      "R",
+      "T",
+      "Ərdoğan",
+      "ilə",
+      "görüşüb"
+    ],
+    "sentences": [
+      "Prezident İlham Əliyev Türkiyə Prezidenti R.T.",
+      " Ərdoğan ilə görüşüb."
+    ]
+  },
+  {
+    "name": "news_sports",
+    "input": "Qarabağ FK Çempionlar Liqasında 2:1 hesabı ilə qalib gəldi.",
+    "words": [
+      "Qarabağ",
+      "FK",
+      "Çempionlar",
+      "Liqasında",
+      "hesabı",
+      "ilə",
+      "qalib",
+      "gəldi"
+    ],
+    "sentences": [
+      "Qarabağ FK Çempionlar Liqasında 2:1 hesabı ilə qalib gəldi."
+    ]
+  },
+  {
+    "name": "banking_transfer",
+    "input": "Köçürmə məbləği 1500.00 AZN təşkil edir. Komissiya 0.5% tutulur.",
+    "words": [
+      "Köçürmə",
+      "məbləği",
+      "AZN",
+      "təşkil",
+      "edir",
+      "Komissiya",
+      "tutulur"
+    ],
+    "sentences": [
+      "Köçürmə məbləği 1500.00 AZN təşkil edir.",
+      " Komissiya 0.5% tutulur."
+    ]
+  },
+  {
+    "name": "banking_loan",
+    "input": "İpoteka krediti üzrə illik faiz dərəcəsi 4%-dən 6%-ə qaldırıldı.",
+    "words": [
+      "İpoteka",
+      "krediti",
+      "üzrə",
+      "illik",
+      "faiz",
+      "dərəcəsi",
+      "dən",
+      "ə",
+      "qaldırıldı"
+    ],
+    "sentences": [
+      "İpoteka krediti üzrə illik faiz dərəcəsi 4%-dən 6%-ə qaldırıldı."
+    ]
+  },
+  {
+    "name": "social_media_mixed",
+    "input": "Bu restoran super idi👍 Mütləq gedin!",
+    "words": [
+      "Bu",
+      "restoran",
+      "super",
+      "idi",
+      "Mütləq",
+      "gedin"
+    ],
+    "sentences": [
+      "Bu restoran super idi👍 Mütləq gedin!"
+    ]
+  }
+]
