@@ -730,3 +730,47 @@ func ExampleIsValid() {
 	// true
 	// false
 }
+
+func ExampleIssueType_String() {
+	fmt.Println(Spelling)
+	fmt.Println(Punctuation)
+	fmt.Println(Layout)
+	// Output:
+	// spelling
+	// punctuation
+	// layout
+}
+
+func ExampleSeverity_String() {
+	fmt.Println(Info)
+	fmt.Println(Warning)
+	fmt.Println(Error)
+	// Output:
+	// info
+	// warning
+	// error
+}
+
+func ExampleValidate_issues() {
+	report := Validate("Bu kitb gözəl idi.")
+	fmt.Printf("Score: %d\n", report.Score)
+	fmt.Printf("Type: %s\n", report.Issues[0].Type)
+	fmt.Printf("Severity: %s\n", report.Issues[0].Severity)
+	fmt.Printf("Suggestion: %s\n", report.Issues[0].Suggestion)
+	// Output:
+	// Score: 90
+	// Type: spelling
+	// Severity: error
+	// Suggestion: kitab
+}
+
+func ExampleIssueType_MarshalJSON() {
+	data, _ := json.Marshal(Spelling)
+	fmt.Println(string(data))
+	var t IssueType
+	_ = json.Unmarshal(data, &t)
+	fmt.Println(t)
+	// Output:
+	// "spelling"
+	// spelling
+}

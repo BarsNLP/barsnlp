@@ -790,3 +790,11 @@ func TestGenerateDeletesContainsSingleCharDelete(t *testing.T) {
 		t.Errorf("generateDeletes(\"a\", 1) = %v, want [\"\"]", got)
 	}
 }
+
+func ExampleSuggest_fields() {
+	suggestions := Suggest("kitb", 2)
+	fmt.Printf("Term: %s, Distance: %d, Frequency: %d\n",
+		suggestions[0].Term, suggestions[0].Distance, suggestions[0].Frequency)
+	// Output:
+	// Term: kitab, Distance: 1, Frequency: 41655
+}

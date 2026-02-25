@@ -1396,3 +1396,39 @@ func ExampleIsKnownStem() {
 	// true
 	// false
 }
+
+func ExampleMorphTag_String() {
+	fmt.Println(Plural)
+	fmt.Println(CaseGen)
+	fmt.Println(TensePastDef)
+	fmt.Println(Negation)
+	// Output:
+	// Plural
+	// CaseGen
+	// TensePastDef
+	// Negation
+}
+
+func ExampleAnalysis_String() {
+	analyses := Analyze("kitablardan")
+	fmt.Println(analyses[0])
+	// Output:
+	// kitab[Plural:lar|CaseAbl:dan]
+}
+
+func ExampleMorphTag_MarshalJSON() {
+	data, _ := json.Marshal(Plural)
+	fmt.Println(string(data))
+	var t MorphTag
+	_ = json.Unmarshal(data, &t)
+	fmt.Println(t)
+	// Output:
+	// "Plural"
+	// Plural
+}
+
+func ExampleIsKnownStem_false() {
+	fmt.Println(IsKnownStem("xyzabc"))
+	// Output:
+	// false
+}

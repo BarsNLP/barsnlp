@@ -254,3 +254,9 @@ func BenchmarkParse(b *testing.B) {
 		Parse("iki milyon üç yüz min doxsan beş")
 	}
 }
+
+func ExampleConvertFloat_digitMode() {
+	fmt.Println(ConvertFloat("3.14", DigitMode))
+	// Output:
+	// üç vergül bir dörd
+}
