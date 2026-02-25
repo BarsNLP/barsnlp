@@ -260,3 +260,31 @@ func ExampleIsPositive() {
 	// true
 	// false
 }
+
+func ExampleSentiment_String() {
+	fmt.Println(Positive)
+	fmt.Println(Neutral)
+	fmt.Println(Negative)
+	// Output:
+	// Positive
+	// Neutral
+	// Negative
+}
+
+func ExampleResult_String() {
+	r := Analyze("Bu film çox gözəl idi")
+	fmt.Println(r)
+	// Output:
+	// Positive(score=0.90, pos=1, neg=0, total=5)
+}
+
+func ExampleSentiment_MarshalJSON() {
+	data, _ := json.Marshal(Positive)
+	fmt.Println(string(data))
+	var s Sentiment
+	_ = json.Unmarshal(data, &s)
+	fmt.Println(s)
+	// Output:
+	// "Positive"
+	// Positive
+}

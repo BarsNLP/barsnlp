@@ -1447,6 +1447,8 @@ func ExampleExtract() {
 	for _, res := range results {
 		fmt.Println(res)
 	}
+	// Output:
+	// DateTime("5 mart 2026 saat 14")[0:19]
 }
 
 // ExampleParse demonstrates parsing a single relative date expression.
@@ -1455,6 +1457,47 @@ func ExampleParse() {
 	res, _ := Parse("sabah", r)
 	fmt.Println(res.Time.Format("2006-01-02"))
 	// Output: 2026-02-21
+}
+
+func ExampleType_String() {
+	fmt.Println(TypeDate)
+	fmt.Println(TypeTime)
+	fmt.Println(TypeDateTime)
+	// Output:
+	// Date
+	// Time
+	// DateTime
+}
+
+func ExampleComponents_String() {
+	date := HasYear | HasMonth | HasDay
+	fmt.Println(date)
+	clock := HasHour | HasMinute
+	fmt.Println(clock)
+	fmt.Println(Components(0))
+	// Output:
+	// YMD
+	// hm
+	// none
+}
+
+func ExampleResult_String() {
+	r := time.Date(2026, 2, 20, 0, 0, 0, 0, time.UTC)
+	results := Extract("5 mart 2026", r)
+	fmt.Println(results[0])
+	// Output:
+	// Date("5 mart 2026")[0:11]
+}
+
+func ExampleType_MarshalJSON() {
+	data, _ := json.Marshal(TypeDate)
+	fmt.Println(string(data))
+	var t Type
+	_ = json.Unmarshal(data, &t)
+	fmt.Println(t)
+	// Output:
+	// "Date"
+	// Date
 }
 
 // BenchmarkExtract benchmarks Extract on a mixed natural + numeric expression.

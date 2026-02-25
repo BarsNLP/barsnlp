@@ -511,3 +511,36 @@ func ExampleURLs() {
 	// Output:
 	// [https://gov.az/services]
 }
+
+func ExampleEntityType_String() {
+	fmt.Println(FIN)
+	fmt.Println(Phone)
+	fmt.Println(Email)
+	fmt.Println(VOEN)
+	// Output:
+	// FIN
+	// Phone
+	// Email
+	// VOEN
+}
+
+func ExampleEntity_String() {
+	e1 := Entity{Text: "+994501234567", Start: 0, End: 13, Type: Phone, Labeled: false}
+	fmt.Println(e1)
+	e2 := Entity{Text: "5ARPXK2", Start: 5, End: 12, Type: FIN, Labeled: true}
+	fmt.Println(e2)
+	// Output:
+	// Phone("+994501234567")[0:13]
+	// FIN("5ARPXK2")[5:12,labeled]
+}
+
+func ExampleEntityType_MarshalJSON() {
+	data, _ := json.Marshal(Phone)
+	fmt.Println(string(data))
+	var et EntityType
+	_ = json.Unmarshal(data, &et)
+	fmt.Println(et)
+	// Output:
+	// "Phone"
+	// Phone
+}

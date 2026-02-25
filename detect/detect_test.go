@@ -380,3 +380,32 @@ func ExampleDetectAll() {
 	// Output:
 	// Russian
 }
+
+func ExampleLanguage_String() {
+	fmt.Println(Azerbaijani)
+	fmt.Println(Russian)
+	fmt.Println(English)
+	// Output:
+	// Azerbaijani
+	// Russian
+	// English
+}
+
+func ExampleScript_String() {
+	fmt.Println(ScriptLatn)
+	fmt.Println(ScriptCyrl)
+	// Output:
+	// Latn
+	// Cyrl
+}
+
+func ExampleLanguage_MarshalJSON() {
+	data, _ := json.Marshal(Azerbaijani)
+	fmt.Println(string(data))
+	var l Language
+	_ = json.Unmarshal(data, &l)
+	fmt.Println(l)
+	// Output:
+	// "Azerbaijani"
+	// Azerbaijani
+}

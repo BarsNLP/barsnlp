@@ -394,3 +394,10 @@ func ExampleRecursive() {
 	// [0:19] "Birinci paraqraf.\n\n"
 	// [19:36] "İkinci paraqraf."
 }
+
+func ExampleChunk_String() {
+	chunks := BySize("Salam, necəsən?", 20, 0)
+	fmt.Println(chunks[0])
+	// Output:
+	// Chunk(0)[0:17](17 bytes)
+}

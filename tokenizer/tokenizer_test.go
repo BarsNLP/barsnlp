@@ -1,6 +1,7 @@
 package tokenizer
 
 import (
+	"encoding/json"
 	"fmt"
 	"strings"
 	"sync"
@@ -644,4 +645,34 @@ func TestConcurrentSafety(t *testing.T) {
 		})
 	}
 	wg.Wait()
+}
+
+func ExampleTokenType_String() {
+	fmt.Println(Word)
+	fmt.Println(Number)
+	fmt.Println(Punctuation)
+	fmt.Println(URL)
+	// Output:
+	// Word
+	// Number
+	// Punctuation
+	// URL
+}
+
+func ExampleToken_String() {
+	tokens := WordTokens("Salam!")
+	fmt.Println(tokens[0])
+	// Output:
+	// Word("Salam")[0:5]
+}
+
+func ExampleTokenType_MarshalJSON() {
+	data, _ := json.Marshal(Word)
+	fmt.Println(string(data))
+	var t TokenType
+	_ = json.Unmarshal(data, &t)
+	fmt.Println(t)
+	// Output:
+	// "Word"
+	// Word
 }
